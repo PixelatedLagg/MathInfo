@@ -1,0 +1,52 @@
+#topBar
+{
+    background-image: linear-gradient(to bottom right, #621C2E, #AB2346);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+#middle
+{
+    margin-top: 10px;
+    background-image: linear-gradient(to bottom right, #00B295, #03F7EB);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px
+}
+#side
+{
+    margin-left: 10px;
+    background-image: linear-gradient(to bottom right, #191516, #C9DAEA);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    
+}
+.left
+{
+    width: 50%;
+    float: left;
+}
+.right
+{
+    width: 50%;
+    float: right;
+}
+.container
+{
+    margin-bottom: 10px;
+}
+@font-face {
+    font-family: 'Bungee';
+    src: url('webfont.ttf') format('truetype');
+}
+h1
+{
+    font-family: 'Bungee';
+    font-size: 50px;
+}
+p
+{
+    font-family: 'Bungee';
+    font-size: 20px;
+}
