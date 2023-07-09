@@ -1,52 +1,88 @@
-#topBar
+body
 {
-    background-image: linear-gradient(to bottom right, #621C2E, #AB2346);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom right, #8E67A5, #718DD6);
 }
-#middle
+button
 {
-    margin-top: 10px;
-    background-image: linear-gradient(to bottom right, #00B295, #03F7EB);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 20px
+    all: unset;
 }
-#side
+button:hover
 {
-    margin-left: 10px;
-    background-image: linear-gradient(to bottom right, #191516, #C9DAEA);
-    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, white, rgb(161, 161, 161));
+}
+.content
+{
     padding: 20px;
-    height: 100%;
-    
 }
-.left
+.text
 {
-    width: 50%;
+    width: 60%;
     float: left;
+    height: 100%;
 }
-.right
+.media
 {
-    width: 50%;
+    position: relative;
+    width: 40%;
     float: right;
+    height: 100%;
+    padding-top: 20px;
+}
+.header
+{
+    background-image: linear-gradient(to bottom right, #00B295, #03F7EB);
+    border-bottom: 3px solid #007b67;
+    padding: 20px;
+}
+.header-button
+{
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: min-content;
+    margin-right: 20px;
 }
 .container
 {
-    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: white;
+    height: 100%;
+    border-left: 3px solid rgb(161, 161, 161);
+    border-right: 3px solid rgb(161, 161, 161);
 }
 @font-face {
-    font-family: 'Bungee';
-    src: url('webfont.ttf') format('truetype');
+    font-family: 'Default';
+    src: url('font.woff2') format('woff2');
 }
-h1
+*
 {
-    font-family: 'Bungee';
-    font-size: 50px;
+    font-family: 'Default';
 }
 p
 {
-    font-family: 'Bungee';
     font-size: 20px;
+}
+.header-button h3
+{
+    margin: 0;
+}
+.image img
+{
+    border-radius: 5px;
+    border: 3px solid rgb(161, 161, 161);
+}
+.image p
+{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.image
+{
+    margin-bottom: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
