@@ -1,0 +1,12 @@
+{
+    "SectionTitle": {
+        "title": "example glossary",
+        "text" : {
+            "h1" : "funny title",
+            "p" : "hey, this is some funny text!!! :))))))"
+        },
+        "media" : {
+            "img" : "https://cdn.discordapp.com/attachments/1121596064596766772/1121887365116481626/image.png"
+        }
+    }
+}
