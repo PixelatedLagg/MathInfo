@@ -7,27 +7,30 @@
         <link type="text/css" rel="stylesheet" href="index.css">
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="icon" href="favicon.ico">
+        <script src="main.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="header">
                 <button class="header-button">
-                    <h3>Home</h3>
+                    <a class="header-link" href="index.html">
+                        <h3>Home</h3>
+                    </a>
                 </button>
                 <div id="resources">
                     <button class="header-button" id="resources-button">
                         <h3>Resources</h3>
                     </button>
                     <div id="resources-content">
-                        <a href="sections/Algebra1.html" style="border-top-right-radius: 5px;">Algebra 1</a>
-                        <a href="#" style="border-bottom-right-radius: 5px;">Algorithms</a>
+                        <a href="sections/Algebra1.html" style="border-top-right-radius: 5px;" onclick="SetCurrent(Algebra1);">Algebra 1</a>
+                        <a href="#" style="border-bottom-right-radius: 5px;" onclick="SetCurrent(Algorithms);">Algorithms</a>
                     </div>
                 </div>
             </div>
             <div class="content">
                 <div class="text">
                     <h1>Welcome to MathInfo.org</h1>
-                    <p>Here you will find resources for Algebra 1, Geometry, Algebra 2, Trigonometry, and Computer Science.</p>
+                    <p>Here you will find (mainly article-based) resources for Algebra 1, Geometry, Algebra 2, Trigonometry, and Computer Science.</p>
                 </div>
                 <div class="media">
                     <div class="image">
