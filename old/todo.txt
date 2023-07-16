@@ -1,4 +1,0 @@
--create js to detect any new sections and add to resources dropdown
--create article list in alg1
--write parser to read json and input results into alg1 page
--rewrite whole website in react (tackle this one first)
