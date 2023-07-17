@@ -1,14 +1,12 @@
-class Section extends Component {
-  render() {
-    return (
-      <div>
-        <Switch>
-          {blogs.map( blog => <Link to={`/blogs/${blog.id}`} /> )}
-          <Route path="/blogs/:blogId  component={<Blog />}"/>
-          </Switch>
-        {this.props.match.params.id}
-      </div>
-    );
-  }
+import { Routes, Route, useParams } from 'react-router-dom';
+import React, { Component } from 'react';
+
+export default function Section() {
+  const { res } = useParams();
+  
+  return (
+    <div>
+      <p>{res}</p>
+    </div>
+  );
 }
-//param here is what section

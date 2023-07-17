@@ -1,0 +1,4 @@
+-fix html/css errors
+-finish article urls
+-automatically detect new sections and add to Dropdown
+-make website responsive

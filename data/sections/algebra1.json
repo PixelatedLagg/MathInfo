@@ -1,8 +1,8 @@
 {
-    "SectionTitle": {
-        "title": "SectionTitle",
+    "ArticleTest": {
+        "title": "ArticleTest",
         "text" : {
-            "h1" : "Test",
+            "h1" : "Title",
             "p" : "This is a test."
         },
         "media" : {
