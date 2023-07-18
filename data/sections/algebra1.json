@@ -1,0 +1,12 @@
+{
+    "ArticleTest": {
+        "title": "ArticleTest",
+        "text" : {
+            "h1" : "Title",
+            "p" : "This is a test."
+        },
+        "media" : {
+            "img" : ["https://cdn.discordapp.com/attachments/1121596064596766772/1121887365116481626/image.png", "Test caption."]
+        }
+    }
+}
