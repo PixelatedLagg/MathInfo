@@ -3,7 +3,7 @@
 @font-face
 {
     font-family: 'Default';
-    src: url('font.woff2') format('woff2');
+    src: url('./fonts/font.woff2') format('woff2');
 }
 *
 {

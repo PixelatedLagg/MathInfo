@@ -1,4 +1,8 @@
--fix html/css errors
--finish article urls
--automatically detect new sections and add to Dropdown
--make website responsive
+-make images scalable == working on
+-make design scalable
+-make resources dropdown automatically list all resources
+-add extra sources button/page
+
+-add to homepage
+    -why website made
+    -who we are

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App';
 import Section from './Section'
-import { HashRouter, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 
 const response = JSON.stringify({
@@ -32,8 +32,8 @@ const root =
 createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <HashRouter basename={`/${process.env.PUBLIC_URL}`}>
+    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
 );

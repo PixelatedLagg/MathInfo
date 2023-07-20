@@ -10,7 +10,9 @@ export default function Home() {
             </div>
             <div className="media">
                 <div className="image">
-                    <img src="../../mathinfologo.png" width="300px" height="300px" alt="The MathInfo logo."/>
+                    <img src="mathinfologo.png" width="300px" height="300px" alt="The MathInfo logo."/>
+                    <p>The MathInfo logo.</p>
+                    <img src="mathinfologo.png" width="300px" height="300px" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
                 </div>
             </div>
