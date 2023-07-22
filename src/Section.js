@@ -13,12 +13,12 @@ export default function Section() {
   fetch(`${process.env.PUBLIC_URL}/data/sections/${res}.json`, {headers: {accept: 'application/json'}}).then((response) => response.json()).then((json) => {
     const summary = json.Summary;
     console.log(json);
-    return (
+    /*return (
       <div className="content">
         <div className="text">
           {summary.text.map((element, content, index) => React.createElement(element, { key: index }, content))}
         </div>
       </div>
-    );
+    );*/
   });
 }
