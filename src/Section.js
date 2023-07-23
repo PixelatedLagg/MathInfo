@@ -20,17 +20,18 @@ export default function Section() {
       .then((res) => setResource(res.default))
       .catch(_ => null);
   }, []);
-  console.log(resource);
-
-
-}
-
-
-
-/*return (
-        <div className="content">
-          <div className="text">
-            {summary.text.map((element, content, index) => React.createElement(element, { key: index }, content))}
-          </div>
+  if (resource.length !== 0)
+  {
+    return (
+      <div className="content">
+        <div className="text">
+          {resource.Summary.text.map((element, index) => React.createElement(element.tag, { key: index }, element.content))}
         </div>
-      );*/
+        <div className="media">
+          {resource.Summary.media.map((element, index) => React.createElement("div", { classname: "image", key: index }, 
+          React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", null, element.caption)))}
+        </div>
+      </div>
+    );
+  }
+}

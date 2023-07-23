@@ -1,4 +1,6 @@
--make images scalable == working on
+-article links and navigation
+
+
 -make design scalable
 -make resources dropdown automatically list all resources
 -add extra sources button/page

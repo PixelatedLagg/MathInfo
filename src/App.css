@@ -33,6 +33,10 @@ button:hover
 {
     background-image: linear-gradient(to bottom right, white, #ddd);
 }
+img
+{
+    max-width: 100%;
+}
 
 /* Header */
 
@@ -99,6 +103,11 @@ button:hover
     height: 100%;
     padding-top: 20px;
 }
+.media:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 .image img
 {
     border-radius: 5px;
@@ -107,7 +116,7 @@ button:hover
 .image p
 {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 15px !important;
 }
 .image
 {

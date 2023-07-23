@@ -3,6 +3,8 @@ import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import Section from "./Section"
 import Home from "./Home"
+import Article from "./Article"
+import './fonts/font.woff2'; 
 
 class App extends React.Component {
   render() {
@@ -27,6 +29,7 @@ class App extends React.Component {
           <Routes>
             <Route exact path={"/"} element={<Home />} />
             <Route path={"/resources/:res"} element={<Section />} />
+            <Route path={"/resources/:res/:article"} element={<Article />} />
           </Routes>
         </div>
             );
