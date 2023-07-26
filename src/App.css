@@ -113,6 +113,7 @@ img
 {
     border-radius: 5px;
     border: 3px solid #ddd;
+    width: calc(100% - 6px);
 }
 .image p
 {
@@ -121,17 +122,27 @@ img
 }
 .image
 {
+    width: 80%;
     margin-bottom: 20px;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+}
+li + li
+{
+    margin-top: 15px;
+}
+li a
+{
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 /* Resources Dropdown */
 
 #resources
 {
-    margin: 0;
     padding: 0;
     position: relative;
     display: inline-block;

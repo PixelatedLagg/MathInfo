@@ -11,7 +11,7 @@ export default function Article() {
         import(`./data/Resources.json`)
         .then((res) => setResources(res.default.Resources))
         .catch(_ => null);
-    }, []);
+    }, [res]);
     if (!resources.includes(res) && resources.length != 0)
     {
         window.location.href = "https://mathinfo.org";
@@ -21,7 +21,7 @@ export default function Article() {
         import(`./data/sections/${res}.json`)
         .then((res) => setResource(res.default))
         .catch(_ => null);
-    }, []);
+    }, [res]);
     if (resource.length != 0)
     {
         if (!resource.hasOwnProperty(article))
@@ -32,10 +32,10 @@ export default function Article() {
         return (
             <div className="content">
               <div className="text">
-              {resource.Summary.text.map((element, index) => CheckImage(element, index))}
+                {articleObject.text.map((element, index) => CheckImage(element, index))}
               </div>
               <div className="media">
-                {articleObject.media.map((element, index) => React.createElement("div", { classname: "image", key: index }, 
+                {articleObject.media.map((element, index) => React.createElement("div", { className: "image", key: index }, 
                 React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", null, element.caption)))}
               </div>
             </div>

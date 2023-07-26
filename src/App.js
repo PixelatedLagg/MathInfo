@@ -16,20 +16,20 @@ class App extends React.Component {
                 <h3>Home</h3>
               </Link>
             </button>
-            <div class="vert-space" id="resources">
+            <div className="vert-space" id="resources">
               <button className="header-button" id="resources-button">
                 <h3>Resources</h3>
               </button>
               <div id="resources-content">
-                <Link style={{borderTopRightRadius: "5px"}} to="/resources/algebra1">Algebra 1</Link>
-                <Link style={{borderBottomRightRadius: "5px"}} to="/resources/algorithms">Algorithms</Link>
+                <Link style={{borderTopRightRadius: "5px"}} to="/algebra1">Algebra 1</Link>
+                <Link style={{borderBottomRightRadius: "5px"}} to="/algorithms">Algorithms</Link>
               </div>
             </div>
           </div>
           <Routes>
             <Route exact path={"/"} element={<Home />} />
-            <Route path={"/resources/:res"} element={<Section />} />
-            <Route path={"/resources/:res/:article"} element={<Article />} />
+            <Route path={"/:res"} element={<Section />} />
+            <Route path={"/:res/:article"} element={<Article />} />
           </Routes>
         </div>
             );
