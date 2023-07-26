@@ -1,7 +1,19 @@
 import { Routes, Route, useParams } from 'react-router-dom';
 import React, { Component, useState, useEffect } from 'react';
 
-export default function Section() {
+export function CheckImage(element, index)
+{
+    if (element.tag == "img")
+    {
+      return React.createElement("img", { key: index, src: element.src }, null);
+    }
+    else
+    {
+      return React.createElement(element.tag, { key: index }, element.content);
+    }
+}
+
+export function Section() {
   var { res } = useParams();
   res = res.toLowerCase();
   const [resources, setResources] = useState([]);
@@ -25,7 +37,7 @@ export default function Section() {
     return (
       <div className="content">
         <div className="text">
-          {resource.Summary.text.map((element, index) => React.createElement(element.tag, { key: index }, element.content))}
+          {resource.Summary.text.map((element, index) => CheckImage(element, index))}
         </div>
         <div className="media">
           {resource.Summary.media.map((element, index) => React.createElement("div", { classname: "image", key: index }, 

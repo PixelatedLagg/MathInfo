@@ -1,7 +1,8 @@
 import { Routes, Route, useParams } from 'react-router-dom';
 import React, { Component, useState, useEffect } from 'react';
+import { CheckImage } from './Section';
 
-export default function Section() {
+export default function Article() {
     var { res, article } = useParams();
     res = res.toLowerCase();
     article = article.toLowerCase();
@@ -31,7 +32,7 @@ export default function Section() {
         return (
             <div className="content">
               <div className="text">
-                {articleObject.text.map((element, index) => React.createElement(element.tag, { key: index }, element.content))}
+              {resource.Summary.text.map((element, index) => CheckImage(element, index))}
               </div>
               <div className="media">
                 {articleObject.media.map((element, index) => React.createElement("div", { classname: "image", key: index }, 

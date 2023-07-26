@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
-import Section from "./Section"
+import { Section } from "./Section"
 import Home from "./Home"
 import Article from "./Article"
 import './fonts/font.woff2'; 
@@ -11,12 +11,12 @@ class App extends React.Component {
       return (
         <div className="container">
           <div className="header">
-            <button className="header-button">
-              <Link className="header-link" href="index.html" to="/">
+            <button className="header-button vert-space">
+              <Link className="header-link" to="/">
                 <h3>Home</h3>
               </Link>
             </button>
-            <div id="resources">
+            <div class="vert-space" id="resources">
               <button className="header-button" id="resources-button">
                 <h3>Resources</h3>
               </button>
