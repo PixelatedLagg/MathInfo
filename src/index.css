@@ -1,29 +1,29 @@
 /* Elements */
 
-@font-face
-{
-    font-family: 'Default';
-    src: url('./fonts/font.woff2') format('woff2');
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 *
 {
-    font-family: 'Default';
+    font-family: 'Inter';
 }
 p
 {
     font-size: 20px;
 }
-html
-{
-    height: 100%;
+html, body, .container {
+    min-height: 100vh;
 }
 body
 {
     background-image: linear-gradient(to bottom right, #8E67A5, #718DD6);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 button
 {
@@ -35,7 +35,7 @@ button:hover
 }
 img
 {
-    max-width: 100%;
+    max-width: 100vh;
 }
 
 /* Header */
@@ -72,21 +72,16 @@ img
 
 /* Main Page */
 
-#root
-{
-    height: 100%;
-}
 .container
 {
     margin-left: 15%;
     margin-right: 15%;
     background-color: white;
-    height: 100%;
 }
 .content
 {
     padding: 20px;
-    height: max-content;
+    min-height: 100%;
     background-color: rgba(11, 11, 11, 0.0);
 }
 .text

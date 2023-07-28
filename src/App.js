@@ -1,10 +1,9 @@
-import './App.css';
+import './index.css';
 import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import { Section } from "./Section"
 import Home from "./Home"
 import Article from "./Article"
-import './fonts/font.woff2'; 
 
 class App extends React.Component {
   render() {

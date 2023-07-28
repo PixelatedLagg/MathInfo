@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import React from 'react';
 
 export default function Home() {
@@ -10,6 +10,10 @@ export default function Home() {
             </div>
             <div className="media">
                 <div className="image">
+                    <img src="mathinfologo.png" alt="The MathInfo logo."/>
+                    <p>The MathInfo logo.</p>
+                    <img src="mathinfologo.png" alt="The MathInfo logo."/>
+                    <p>The MathInfo logo.</p>
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>

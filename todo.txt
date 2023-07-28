@@ -1,10 +1,2 @@
--article links and navigation
-
-
--make design scalable
--make resources dropdown automatically list all resources
--add extra sources button/page
-
--add to homepage
-    -why website made
-    -who we are
+-change algebra 1 to algebra
+-add first algebra article

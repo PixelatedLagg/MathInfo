@@ -1,5 +1,5 @@
-import { Routes, Route, useParams } from 'react-router-dom';
-import React, { Component, useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { CheckImage } from './Section';
 
 export default function Article() {
@@ -12,7 +12,7 @@ export default function Article() {
         .then((res) => setResources(res.default.Resources))
         .catch(_ => null);
     }, [res]);
-    if (!resources.includes(res) && resources.length != 0)
+    if (!resources.includes(res) && resources.length !== 0)
     {
         window.location.href = "https://mathinfo.org";
     }
@@ -22,7 +22,7 @@ export default function Article() {
         .then((res) => setResource(res.default))
         .catch(_ => null);
     }, [res]);
-    if (resource.length != 0)
+    if (resource.length !== 0)
     {
         if (!resource.hasOwnProperty(article))
         {

@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
+import './index.css';
 import App from './App';
-import Section from './Section'
-import { HashRouter, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
-import './fonts/font.woff2'
+import './fonts/Inter-VariableFont_slnt,wght.ttf'
 
 const rootElement = 
 document.getElementById('root');
