@@ -2,7 +2,13 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('./fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    src: url('./fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSansMath';
+    src: url('./fonts/NotoSansMath/NotoSansMath-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,10 +18,10 @@
 }
 p
 {
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 20px;
-}
-html, body, .container {
-    min-height: 100vh;
+    line-height: 40px;
 }
 body
 {
@@ -24,18 +30,34 @@ body
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 button
 {
     all: unset;
 }
-button:hover
-{
-    background-image: linear-gradient(to bottom right, white, #ddd);
-}
 img
 {
     max-width: 100vh;
+}
+html, body, #root
+{
+    height: 100%;
+}
+strong, sup
+{
+    font-family: 'NotoSansMath';
+    font-weight: normal;
+    text-decoration: wavy;
+    font-style: italic;
+}
+sup
+{
+    line-height: 0;
+}
+strong
+{
+    line-height: 40px;
 }
 
 /* Header */
@@ -50,9 +72,9 @@ img
     border-radius: 5px;
     padding: 0;
     margin: 0;
-    width: min-content;
     text-decoration: none;
     color: #000;
+    display: inline-block;
 }
 .header-button
 {
@@ -60,6 +82,10 @@ img
     border-radius: 5px;
     padding: 10px;
     width: min-content;
+}
+.header-button:hover
+{
+    background-image: linear-gradient(to bottom right, white, #ddd);
 }
 .header > *
 {
@@ -77,11 +103,12 @@ img
     margin-left: 15%;
     margin-right: 15%;
     background-color: white;
+    overflow: auto;
+    min-height: 100%;
 }
 .content
 {
     padding: 20px;
-    min-height: 100%;
     background-color: rgba(11, 11, 11, 0.0);
 }
 .text
@@ -89,6 +116,7 @@ img
     width: 60%;
     float: left;
     height: 100%;
+    display: block;
 }
 .text img
 {
@@ -98,10 +126,9 @@ img
 }
 .media
 {
-    position: relative;
+    display: block;
     width: 40%;
     float: right;
-    height: 100%;
     padding-top: 20px;
 }
 .image img
@@ -117,11 +144,10 @@ img
 }
 .image
 {
+    display: block;
     width: 80%;
     margin-bottom: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin: 0 auto;
 }
 li + li
 {
@@ -195,6 +221,10 @@ li a
     .text
     {
         width: 100%;
+    }
+    .container
+    {
+        height: 100vh;
     }
 }
 @media (max-width: 500px) 

@@ -29,6 +29,7 @@ export default function Article() {
             window.location.href = "https://mathinfo.org";
         }
         const articleObject = resource[article];
+        document.title = articleObject.title;
         return (
             <div className="content">
               <div className="text">

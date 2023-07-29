@@ -10,17 +10,15 @@ class App extends React.Component {
       return (
         <div className="container">
           <div className="header">
-            <button className="header-button vert-space">
-              <Link className="header-link" to="/">
-                <h3>Home</h3>
-              </Link>
-            </button>
+            <Link className="header-button header-link vert-space" to="/">
+              <h3>Home</h3>
+            </Link>
             <div className="vert-space" id="resources">
               <button className="header-button" id="resources-button">
                 <h3>Resources</h3>
               </button>
               <div id="resources-content">
-                <Link style={{borderTopRightRadius: "5px"}} to="/algebra1">Algebra 1</Link>
+                <Link style={{borderTopRightRadius: "5px"}} to="/algebra">Algebra</Link>
                 <Link style={{borderBottomRightRadius: "5px"}} to="/algorithms">Algorithms</Link>
               </div>
             </div>

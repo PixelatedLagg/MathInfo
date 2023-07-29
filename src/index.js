@@ -3,7 +3,8 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
-import './fonts/Inter-VariableFont_slnt,wght.ttf'
+import './fonts/Inter/Inter-VariableFont_slnt,wght.ttf'
+import './fonts/NotoSansMath/NotoSansMath-Regular.ttf'
 
 const rootElement = 
 document.getElementById('root');

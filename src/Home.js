@@ -12,10 +12,16 @@ export default function Home() {
                 <div className="image">
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
+                </div>
+                <div className="image">
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
+                </div>
+                <div className="image">
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
+                </div>
+                <div className="image">
                     <img src="mathinfologo.png" alt="The MathInfo logo."/>
                     <p>The MathInfo logo.</p>
                 </div>

@@ -9,22 +9,23 @@ export function CheckImage(element, index)
     }
     else
     {
-      return React.createElement(element.tag, { key: index }, element.content);
+      return React.createElement(element.tag, { key: index, dangerouslySetInnerHTML: { __html: element.content }}, null);
     }
 }
 
-function CheckSummary(element, index)
+function CheckSummary(element, index, resource)
 {
   if (element === "Summary")
   {
     return;
   }
-  return React.createElement("li", { key: index }, <Link key={index} to={element}>{element}</Link>);
+  return React.createElement("li", { key: index }, <Link key={index} to={element}>{resource[element].title}</Link>);
 }
 
 export function Section() {
   var { res } = useParams();
   res = res.toLowerCase();
+  document.title = res.charAt(0).toUpperCase() + res.slice(1);
   const [resources, setResources] = useState([]);
   useEffect(() => {
     import(`./data/Resources.json`)
@@ -49,7 +50,7 @@ export function Section() {
           {resource.Summary.text.map((element, index) => CheckImage(element, index))}
           <h2>Articles:</h2>
           <ul>
-            {Object.keys(resource).map((element, index) => CheckSummary(element, index))}
+            {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
           </ul>
         </div>
         <div className="media">
