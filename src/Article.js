@@ -29,7 +29,7 @@ export default function Article() {
             window.location.href = "https://mathinfo.org";
         }
         const articleObject = resource[article];
-        document.title = articleObject.title;
+        document.title = `MathInfo - ${articleObject.title}`;
         return (
             <div className="content">
               <div className="text">
@@ -37,7 +37,7 @@ export default function Article() {
               </div>
               <div className="media">
                 {articleObject.media.map((element, index) => React.createElement("div", { className: "image", key: index }, 
-                React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", null, element.caption)))}
+                React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", { dangerouslySetInnerHTML: { __html: element.caption } }, null)))}
               </div>
             </div>
           );

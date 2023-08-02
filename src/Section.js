@@ -9,7 +9,7 @@ export function CheckImage(element, index)
     }
     else
     {
-      return React.createElement(element.tag, { key: index, dangerouslySetInnerHTML: { __html: element.content }}, null);
+      return React.createElement(element.tag, { key: index, dangerouslySetInnerHTML: { __html: element.content } }, null);
     }
 }
 
@@ -25,7 +25,7 @@ function CheckSummary(element, index, resource)
 export function Section() {
   var { res } = useParams();
   res = res.toLowerCase();
-  document.title = res.charAt(0).toUpperCase() + res.slice(1);
+  document.title = `MathInfo - ${res.charAt(0).toUpperCase() + res.slice(1)}`;
   const [resources, setResources] = useState([]);
   useEffect(() => {
     import(`./data/Resources.json`)
@@ -55,7 +55,7 @@ export function Section() {
         </div>
         <div className="media">
           {resource.Summary.media.map((element, index) => React.createElement("div", { className: "image", key: index }, 
-          React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", null, element.caption)))}
+          React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", { dangerouslySetInnerHTML: { __html: element.caption } }, null)))}
         </div>
       </div>
     );
