@@ -116,7 +116,6 @@ strong
 {
     width: 60%;
     float: left;
-    height: 100%;
     display: block;
     padding-bottom: 40px;
 }
@@ -159,6 +158,10 @@ strong
     width: 80%;
     margin-bottom: 20px;
     margin: 0 auto;
+}
+.section
+{
+    overflow: hidden;
 }
 li + li
 {

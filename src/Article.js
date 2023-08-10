@@ -1,6 +1,15 @@
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-import { CheckImage } from './Section';
+
+function ReadSection(section, index)
+{
+  return (
+    <div className="section" key={index}>
+      <div className="text" dangerouslySetInnerHTML={{ __html: section.text }}></div>
+      <div className="media" dangerouslySetInnerHTML={{ __html: section.image }}></div>
+    </div>
+  );
+}
 
 export default function Article() {
     var { res, article } = useParams();
@@ -32,13 +41,7 @@ export default function Article() {
         document.title = `MathInfo - ${articleObject.title}`;
         return (
             <div className="content">
-              <div className="text">
-                {articleObject.text.map((element, index) => CheckImage(element, index))}
-              </div>
-              <div className="media">
-                {articleObject.media.map((element, index) => React.createElement("div", { className: "image", key: index }, 
-                React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", { dangerouslySetInnerHTML: { __html: element.caption } }, null)))}
-              </div>
+              {articleObject.sections.map((element, index) => ReadSection(element, index))}
             </div>
           );
     }

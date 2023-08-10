@@ -1,18 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-export function CheckImage(element, index)
-{
-    if (element.tag === "img")
-    {
-      return React.createElement("img", { key: index, src: element.src }, null);
-    }
-    else
-    {
-      return React.createElement(element.tag, { key: index, dangerouslySetInnerHTML: { __html: element.content } }, null);
-    }
-}
-
 function CheckSummary(element, index, resource)
 {
   if (element === "Summary")
@@ -47,16 +35,13 @@ export function Section() {
     return (
       <div className="content">
         <div className="text">
-          {resource.Summary.text.map((element, index) => CheckImage(element, index))}
+          <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
           <h2>Articles:</h2>
           <ul>
             {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
           </ul>
         </div>
-        <div className="media">
-          {resource.Summary.media.map((element, index) => React.createElement("div", { className: "image", key: index }, 
-          React.createElement("img", { key : index, src : element.src, alt : element.caption }), React.createElement("p", { dangerouslySetInnerHTML: { __html: element.caption } }, null)))}
-        </div>
+        <div className="media" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
       </div>
     );
   }
