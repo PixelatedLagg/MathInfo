@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function CheckSummary(element, index, resource)
 {
@@ -34,6 +35,13 @@ export function Section() {
   {
     return (
       <div className="content">
+        {/*<Helmet>
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={window.location.href} />
+          <meta property="og:title" content={res.charAt(0).toUpperCase() + res.slice(1)} />
+          <meta property="og:description" content="MathInfo.org is a cool place to learn about Math and Computer Science." />
+          <meta property="og:image" content="https://mathinfo.org/mathinfologo.png" />
+    </Helmet>*/}
         <div className="text">
           <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
           <h2>Articles:</h2>

@@ -117,7 +117,16 @@ strong
     width: 60%;
     float: left;
     display: block;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section .text:not(:first-child)
+{
+    border-top: 1.5px solid black;
+}
+.section .text:not(:last-child)
+{
+    border-bottom: 1.5px solid black;
 }
 .text img
 {
@@ -146,10 +155,12 @@ strong
 .image p
 {
     margin-top: 5px;
+    line-height: 35px !important;
     font-size: 15px !important;
 }
 .image > p > strong
 {
+    line-height: 35px !important;
     font-size: 15px !important;
 }
 .image

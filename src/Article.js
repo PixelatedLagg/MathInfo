@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function ReadSection(section, index)
 {
@@ -41,6 +42,13 @@ export default function Article() {
         document.title = `MathInfo - ${articleObject.title}`;
         return (
             <div className="content">
+              {/*<Helmet>
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:title" content={articleObject.title} />
+                <meta property="og:description" content="MathInfo.org is a cool place to learn about Math and Computer Science." />
+                <meta property="og:image" content="https://mathinfo.org/mathinfologo.png" />
+        </Helmet>*/}
               {articleObject.sections.map((element, index) => ReadSection(element, index))}
             </div>
           );
