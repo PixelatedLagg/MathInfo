@@ -1,13 +1,13 @@
 import './index.css';
 import React from 'react';
 
-export default function Sites() {
-    document.title = "MathInfo - Other Sites";
+export default function External() {
+    document.title = "MathInfo - External Stuff";
     return (
         <div className="content">
             <div className="text">
-                <h1>Other Sites</h1>
-                <p>Here is a list of websites useful for math!</p>
+                <h1>External Stuff</h1>
+                <p>Cool websites:</p>
                 <ul>
                     <li>
                         <a href='https://www.khanacademy.org/'>Khan Academy</a>

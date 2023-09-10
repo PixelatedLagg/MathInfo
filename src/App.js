@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import { Section } from "./Section"
 import Home from "./Home"
-import Sites from "./Sites"
+import External from "./External"
 import Article from "./Article"
 
 function GenerateResources(element, index, resources)
@@ -47,13 +47,13 @@ export default function App() {
               {resources.map((element, index) => GenerateResources(element, index, resources))}
             </div>
           </div>
-          <Link className="header-button header-link vert-space" to="/other-sites">
-            <h3>Other Sites</h3>
+          <Link className="header-button header-link vert-space" to="/external">
+            <h3>External Stuff</h3>
           </Link>
         </div>
         <Routes>
           <Route exact path={"/"} element={<Home />} />
-          <Route exact path={"/other-sites"} element={<Sites />} />
+          <Route exact path={"/external"} element={<External />} />
           <Route path={"/:res"} element={<Section />} />
           <Route path={"/:res/:article"} element={<Article />} />
         </Routes>
