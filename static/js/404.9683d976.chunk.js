@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmathinfo=self.webpackChunkmathinfo||[]).push([[404],{404:function(t){t.exports=JSON.parse('{"Summary":{"text":"<h1>Trigonometry</h1>","image":"<div class=\\"image\\"><img src=\\"https://cdn.discordapp.com/attachments/836806873906806795/1158173673476325488/trig.png\\"></div>"}}')}}]);
