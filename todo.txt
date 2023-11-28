@@ -1,5 +1,1 @@
--add first algebra article
--add second algebra article
--add discord embed
-
-            { "tag" : "img", "src" : "https://cdn.discordapp.com/attachments/1121596064596766772/1121887365116481626/image.png" },
+-use local copy of all images (discord's cdn is blocked on some computers)
