@@ -19,5 +19,14 @@
                 "image" : "<div class=\"image\"><img src=\"/imgs/Trigonometry/findbinit.png\" alt=\"Can you find the length of side b? (Answer ≈ 6.3)\"><p>Can you find the length of side <strong>b</strong>? (Answer ≈ 6.3)</p></div>"
             }
         ]
+    },
+    "right-angle-trigonometry-test-problem" : {
+        "title" : "Right Angle Trigonometry Test Problem",
+        "sections" : [
+            {
+                "text" : "<h1>Right Angle Trigonometry Test Problem</h1><img src='/imgs/Trigonometry/rightangleproblem.png'><p>Solve for x. Solution below:</p><br><strong>Let y = the base of the entire triangle.<br>tan(30°) = 50 / y<br>y * tan(30°) = 50<br>y = 50 / tan(30°)<br><br>Let z = the base of the inner right triangle, z = y - x.<br>tan(60°) = 50 / z<br>z * tan(60°) = 50<br>z * tan(60°) = 50<br><br>x = y - z<br>x = 50 / tan(30°) - 50 / tan(60°)<br>x ≈ 57.7</strong>",
+                "image" : "<div class=\"image\"><img src=\"/imgs/Trigonometry/543alltrig.png\" alt=\"All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.\"><p>All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.</p></div>"
+            }
+        ]
     }
 }
