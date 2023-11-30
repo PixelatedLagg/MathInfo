@@ -1,1 +1,3 @@
 -use local copy of all images (discord's cdn is blocked on some computers)
+-use image naming standards:
+unit_article#_image#
