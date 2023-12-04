@@ -1,0 +1,1 @@
+//have randomly generated trig problems to solve, with solution and explanation
