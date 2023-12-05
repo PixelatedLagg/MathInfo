@@ -36,7 +36,7 @@ button
 {
     all: unset;
 }
-img
+img, svg
 {
     max-width: 100vh;
 }
@@ -131,7 +131,7 @@ a h3
 {
     border-bottom: 1.5px solid black;
 }
-.text img
+.text img, .text svg
 {
     width: calc(100% - 6px);
     border-radius: 5px;
@@ -228,6 +228,49 @@ li a
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-image: linear-gradient(to bottom right, white, #ddd);
+}
+
+
+/* Interactive (https://coolors.co/33ff00-27cc0a) */
+.interactive-button:hover
+{
+    background-image: linear-gradient(to bottom right, white, #ddd);
+}
+
+.yellow
+{
+    background-image: linear-gradient(to bottom right, #EEFF00, #B5CC0A);
+}
+
+.red
+{
+    background-image: linear-gradient(to bottom right, #FF0011, #CC0A0D);
+}
+
+.green
+{
+    background-image: linear-gradient(to bottom right, #33FF00, #27CC0A);
+}
+
+.interactive > *
+{
+    margin-right: 20px;
+}
+
+.interactive-button
+{
+    border-radius: 5px;
+    padding: 10px;
+    width: min-content;
+    border-radius: 5px;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+.interactive-button h3
+{
+    margin: 0;
 }
 
 /* Responsiveness */
