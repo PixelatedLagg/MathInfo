@@ -1,1 +1,4 @@
--basic trig interactive activity that randomly generates questions
+-finish interactive trig side x
+-create interactive trig angle x using inv trig
+-decide on a style for all math text
+-add interactive menu to page header

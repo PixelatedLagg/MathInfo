@@ -1,6 +1,3 @@
-//have randomly generated trig problems to solve, with solution and explanation
-
-
 import '../index.css';
 import React, { useState, useEffect } from 'react';
 
@@ -66,7 +63,7 @@ function generate()
                     answer = (side / Math.tan(rad(calc))).toFixed(1);
                     return (<strong dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
-                else //sin(angle1) = x / sidec
+                else
                 {
                     sideb = "x";
                     sidea = side;
@@ -118,7 +115,7 @@ function generate()
                     answer = (side / Math.tan(rad(calc))).toFixed(1);
                     return (<strong dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
-                else //sin(angle1) = x / sidec
+                else
                 {
                     sidea = "x";
                     sideb = side;
