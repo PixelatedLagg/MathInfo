@@ -1,4 +1,10 @@
 -finish interactive trig side x
++form with submission for answer
++red or green animation if they get it right
++mechanism to move onto next question if they got it right
++mechanism to show solution if they got it wrong
+
+
 -create interactive trig angle x using inv trig
 -decide on a style for all math text
 -add interactive menu to page header
