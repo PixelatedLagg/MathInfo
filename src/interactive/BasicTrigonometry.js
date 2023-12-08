@@ -141,14 +141,14 @@ export default function App() {
                         <text x="178.826" y="138" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve">{angle1}</text>
                         <text x="441.832" y="405" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve">{angle2}</text>
                     </svg>
-                    {/*<div className='interactive'>
+                    <div className='interactive'>
                         <button className='interactive-button yellow vert-space'>
                             <h3>Check</h3>
                         </button>
-                        <button className='interactive-button yellow vert-space'>
-                            <h3>Check</h3>
+                        <button className='interactive-button yellow vert-space' onClick={ generate() }>
+                            <h3>New</h3>
                         </button>
-                    </div>*/}
+                    </div>
                     {solution}
                 </div>
                 <div className='media'>
