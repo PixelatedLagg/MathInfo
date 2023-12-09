@@ -49,7 +49,11 @@ strong, sup
     font-family: 'NotoSansMath';
     font-weight: normal;
     text-decoration: wavy;
-    font-style: italic;
+    color: black;
+    background-image: -webkit-linear-gradient(0deg, #e439a6 35%, #e51299 48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 sup
 {
