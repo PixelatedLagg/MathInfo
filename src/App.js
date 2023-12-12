@@ -6,6 +6,7 @@ import Home from "./Home"
 import External from "./External"
 import Article from "./Article"
 import BasicTrigonometry from "./interactive/Trigonometry"
+import Interactive from "./Interactive"
 
 function GenerateResources(element, index, resources)
 {
@@ -51,12 +52,16 @@ export default function App() {
           <Link className="header-button header-link vert-space" to="/external">
             <h3>External Stuff</h3>
           </Link>
+          <Link className="header-button header-link vert-space" to="/interactive">
+            <h3>Interactive</h3>
+          </Link>
         </div>
         <Routes>
           <Route exact path={"/"} element={<Home />} />
           <Route exact path={"/external"} element={<External />} />
           <Route path={"/:res"} element={<Section />} />
           <Route path={"/:res/:article"} element={<Article />} />
+          <Route path={"/interactive"} element={<Interactive />} />
           <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry />} />
         </Routes>
       </div>
