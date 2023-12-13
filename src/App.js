@@ -5,7 +5,7 @@ import { Section } from "./Section"
 import Home from "./Home"
 import External from "./External"
 import Article from "./Article"
-import BasicTrigonometry from "./interactive/Trigonometry"
+import BasicTrigonometry from "./interactive/Basic-Trigonometry"
 import Interactive from "./Interactive"
 
 function GenerateResources(element, index, resources)
