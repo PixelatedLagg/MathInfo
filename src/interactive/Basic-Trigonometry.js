@@ -142,7 +142,7 @@ function SideTrigonometry()
                 <text x="441.832" y="405" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="angle2">{angle2}</text>
             </svg>
             <div className='interactive'>
-                <button className='interactive-button yellow vert-space' onClick={render}>
+                <button className='interactive-button green vert-space' onClick={render}>
                 <h3>New</h3>
                 </button>
             </div>
