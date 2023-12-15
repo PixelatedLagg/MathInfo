@@ -1,3 +1,9 @@
+DESIGN OVERHAUL:
+-stick to consistent color scheme
+-measure and standardise ALL paddings and margins to traditional web standards
+-verify design meets accessibility standards (https://www.w3.org/WAI/standards-guidelines/)
+
+
 +form with submission for answer
 +red or green animation if they get it right
 +mechanism to move onto next question if they got it right

@@ -8,26 +8,6 @@ import Article from "./Article"
 import BasicTrigonometry from "./interactive/Basic-Trigonometry"
 import Interactive from "./Interactive"
 
-function GenerateResources(element, index, resources)
-{
-    if (resources[0] === element)
-    {
-      if (resources[resources.length - 1] === element)
-      {
-        return <Link key={index} style={{borderTopRightRadius: "5px", borderBottomRightRadius: "5px"}} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>
-      }
-      else
-      {
-        return <Link key={index} style={{borderTopRightRadius: "5px"}} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>
-      }
-    }
-    if (resources[resources.length - 1] === element)
-    {
-      return <Link key={index} style={{borderBottomRightRadius: "5px"}} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>
-    }
-    return <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>
-}
-
 export default function App() {
   const [resources, setResources] = useState([]);
     useEffect(() => {
@@ -46,7 +26,7 @@ export default function App() {
               <h3>Resources</h3>
             </button>
             <div id="resources-content">
-              {resources.map((element, index) => GenerateResources(element, index, resources))}
+              {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
             </div>
           </div>
           <Link className="header-button header-link vert-space" to="/external">

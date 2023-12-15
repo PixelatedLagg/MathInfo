@@ -132,6 +132,8 @@ function SideTrigonometry()
     var solution = generate();
     return (
         <div className="text">
+            <h1>Solve for Side</h1>
+            <button className='interactive-button' onClick={render}>Generate New Problem</button>
             <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480">
                 <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="5" d="M140.575 423.795v-376l376 376h-376z"></path>
                 <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="2" d="M141 387H176V422H141z"></path>
@@ -141,13 +143,10 @@ function SideTrigonometry()
                 <text x="178.826" y="138" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="angle1">{angle1}</text>
                 <text x="441.832" y="405" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="angle2">{angle2}</text>
             </svg>
-            <div className='interactive'>
-                <button className='interactive-button green vert-space' onClick={render}>
-                <h3>New</h3>
-                </button>
-            </div>
+            <p style={{marginTop: "10px", marginBottom: "10px"}}>Solution:</p>
             {solution}
-        </div>);
+        </div>
+        );
 }
 
 export default function Trigonometry() {
@@ -155,9 +154,7 @@ export default function Trigonometry() {
     return (
         <div className='content'>
             <div className='section'>
-                <div className="text">
-                    <SideTrigonometry />
-                </div>
+                <SideTrigonometry />
                 <div className='media'>
                     <div className='image'>
                         <img src='/imgs/Trigonometry/1_3.png' alt='All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.'></img>

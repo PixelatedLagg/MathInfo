@@ -77,7 +77,6 @@ a h3
 }
 .header-link
 {
-    border-radius: 5px;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -86,14 +85,13 @@ a h3
 }
 .header-button
 {
-    background-image: linear-gradient(to bottom right, #00DDFF, #0AAACC);
-    border-radius: 5px;
+    background-color: #00DDFF;
     padding: 10px;
     width: min-content;
 }
 .header-button:hover
 {
-    background-image: linear-gradient(to bottom right, white, #ddd);
+    text-decoration: #0AAACC solid underline 3px;
 }
 .header > *
 {
@@ -102,6 +100,46 @@ a h3
 .header-button h3
 {
     margin: 0;
+}
+
+/* Resources Dropdown */
+
+#resources
+{
+    padding: 0;
+    position: relative;
+    display: inline-block;
+}
+#resources-content
+{
+    display: none;
+    position: absolute;
+    background-color: white;
+    max-width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#resources-content a
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#resources-content a:hover
+{
+    text-decoration: black solid underline 2px;
+}
+#resources:hover #resources-content
+{
+    display: block;
+}
+#resources:hover #resources-button
+{
+    text-decoration: #0AAACC solid underline 3px;
 }
 
 /* Main Page */
@@ -185,6 +223,18 @@ li + li
 {
     margin-top: 15px;
 }
+.interactive-button
+{
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.interactive-button:hover
+{
+    cursor: pointer;
+}
 li a
 {
     color: black;
@@ -192,55 +242,7 @@ li a
     text-decoration: underline;
 }
 
-/* Resources Dropdown */
-
-#resources
-{
-    padding: 0;
-    position: relative;
-    display: inline-block;
-}
-#resources-content
-{
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-}
-#resources-content a
-{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-#resources-content a:hover
-{
-    background-image: linear-gradient(to bottom right, white, #ddd);
-}
-#resources:hover #resources-content
-{
-    display: block;
-}
-#resources:hover #resources-button
-{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background-image: linear-gradient(to bottom right, white, #ddd);
-}
-
-
 /* Interactive (https://coolors.co/33ff00-27cc0a) */
-.interactive-button:hover
-{
-    background-image: linear-gradient(to bottom right, white, #ddd);
-}
-
 .yellow
 {
     background-image: linear-gradient(to bottom right, #EEFF00, #B5CC0A);
@@ -256,25 +258,19 @@ li a
     background-image: linear-gradient(to bottom right, #33FF00, #27CC0A);
 }
 
-.interactive > *
+#solution
 {
-    margin-right: 20px;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    display: block;
+    margin: 5px;
+    max-width: fit-content;
 }
 
-.interactive-button
+#solution:hover
 {
-    border-radius: 5px;
-    padding: 10px;
-    width: min-content;
-    border-radius: 5px;
-    margin: 0;
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-}
-.interactive-button h3
-{
-    margin: 0;
+    filter: none;
+    -webkit-filter: none;
 }
 
 /* Responsiveness */
