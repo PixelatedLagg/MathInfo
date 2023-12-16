@@ -134,7 +134,7 @@ function SideTrigonometry()
         <div className="text">
             <h1>Solve for Side</h1>
             <button className='interactive-button' onClick={render}>Generate New Problem</button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="640" height="480">
+            <svg xmlns="http://www.w3.org/2000/svg" height="480" preserveAspectRatio="xMidYMid meet" viewbox="0 0 1500 1000">
                 <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="5" d="M140.575 423.795v-376l376 376h-376z"></path>
                 <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="2" d="M141 387H176V422H141z"></path>
                 <text x="88" y="247" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="sidea">{sidea}</text>

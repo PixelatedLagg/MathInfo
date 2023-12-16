@@ -38,7 +38,7 @@ export default function Article() {
             window.location.href = "https://mathinfo.org";
         }
         const articleObject = resource[article];
-        document.title = `MathInfo - ${articleObject.title}`;
+        document.title = articleObject.title;
         return (
             <div className="content">
               {articleObject.sections.map((element, index) => ReadSection(element, index))}

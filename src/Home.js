@@ -2,7 +2,7 @@ import './index.css';
 import React from 'react';
 
 export default function Home() {
-    document.title = "MathInfo - Home";
+    document.title = "Home";
     return (
         <div className="content">
             <div className="text">
