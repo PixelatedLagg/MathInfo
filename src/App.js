@@ -17,25 +17,27 @@ export default function App() {
     }, [resources]);
     return (
       <div className="container">
-        <div className="header">
-          <Link className="header-button header-link vert-space" to="/">
-            <h3>Home</h3>
-          </Link>
-          <div className="vert-space" id="resources">
-            <button className="header-button" id="resources-button">
-              <h3>Resources</h3>
-            </button>
-            <div id="resources-content">
-              {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
+        <nav>
+          <div className="header">
+            <Link className="header-button header-link vert-space" to="/">
+              <h3>Home</h3>
+            </Link>
+            <div className="vert-space" id="resources">
+              <button className="header-button" id="resources-button">
+                <h3>Resources</h3>
+              </button>
+              <div id="resources-content">
+                {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
+              </div>
             </div>
+            <Link className="header-button header-link vert-space" to="/external">
+              <h3>External Stuff</h3>
+            </Link>
+            <Link className="header-button header-link vert-space" to="/interactive">
+              <h3>Interactive</h3>
+            </Link>
           </div>
-          <Link className="header-button header-link vert-space" to="/external">
-            <h3>External Stuff</h3>
-          </Link>
-          <Link className="header-button header-link vert-space" to="/interactive">
-            <h3>Interactive</h3>
-          </Link>
-        </div>
+        </nav>
         <Routes>
           <Route exact path={"/"} element={<Home />} />
           <Route exact path={"/external"} element={<External />} />

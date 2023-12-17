@@ -134,17 +134,18 @@ function SideTrigonometry()
         <div className="text">
             <h1>Solve for Side</h1>
             <button className='interactive-button' onClick={render}>Generate New Problem</button>
-            <svg xmlns="http://www.w3.org/2000/svg" height="480" preserveAspectRatio="xMidYMid meet" viewbox="0 0 1500 1000">
-                <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="5" d="M140.575 423.795v-376l376 376h-376z"></path>
-                <path fill="#000" fillOpacity="0" stroke="#000" strokeWidth="2" d="M141 387H176V422H141z"></path>
-                <text x="88" y="247" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="sidea">{sidea}</text>
-                <text x="307.826" y="460" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="sideb">{sideb}</text>
-                <text x="366.826" y="204" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="sidec">{sidec}</text>
-                <text x="178.826" y="138" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="angle1">{angle1}</text>
-                <text x="441.832" y="405" fill="#000" stroke="#000" strokeWidth="0" fontFamily="serif" fontSize="24" textAnchor="middle" xmlSpace="preserve" id="angle2">{angle2}</text>
+            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+                <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{sidea}</text>
+                <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{sideb}</text>
+                <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{sidec}</text>
+                <text stroke="#000" id="angle1" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" fill="#000" y="136" x="90">{angle1}</text>
+                <text id="angle2" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="426" x="380">{angle2}</text>
+                <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
+                <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
             </svg>
-            <p style={{marginTop: "10px", marginBottom: "10px"}}>Solution:</p>
-            {solution}
+            </svg>
+            <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:{solution}</p>
         </div>
         );
 }
