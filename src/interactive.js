@@ -2,8 +2,10 @@ import './index.css';
 import React from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 
-export default function Interactive() {
-    document.title = "Interactives";
+export default function Interactive(props) {
+    document.title = "Interactive";
+    props.onSetNames("Interactive");
+    props.onSetLinks("/interactive");
     return (<div className="content">
         <div className="text">
           <div>
@@ -12,7 +14,7 @@ export default function Interactive() {
           </div>
           <h2>Interactive Activities:</h2>
           <ul>
-            <li><Link key='0' to='/interactive/basic-trigonometry'>Basic Trigonometry</Link></li>
+            <li><Link to='/interactive/basic-trigonometry' onSetNames={props.onSetNames} onSetLinks={props.onSetLinks}>Basic Trigonometry</Link></li>
           </ul>
         </div>
         <div className="media"></div>

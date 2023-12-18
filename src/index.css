@@ -45,7 +45,11 @@ body
 }
 button
 {
-    all: unset;
+    background: unset;
+    border: unset;
+    margin: unset;
+    padding: unset;
+    font-size: unset;
 }
 img, svg
 {
@@ -74,6 +78,11 @@ a h3
 {
     white-space: nowrap;
 }
+a:link, a:visited
+{
+    color: black;
+}
+
 /* Header */
 
 .header
@@ -108,6 +117,34 @@ a h3
     margin: 0;
 }
 
+#location
+{
+    top: 0;
+    height: 24px;
+}
+#location ul
+{
+    margin: 0;
+    padding: 0;
+}
+#location ul li
+{
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: min-content;
+    list-style-type: none;
+}
+#location ul li a
+{
+    white-space: nowrap
+}
+#location ul li:not(:first-child)
+{
+    margin-left: 16px;
+    list-style-type: '\2192';
+}
+
 /* Resources Dropdown */
 
 #resources
@@ -139,7 +176,7 @@ a h3
 {
     text-decoration: black solid underline 2px;
 }
-#resources:hover #resources-content
+#resources:hover #resources-content, #resources:focus #resources-content, #resources:focus-within #resources-content
 {
     display: block;
 }
@@ -242,10 +279,10 @@ li + li
 .interactive-button
 {
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: underline;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 .interactive-button:hover
 {
@@ -281,7 +318,7 @@ li a
     max-width: fit-content;
 }
 
-#solution:hover
+#solution:hover, #solution:focus
 {
     filter: none;
     -webkit-filter: none;

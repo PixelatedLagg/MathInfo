@@ -10,10 +10,10 @@ function CheckSummary(element, index, resource)
   return React.createElement("li", { key: index }, <Link key={index} to={element}>{resource[element].title}</Link>);
 }
 
-export function Section() {
+export function Section(props) {
   var { res } = useParams();
   res = res.toLowerCase();
-  document.title = `MathInfo - ${res.charAt(0).toUpperCase() + res.slice(1)}`;
+  document.title = res.charAt(0).toUpperCase() + res.slice(1);
   const [resources, setResources] = useState([]);
   useEffect(() => {
     import(`./data/Resources.json`)
@@ -32,6 +32,8 @@ export function Section() {
   }, [res]);
   if (resource.length !== 0)
   {
+    props.onSetNames(document.title);
+    props.onSetLinks(`/${res}`);
     return (
       <div className="content">
         <div className="text">

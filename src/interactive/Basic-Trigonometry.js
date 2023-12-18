@@ -32,14 +32,14 @@ function generate()
                     sideb = side;
                     sidec = "x";
                     answer = (side / Math.sin(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = ${side} / x<br>x * sin(${calc}°) = ${side}<br>x = ${side} / sin(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = ${side} / x<br>x * sin(${calc}°) = ${side}<br>x = ${side} / sin(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sideb = "x";
                     sidec = side;
                     answer = (side * Math.sin(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
             case 1: //cos = a / c
                 if (!Math.round(Math.random()))
@@ -47,14 +47,14 @@ function generate()
                     sidea = side;
                     sidec = "x";
                     answer = (side / Math.cos(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = ${side} / x<br>x * cos(${calc}°) = ${side}<br>x = ${side} / cos(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = ${side} / x<br>x * cos(${calc}°) = ${side}<br>x = ${side} / cos(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sidea = "x";
                     sidec = side;
                     answer = (side * Math.cos(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
             case 2: //tan = b / a
                 if (!Math.round(Math.random()))
@@ -62,14 +62,14 @@ function generate()
                     sideb = side;
                     sidea = "x";
                     answer = (side / Math.tan(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sideb = "x";
                     sidea = side;
                     answer = (side * Math.tan(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
         }
     }
@@ -84,14 +84,14 @@ function generate()
                     sidea = side;
                     sidec = "x";
                     answer = (side / Math.sin(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = ${side} / x<br>x * sin(${calc}°) = ${side}<br>x = ${side} / sin(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = ${side} / x<br>x * sin(${calc}°) = ${side}<br>x = ${side} / sin(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sidea = "x";
                     sidec = side;
                     answer = (side * Math.sin(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
             case 1: //cos = b / c
                 if (!Math.round(Math.random()))
@@ -99,14 +99,14 @@ function generate()
                     sideb = side;
                     sidec = "x";
                     answer = (side / Math.cos(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = ${side} / x<br>x * cos(${calc}°) = ${side}<br>x = ${side} / cos(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = ${side} / x<br>x * cos(${calc}°) = ${side}<br>x = ${side} / cos(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sideb = "x";
                     sidec = side;
                     answer = (side * Math.cos(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
             case 2: //tan = a / b
                 if (!Math.round(Math.random()))
@@ -114,14 +114,14 @@ function generate()
                     sidea = side;
                     sideb = "x";
                     answer = (side / Math.tan(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = ${side} / x<br>x * tan(${calc}°) = ${side}<br>x = ${side} / tan(${calc}°)<br>x ≈ ${answer}`}}></strong>);
                 }
                 else
                 {
                     sidea = "x";
                     sideb = side;
                     answer = (side * Math.tan(rad(calc))).toFixed(1);
-                    return (<strong id="solution" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
+                    return (<strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${answer}`}}></strong>);
                 }
         }
     }
@@ -133,9 +133,8 @@ function SideTrigonometry()
     return (
         <div className="text">
             <h1>Solve for Side</h1>
-            <button className='interactive-button' onClick={render}>Generate New Problem</button>
+            <button type="button" className='interactive-button' tabindex="0">Generate New Problem</button>
             <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
-            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
                 <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{sidea}</text>
                 <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{sideb}</text>
                 <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{sidec}</text>
@@ -144,16 +143,17 @@ function SideTrigonometry()
                 <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
                 <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
             </svg>
-            </svg>
             <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:{solution}</p>
         </div>
         );
 }
 
-export default function Trigonometry() {
-    document.title = "Interactive Trigonometry";
+export default function Trigonometry(props) {
+    document.title = "Basic Trigonometry";
+    props.onSetNames("Basic*Trigonometry");
+    props.onSetLinks("/interactive/basic-trigonometry");
     return (
-        <div className='content'>
+        <div className='content' data-names="Interactive Basic-Trigonometry" data-links="/interactive /interactive/basic-trigonometry">
             <div className='section'>
                 <SideTrigonometry />
                 <div className='media'>

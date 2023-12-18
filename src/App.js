@@ -1,5 +1,5 @@
 import './index.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Route, Routes, Link } from "react-router-dom";
 import { Section } from "./Section"
 import Home from "./Home"
@@ -8,13 +8,37 @@ import Article from "./Article"
 import BasicTrigonometry from "./interactive/Basic-Trigonometry"
 import Interactive from "./Interactive"
 
+
+function generateLocation(names, links)
+{
+    if (typeof(names) === "undefined")
+    {
+      return;
+    }
+    var namesSplit = names.split(' ');
+    if (namesSplit[0] === "Home")
+    {
+      return;
+    }
+    var linksSplit = links.split(' ');
+    return namesSplit.map((element, index) => <li><Link key={index} to={linksSplit[index]}>{element.replaceAll('*', ' ')}</Link></li>);
+}
+
 export default function App() {
-  const [resources, setResources] = useState([]);
+    const [resources, setResources] = useState([]);
     useEffect(() => {
         import(`./data/Resources.json`)
         .then((res) => setResources(res.default.Resources))
         .catch(_ => null);
     }, [resources]);
+    const [names, setNames] = useState('');
+    const handleNames = (data) => {
+      setNames(data);
+    }
+    const [links, setLinks] = useState('');
+    const handleLinks = (data) => {
+      setLinks(data);
+    }
     return (
       <div className="container">
         <nav>
@@ -22,8 +46,8 @@ export default function App() {
             <Link className="header-button header-link vert-space" to="/">
               <h3>Home</h3>
             </Link>
-            <div className="vert-space" id="resources">
-              <button className="header-button" id="resources-button">
+            <div className="vert-space" id="resources" tabindex="0">
+              <button className="header-button" id="resources-button" tabIndex="-1">
                 <h3>Resources</h3>
               </button>
               <div id="resources-content">
@@ -37,15 +61,24 @@ export default function App() {
               <h3>Interactive</h3>
             </Link>
           </div>
+          <div id="location">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              {generateLocation(names, links)}
+            </ul>
+          </div>
         </nav>
         <Routes>
-          <Route exact path={"/"} element={<Home />} />
-          <Route exact path={"/external"} element={<External />} />
-          <Route path={"/:res"} element={<Section />} />
-          <Route path={"/:res/:article"} element={<Article />} />
-          <Route path={"/interactive"} element={<Interactive />} />
-          <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry />} />
+          <Route exact path={"/"} element={<Home onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route exact path={"/external"} element={<External onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/:res"} element={<Section onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/:res/:article"} element={<Article onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/interactive"} element={<Interactive onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry onSetNames={handleNames} onSetLinks={handleLinks}/>} />
         </Routes>
       </div>
         );
 }
+//{document.getElementsByClassName("content")[0].getAttribute("data-names").split(' ').map((element, index) => generateLocation(element, index))}

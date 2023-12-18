@@ -4,7 +4,6 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
-- CHANGE COLORS OF QUADRATIC DERIVATION IMAGE BACK TO ORIGINAL COLORS (IMPORTANT TO ARTICLE)
 - find/manage consistent color scheme
 - add interactive activity using inverse trigonometry to find unknown angle
 - be compliant to WCAG 2.2 AAA
@@ -21,24 +20,24 @@ A:
 - [x] 1.3.3	Sensory Characteristics	Instructions don’t rely solely on sensory characteristics.
 - [x] 1.4.1	Use of Colour	Don’t use presentation that relies solely on colour.
 - [x] 1.4.2	Audio Control	Don’t play audio automatically.
-- [ ] 2.1.1	Keyboard	All functionality is accessible by keyboard with no specific timings.
-- [ ] 2.1.2	No Keyboard Trap	Users can navigate to and from all content using a keyboard.
+- [x] 2.1.1	Keyboard	All functionality is accessible by keyboard with no specific timings.
+- [x] 2.1.2	No Keyboard Trap	Users can navigate to and from all content using a keyboard.
 - [x] 2.1.4	Character Key Shortcuts	Allow users to turn off or remap single-key character shortcuts.
 - [x] 2.2.1	Timing Adjustable	Provide user controls to turn off, adjust or extend time limits.
 - [x] 2.2.2	Pause, Stop, Hide	Provide user controls to pause, stop and hide moving and auto-updating content.
 - [x] 2.3.1	Three Flashes or Below Threshold	No content flashes more than three times per second.
 - [ ] 2.4.1	Bypass Blocks	Provide a way for users to skip repeated blocks of content. (add skip to content button)
 - [x] 2.4.2	Page Titled	Use helpful and clear page titles.
-- [ ] 2.4.3	Focus Order	Components receive focus in a logical sequence.
+- [x] 2.4.3	Focus Order	Components receive focus in a logical sequence.
 - [x] 2.4.4	Link Purpose (In Context)	Every link’s purpose is clear from its text or context.
-- [ ] 2.4.7	Focus Visible	Keyboard focus is visible when used.
+- [x] 2.4.7	Focus Visible	Keyboard focus is visible when used.
 - [ ] 2.4.3	Page Break Navigation	Provide a way to navigate between page break locators.
 - [x] 2.5.1	Pointer Gestures	Multi-point and path-based gestures can be operated with a single pointer.
 - [x] 2.5.2	Pointer Cancellation	Functions don’t complete on the down-click of a pointer.
 - [ ] 2.5.3	Label in Name	Where a component has a text label, the name of the component also contains the text displayed.
 - [x] 2.5.4	Motion Actuation	Functions operated by motion can also be operated through an interface and responding to motion can be disabled.
 - [ ] 3.1.1	Language of Page	Each webpage has a default human language assigned.
-- [ ] 3.2.1	On Focus	Elements do not change when they receive focus.
+- [x] 3.2.1	On Focus	Elements do not change when they receive focus.
 - [x] 3.2.2	On Input	Elements do not change when they receive input.
 - [ ] 3.2.6	Consistent Help	Help options are presented in the same order.
 - [x] 3.3.1	Error Identification	identify and describe input errors for users.
@@ -59,7 +58,7 @@ AA:
 - [x] 1.4.11 – Non-Text Contrast	The contrast between user interface components, graphics and adjacent colours is at least 3:1.
 - [ ] 1.4.12 – Text Spacing	Content and function retain meaning when users change elements of text spacing.
 - [x] 1.4.13 – Content on Hover or Focus	When hover or focus triggers content to appear, it is dismissible, hoverable and persistent.
-- [ ] 2.4.5 – Multiple Ways	Offer at least two ways to find pages on your website.
+- [x] 2.4.5 – Multiple Ways	Offer at least two ways to find pages on your website.
 - [ ] 2.4.6 – Headings and Labels	Headings and labels describe topic or purpose.
 - [x] 2.4.11 – Focus Appearance (Minimum)	Focus indicators are clearly distinguishable when active.
 - [x] 2.5.7 – Dragging Movements	Functionality that uses dragging movements can be achieved with a single pointer without dragging.

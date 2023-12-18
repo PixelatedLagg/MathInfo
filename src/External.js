@@ -1,10 +1,12 @@
 import './index.css';
 import React from 'react';
 
-export default function External() {
-    document.title = "MathInfo - External Stuff";
+export default function External(props) {
+    document.title = "External";
+    props.onSetNames("External");
+    props.onSetLinks("/external");
     return (
-        <div className="content">
+        <div className="content" data-names="External" data-links="/external">
             <div className="text">
                 <h1>External Stuff</h1>
                 <p>Cool websites:</p>

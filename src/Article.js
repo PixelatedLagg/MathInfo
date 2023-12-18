@@ -11,7 +11,7 @@ function ReadSection(section, index)
   );
 }
 
-export default function Article() {
+export default function Article(props) {
     var { res, article } = useParams();
     res = res.toLowerCase();
     article = article.toLowerCase();
@@ -39,6 +39,8 @@ export default function Article() {
         }
         const articleObject = resource[article];
         document.title = articleObject.title;
+        props.onSetNames(`${res.charAt(0).toUpperCase() + res.slice(1)} ${articleObject.title.replaceAll(' ', '*')}`);
+        props.onSetLinks(`/${res} /${res}/${article}`);
         return (
             <div className="content">
               {articleObject.sections.map((element, index) => ReadSection(element, index))}
