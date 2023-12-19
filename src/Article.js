@@ -42,7 +42,7 @@ export default function Article(props) {
         props.onSetNames(`${res.charAt(0).toUpperCase() + res.slice(1)} ${articleObject.title.replaceAll(' ', '*')}`);
         props.onSetLinks(`/${res} /${res}/${article}`);
         return (
-            <div className="content">
+            <div className="content" role="main">
               {articleObject.sections.map((element, index) => ReadSection(element, index))}
             </div>
           );

@@ -4,6 +4,10 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
+- CHANGE RESOURCES SIZE WHEN SCALED DOWN TO MOBILE DEVICES
+- ADD INTERACTIVE PAGE TO BASIC TRIGONOMETRY INTERACTIVE NAMES/LINKS LIST
+- ADD LIGHT/DARK MODE
+- ADD 200% TEXT OPTION
 - find/manage consistent color scheme
 - add interactive activity using inverse trigonometry to find unknown angle
 - be compliant to WCAG 2.2 AAA
@@ -15,8 +19,8 @@ A:
 - [x] 1.2.1	Audio-only and Video-only (Pre-recorded)	Provide an alternative to video-only and audio-only content.
 - [x] 1.2.2	Captions (Pre-recorded)	Provide captions for videos with audio.
 - [x] 1.2.3	Audio Description or Media Alternative (Pre-recorded)	Provide audio description or text transcript for videos with sound.
-- [ ] 1.3.1	Info and Relationships	Content, structure and relationships can be programmatically determined.
-- [ ] 1.3.2	Meaningful Sequence	Present content in a meaningful order.
+- [x] 1.3.1	Info and Relationships	Content, structure and relationships can be programmatically determined.
+- [x] 1.3.2	Meaningful Sequence	Present content in a meaningful order.
 - [x] 1.3.3	Sensory Characteristics	Instructions don’t rely solely on sensory characteristics.
 - [x] 1.4.1	Use of Colour	Don’t use presentation that relies solely on colour.
 - [x] 1.4.2	Audio Control	Don’t play audio automatically.
@@ -26,12 +30,12 @@ A:
 - [x] 2.2.1	Timing Adjustable	Provide user controls to turn off, adjust or extend time limits.
 - [x] 2.2.2	Pause, Stop, Hide	Provide user controls to pause, stop and hide moving and auto-updating content.
 - [x] 2.3.1	Three Flashes or Below Threshold	No content flashes more than three times per second.
-- [ ] 2.4.1	Bypass Blocks	Provide a way for users to skip repeated blocks of content. (add skip to content button)
+- [x] 2.4.1	Bypass Blocks	Provide a way for users to skip repeated blocks of content. (add skip to content button)
 - [x] 2.4.2	Page Titled	Use helpful and clear page titles.
 - [x] 2.4.3	Focus Order	Components receive focus in a logical sequence.
 - [x] 2.4.4	Link Purpose (In Context)	Every link’s purpose is clear from its text or context.
 - [x] 2.4.7	Focus Visible	Keyboard focus is visible when used.
-- [ ] 2.4.3	Page Break Navigation	Provide a way to navigate between page break locators.
+- [x] 2.4.3	Page Break Navigation	Provide a way to navigate between page break locators.
 - [x] 2.5.1	Pointer Gestures	Multi-point and path-based gestures can be operated with a single pointer.
 - [x] 2.5.2	Pointer Cancellation	Functions don’t complete on the down-click of a pointer.
 - [ ] 2.5.3	Label in Name	Where a component has a text label, the name of the component also contains the text displayed.

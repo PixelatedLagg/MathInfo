@@ -35,7 +35,7 @@ export function Section(props) {
     props.onSetNames(document.title);
     props.onSetLinks(`/${res}`);
     return (
-      <div className="content">
+      <div className="content" role="main">
         <div className="text">
           <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
           <h2>Articles:</h2>

@@ -6,7 +6,7 @@ export default function Interactive(props) {
     document.title = "Interactive";
     props.onSetNames("Interactive");
     props.onSetLinks("/interactive");
-    return (<div className="content">
+    return (<div className="content" role="main">
         <div className="text">
           <div>
             <h1>Interactive</h1>

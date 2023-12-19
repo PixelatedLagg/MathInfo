@@ -76,6 +76,7 @@ strong
 }
 a h3
 {
+    width: unset;
     white-space: nowrap;
 }
 a:link, a:visited
@@ -110,7 +111,7 @@ a:link, a:visited
 }
 .header > *
 {
-    margin-right: 20px;
+    margin-right: 24px;
 }
 .header-button h3
 {
@@ -351,22 +352,34 @@ li a
 }
 @media (max-width: 500px) 
 {
+    .header > *
+    {
+        margin-right: 0;
+    }
+    .header
+    {
+        display: inline-block;
+        padding: 16px !important;
+        width: 100%;
+    }
     .header-button
     {
-        display: block;
         text-align: center;
-        width: calc(100% - 20px);
-        margin-right: 20px;
+        width: calc(100% - 16px) !important;
+    }
+    #resourcecs .header-button
+    {
+        margin: 0 !important;
+        width: 100% !important;
     }
     #resources
     {
-        width: 100%;
+        width: calc(100% - 16px);
         display: block;
     }
     #resources-content
     {
         width: 100%;
-        border-top-right-radius: 0;
     }
     #resources-content a
     {

@@ -41,7 +41,7 @@ export default function App() {
     }
     return (
       <div className="container">
-        <nav>
+        <nav role="navigation">
           <div className="header">
             <Link className="header-button header-link vert-space" to="/">
               <h3>Home</h3>

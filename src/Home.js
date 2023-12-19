@@ -6,7 +6,7 @@ export default function Home(props) {
     props.onSetNames("Home");
     props.onSetLinks("/");
     return (
-        <div className="content">
+        <div className="content" role="main">
             <div className="text">
                 <h1>Welcome to MathInfo.org</h1>
                 <p>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive </p>

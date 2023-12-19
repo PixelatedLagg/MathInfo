@@ -6,7 +6,7 @@ export default function External(props) {
     props.onSetNames("External");
     props.onSetLinks("/external");
     return (
-        <div className="content" data-names="External" data-links="/external">
+        <div className="content" role="main">
             <div className="text">
                 <h1>External Stuff</h1>
                 <p>Cool websites:</p>
