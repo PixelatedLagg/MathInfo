@@ -89,7 +89,9 @@ a:link, a:visited
 .header
 {
     background-color: #0B0B0B;
-    padding: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .header-link
 {
@@ -111,7 +113,9 @@ a:link, a:visited
 }
 .header > *
 {
+    margin-top: 16px;
     margin-right: 24px;
+    top: 0;
 }
 .header-button h3
 {
@@ -153,6 +157,7 @@ a:link, a:visited
     padding: 0;
     position: relative;
     display: inline-block;
+    height: 24px;
 }
 #resources-content
 {
@@ -327,14 +332,26 @@ li a
 
 /* Responsiveness */
 
-@media (max-width: 1300px) 
+.header-menu:hover path
+{
+    fill: #067189;
+}
+
+.header-menu
+{
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+}
+
+@media (max-width: 1360px)
 {
     .container
     {
         margin: 0;
     }
 }
-@media (max-width: 800px) 
+@media (max-width: 800px)
 {
     .media
     {
@@ -350,43 +367,17 @@ li a
         height: 100vh;
     }
 }
-@media (max-width: 500px) 
+@media (max-width: 500px)
 {
     .header > *
     {
-        margin-right: 0;
-    }
-    .header
-    {
-        display: inline-block;
-        padding: 16px !important;
+        text-align: center;
+        margin-right: 16px;
         width: 100%;
     }
-    .header-button
+    #resources .header-button
     {
         text-align: center;
-        width: calc(100% - 16px) !important;
-    }
-    #resourcecs .header-button
-    {
-        margin: 0 !important;
         width: 100% !important;
-    }
-    #resources
-    {
-        width: calc(100% - 16px);
-        display: block;
-    }
-    #resources-content
-    {
-        width: 100%;
-    }
-    #resources-content a
-    {
-        text-align: center;
-    }
-    .vert-space + .vert-space
-    {
-        margin-top: 15px;
     }
 }

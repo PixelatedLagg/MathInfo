@@ -43,10 +43,11 @@ export default function App() {
       <div className="container">
         <nav role="navigation">
           <div className="header">
-            <Link className="header-button header-link vert-space" to="/">
+            <svg class="header-menu" width="40px" height="40px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#00DDFF" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>
+            <Link className="header-button header-link" to="/">
               <h3>Home</h3>
             </Link>
-            <div className="vert-space" id="resources" tabindex="0">
+            <div id="resources" tabindex="0">
               <button className="header-button" id="resources-button" tabIndex="-1">
                 <h3>Resources</h3>
               </button>
@@ -54,10 +55,10 @@ export default function App() {
                 {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
               </div>
             </div>
-            <Link className="header-button header-link vert-space" to="/external">
+            <Link className="header-button header-link" to="/external">
               <h3>External Stuff</h3>
             </Link>
-            <Link className="header-button header-link vert-space" to="/interactive">
+            <Link className="header-button header-link" to="/interactive">
               <h3>Interactive</h3>
             </Link>
           </div>
