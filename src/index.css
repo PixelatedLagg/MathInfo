@@ -89,9 +89,9 @@ a:link, a:visited
 .header
 {
     background-color: #0B0B0B;
-    padding-bottom: 16px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-bottom: 16px;
 }
 .header-link
 {
@@ -115,7 +115,6 @@ a:link, a:visited
 {
     margin-top: 16px;
     margin-right: 24px;
-    top: 0;
 }
 .header-button h3
 {
@@ -155,9 +154,7 @@ a:link, a:visited
 #resources
 {
     padding: 0;
-    position: relative;
     display: inline-block;
-    height: 24px;
 }
 #resources-content
 {
@@ -301,21 +298,6 @@ li a
     text-decoration: underline;
 }
 
-.yellow
-{
-    background-image: linear-gradient(to bottom right, #EEFF00, #B5CC0A);
-}
-
-.red
-{
-    background-image: linear-gradient(to bottom right, #FF0011, #CC0A0D);
-}
-
-.green
-{
-    background-image: linear-gradient(to bottom right, #33FF00, #27CC0A);
-}
-
 #solution
 {
     filter: blur(3px);
@@ -330,28 +312,27 @@ li a
     -webkit-filter: none;
 }
 
-/* Responsiveness */
-
-.header-menu:hover path
-{
-    fill: #067189;
-}
-
 .header-menu
 {
-    width: 40px;
-    height: 40px;
-    bottom: 0;
+    display: none;
 }
 
-@media (max-width: 1360px)
+.header-group
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1360px) 
 {
     .container
     {
         margin: 0;
     }
 }
-@media (max-width: 800px)
+@media (max-width: 800px) 
 {
     .media
     {
@@ -367,17 +348,25 @@ li a
         height: 100vh;
     }
 }
-@media (max-width: 500px)
+@media (max-width: 496px) 
 {
+    .header-menu
+    {
+        display: unset;
+    }
     .header > *
     {
-        text-align: center;
-        margin-right: 16px;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
         width: 100%;
     }
-    #resources .header-button
+    .header-button
     {
         text-align: center;
-        width: 100% !important;
+    }
+    #resources-button
+    {
+        width: 100%;
     }
 }

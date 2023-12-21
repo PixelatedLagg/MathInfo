@@ -43,7 +43,6 @@ export default function App() {
       <div className="container">
         <nav role="navigation">
           <div className="header">
-            <svg class="header-menu" width="40px" height="40px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#00DDFF" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>
             <Link className="header-button header-link" to="/">
               <h3>Home</h3>
             </Link>
@@ -83,3 +82,4 @@ export default function App() {
         );
 }
 //{document.getElementsByClassName("content")[0].getAttribute("data-names").split(' ').map((element, index) => generateLocation(element, index))}
+//<svg class="header-menu" width="40px" height="40px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="#00DDFF" d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"/></svg>

@@ -4,8 +4,7 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
-- CHANGE RESOURCES SIZE WHEN SCALED DOWN TO MOBILE DEVICES
-- ADD INTERACTIVE PAGE TO BASIC TRIGONOMETRY INTERACTIVE NAMES/LINKS LIST
+- ADD HAMBURGER MENU BUTTON ON WIDTH < 496
 - ADD LIGHT/DARK MODE
 - ADD 200% TEXT OPTION
 - find/manage consistent color scheme

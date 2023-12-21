@@ -150,10 +150,10 @@ function SideTrigonometry()
 
 export default function Trigonometry(props) {
     document.title = "Basic Trigonometry";
-    props.onSetNames("Basic*Trigonometry");
-    props.onSetLinks("/interactive/basic-trigonometry");
+    props.onSetNames("Interactive Basic*Trigonometry");
+    props.onSetLinks("/interactive /interactive/basic-trigonometry");
     return (
-        <div className='content' data-names="Interactive Basic-Trigonometry" data-links="/interactive /interactive/basic-trigonometry">
+        <div className='content'>
             <div className='section'>
                 <SideTrigonometry />
                 <div className='media'>
