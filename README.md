@@ -92,7 +92,7 @@ AAA:
 - [x] 2.2.6 – Timeouts	Warn users about timeouts that cause data loss.
 - [x] 2.3.2 – Three Flashes	No content flashes more than three times per second.
 - [x] 2.3.3 – Animation from Interactions	Users can disable motion animation.
-- [ ] 2.4.8 – Location	Let users know where they are on your website. (add Home > Section > Article to each page)
+- [x] 2.4.8 – Location	Let users know where they are on your website. (add Home > Section > Article to each page)
 - [x] 2.4.9 – Link Purpose (Link Only)	Every link’s purpose is clear from its text.
 - [x] 2.4.10 – Section Headings	Organise content with headings.
 - [ ] 2.4.12 – Focus Appearance (Enhanced)	Focus indicators are more clearly distinguishable when active.
