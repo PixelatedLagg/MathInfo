@@ -37,7 +37,7 @@ A:
 - [x] 2.4.3	Page Break Navigation	Provide a way to navigate between page break locators.
 - [x] 2.5.1	Pointer Gestures	Multi-point and path-based gestures can be operated with a single pointer.
 - [x] 2.5.2	Pointer Cancellation	Functions don’t complete on the down-click of a pointer.
-- [ ] 2.5.3	Label in Name	Where a component has a text label, the name of the component also contains the text displayed.
+- [x] 2.5.3	Label in Name	Where a component has a text label, the name of the component also contains the text displayed.
 - [x] 2.5.4	Motion Actuation	Functions operated by motion can also be operated through an interface and responding to motion can be disabled.
 - [ ] 3.1.1	Language of Page	Each webpage has a default human language assigned.
 - [x] 3.2.1	On Focus	Elements do not change when they receive focus.
