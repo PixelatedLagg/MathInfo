@@ -14,7 +14,7 @@ export default function Home(props) {
             </div>
             <div className="media">
                 <div className="image">
-                    <img src="mathinfologo.png" alt="The MathInfo logo."/>
+                    <img src="mathinfologo.png" alt=""/>
                     <p>The MathInfo logo.</p>
                 </div>
             </div>

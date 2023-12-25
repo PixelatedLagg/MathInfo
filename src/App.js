@@ -44,21 +44,21 @@ export default function App() {
         <nav role="navigation">
           <div className="header">
             <Link className="header-button header-link" to="/">
-              <h3>Home</h3>
+              <span>Home</span>
             </Link>
             <div id="resources" tabindex="0">
               <button className="header-button" id="resources-button" tabIndex="-1">
-                <h3>Resources</h3>
+                <span>Resources</span>
               </button>
               <div id="resources-content">
                 {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
               </div>
             </div>
             <Link className="header-button header-link" to="/external">
-              <h3>External Stuff</h3>
+              <span>External Stuff</span>
             </Link>
             <Link className="header-button header-link" to="/interactive">
-              <h3>Interactive</h3>
+              <span>Interactive</span>
             </Link>
           </div>
           <div id="location">

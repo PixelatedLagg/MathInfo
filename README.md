@@ -14,7 +14,7 @@ TODO:
 WCAG 2.2 checklist (supplied from https://www.wuhcag.com/wcag-checklist/):
 
 A:
-- [ ] 1.1.1	Non-text Content	Provide text alternatives for non-text content that serves the same purpose.
+- [ ] 1.1.1	Non-text Content	Provide text alternatives for non-text content that serves the same purpose. (aria-label)
 - [x] 1.2.1	Audio-only and Video-only (Pre-recorded)	Provide an alternative to video-only and audio-only content.
 - [x] 1.2.2	Captions (Pre-recorded)	Provide captions for videos with audio.
 - [x] 1.2.3	Audio Description or Media Alternative (Pre-recorded)	Provide audio description or text transcript for videos with sound.

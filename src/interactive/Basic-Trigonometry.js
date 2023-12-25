@@ -192,7 +192,7 @@ export default function Trigonometry(props) {
                 </div>
                 <div className='media'>
                     <div className='image'>
-                        <img src='/imgs/Trigonometry/1_3.png' alt='All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.'></img>
+                        <img src='/imgs/Trigonometry/1_3.png' alt=""></img>
                         <p>All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.</p>
                     </div>
                 </div>

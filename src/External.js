@@ -42,11 +42,11 @@ export default function External(props) {
             </div>
             <div className="media">
                 <div className="image">
-                    <img src="https://m.media-amazon.com/images/I/81XUnIqK4cL._SY466_.jpg" alt="The cover of Introduction to Number Theory (Art of Problem Solving Introduction) by Mathew Crawford."/>
+                    <img src="https://m.media-amazon.com/images/I/81XUnIqK4cL._SY466_.jpg" alt=""/>
                     <p>The cover of Introduction to Number Theory (Art of Problem Solving Introduction) by Mathew Crawford.</p>
                 </div>
                 <div className="image">
-                    <img src="https://pictures.abebooks.com/isbn/9780618394807-us.jpg" alt="The cover of Precalculus with Limits: a Graphing Approach 4th edition by Ron Larson."/>
+                    <img src="https://pictures.abebooks.com/isbn/9780618394807-us.jpg" alt=""/>
                     <p>The cover of Precalculus with Limits: a Graphing Approach 4th edition by Ron Larson.</p>
                 </div>
             </div>

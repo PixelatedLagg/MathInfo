@@ -74,8 +74,17 @@ strong
     font-size: 16px;
     line-height: 32px;
 }
-a h3
+a span, button span
 {
+    margin: 0 !important;
+    line-height: unset;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
     width: unset;
     white-space: nowrap;
 }
