@@ -9,8 +9,8 @@ export default function Home(props) {
         <div className="content" role="main">
             <div className="text">
                 <h1>Welcome to MathInfo.org</h1>
-                <p>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive </p>
-                <p>This website was created by Will and Alex, two highschoolers deeply interested in the relating fields. It is their goal to spread knowledge pertaining to the many intriguing facets of both Mathematics and Computer Science.</p>
+                <p>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.</p>
+                <p>This website was created by Will and Alex, two highschoolers interested in the relating fields. It's their goal to spread the useful knowledge surrounding these topics.</p>
             </div>
             <div className="media">
                 <div className="image">

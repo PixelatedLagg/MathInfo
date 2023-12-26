@@ -8,12 +8,13 @@ import './fonts/NotoSansMath/NotoSansMath-Regular.ttf'
 
 const rootElement = 
 document.getElementById('root');
+document.documentElement.setAttribute("data-theme", "light");
 const root = 
 createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
-      <App />
+      <App/>
     </BrowserRouter>
   </React.StrictMode>,
 );
