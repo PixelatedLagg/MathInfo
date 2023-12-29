@@ -28,10 +28,12 @@ function toggleDark(mode, setMode)
 {
   if (document.documentElement.getAttribute("data-theme") === "light")
   {
+    localStorage.setItem("data-theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
   }
   else
   {
+    localStorage.setItem("data-theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
   }
 }
@@ -42,6 +44,15 @@ export default function App() {
         import(`./data/Resources.json`)
         .then((res) => setResources(res.default.Resources))
         .catch(_ => null);
+        if (localStorage.getItem("data-theme") == null)
+        {
+          localStorage.setItem("data-theme", "light");
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        else
+        {
+          document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+        }
     }, [resources]);
     const [names, setNames] = useState('');
     const handleNames = (data) => {
