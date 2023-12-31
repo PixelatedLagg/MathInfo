@@ -4,6 +4,7 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
+- create chatgpt prompt to automate editing and json formatting of articles
 - ADD HAMBURGER MENU BUTTON ON WIDTH < 496
 - ADD LIGHT/DARK MODE
 - ADD 200% TEXT OPTION
