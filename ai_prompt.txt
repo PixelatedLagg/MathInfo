@@ -1,5 +1,9 @@
-here is an article: {article}
+{article}
 
-here is the json representation (with html) of the article: {json/html of article}
+edit the article according to the following rules:
+- put all function parameters into parenthesis, for example: sin60 becomes sin(60)
+- make sure all multiplication is with * symbol, including implicit multiplication. be sure to space it out, for example: 9*8 becomes 9 * 8
 
-with that example, create the json/html representation of this article: {article}
+- enclose all exponents in a sup tag
+
+*creating an ai prompt is very hard to make perfect, might just use chatgpt4
