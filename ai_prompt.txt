@@ -7,3 +7,4 @@ edit the article according to the following rules:
 - enclose all exponents in a sup tag
 
 *creating an ai prompt is very hard to make perfect, might just use chatgpt4
+-try to more fully explain intentions of actions..
