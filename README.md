@@ -5,8 +5,6 @@ yarn start - locally run main branch
 
 TODO:
 - create chatgpt prompt to automate editing and json formatting of articles
-- ADD HAMBURGER MENU BUTTON ON WIDTH < 496
-- ADD LIGHT/DARK MODE
 - ADD 200% TEXT OPTION
 - find/manage consistent color scheme
 - add interactive activity using inverse trigonometry to find unknown angle
@@ -86,7 +84,7 @@ AAA:
 - [x] 1.4.7 – Low or No Background Audio	Audio-only content is clear with no or minimal background noise.
 - [ ] 1.4.8 – Visual Presentation	Offer users a range of presentation options for blocks of text.
 - [x] 1.4.9 – Images of Text (No Exception)	Don’t use images of text.
-- [ ] 2.1.3 – Keyboard (No Exception)	All functionality is accessible by keyboard with no exceptions.
+- [x] 2.1.3 – Keyboard (No Exception)	All functionality is accessible by keyboard with no exceptions.
 - [x] 2.2.3 – No Timing	No time limits on your website.
 - [x] 2.2.4 – Interruptions	Users can postpone or supress non-emergency interruptions.
 - [x] 2.2.5 – Re-authenticating	Save user data when re-authenticating.
@@ -96,14 +94,14 @@ AAA:
 - [x] 2.4.8 – Location	Let users know where they are on your website. (add Home > Section > Article to each page)
 - [x] 2.4.9 – Link Purpose (Link Only)	Every link’s purpose is clear from its text.
 - [x] 2.4.10 – Section Headings	Organise content with headings.
-- [ ] 2.4.12 – Focus Appearance (Enhanced)	Focus indicators are more clearly distinguishable when active.
-- [ ] 2.5.5 – Target Size	The target size for pointer inputs is at least 44 by 44 CSS pixels.
-- [ ] 2.5.6 – Concurrent Input Mechanisms	No restrictions on modes of input.
+- [x] 2.4.12 – Focus Appearance (Enhanced)	Focus indicators are more clearly distinguishable when active.
+- [x] 2.5.5 – Target Size	The target size for pointer inputs is at least 44 by 44 CSS pixels.
+- [x] 2.5.6 – Concurrent Input Mechanisms	No restrictions on modes of input.
 - [x] 3.1.3 – Unusual Words	Define any unusual words or phrases.
-- [ ] 3.1.4 – Abbreviations	Define any abbreviations.
+- [x] 3.1.4 – Abbreviations	Define any abbreviations.
 - [x] 3.1.5 – Reading Level	Users with nine years of schooling can read your content.
 - [x] 3.1.6 – Pronunciation	Define words where meaning is ambiguous without pronunciation. 
 - [x] 3.2.5 – Change on Request	Elements do not change without a request.
-- [ ] 3.3.5 – Help	Provide help to users.
+- [x] 3.3.5 – Help	Provide help to users.
 - [x] 3.3.6 – Error Prevention (All)	Check, confirm and allow reversal of pages that require users to submit information.
 - [x] 3.3.9 – Accessible Authentication (Enhanced)	Don’t authenticate users through memory, transcription or cognitive tests.
