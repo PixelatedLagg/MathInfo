@@ -4,8 +4,8 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
+- MAKE ALL TEXT INCLUDING LISTS SCALE UP WITH
 - create chatgpt prompt to automate editing and json formatting of articles
-- ADD 200% TEXT OPTION
 - find/manage consistent color scheme
 - add interactive activity using inverse trigonometry to find unknown angle
 - be compliant to WCAG 2.2 AAA

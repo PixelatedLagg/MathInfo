@@ -38,6 +38,20 @@ function toggleDark()
   }
 }
 
+function toggleFontSize()
+{
+  if (document.documentElement.getAttribute("font-size") === "normal")
+  {
+    localStorage.setItem("font-size", "double");
+    document.documentElement.setAttribute("font-size", "double");
+  }
+  else
+  {
+    localStorage.setItem("font-size", "normal");
+    document.documentElement.setAttribute("font-size", "normal");
+  }
+}
+
 export default function App() {
     const [resources, setResources] = useState([]);
     useEffect(() => {
@@ -52,6 +66,15 @@ export default function App() {
         else
         {
           document.documentElement.setAttribute("data-theme", localStorage.getItem("data-theme"));
+        }
+        if (localStorage.getItem("font-size") == null)
+        {
+          localStorage.setItem("font-size", "normal");
+          document.documentElement.setAttribute("font-size", "normal");
+        }
+        else
+        {
+          document.documentElement.setAttribute("font-size", localStorage.getItem("font-size"));
         }
     }, [resources]);
     const [names, setNames] = useState('');
@@ -89,6 +112,7 @@ export default function App() {
               </button>
               <div className="dropdown-content">
                 <button onClick={toggleDark}>Light/Dark Mode</button>
+                <button onClick={toggleFontSize}>200% Font Size</button>
               </div>
             </div>
           </div>
