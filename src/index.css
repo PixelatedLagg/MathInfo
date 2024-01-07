@@ -28,13 +28,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face
-{
-    font-family: 'NotoSansMath';
-    src: url('./fonts/NotoSansMath/NotoSansMath-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 p, strong
 {
     font-size: var(--font-size);
@@ -80,8 +73,6 @@ button
     margin: unset;
     padding: unset;
     font-size: unset;
-    font-size: var(--font-size);
-    line-height: var(--line-height);
 }
 img, svg
 {
@@ -93,8 +84,6 @@ html, body, #root
 }
 strong, sup
 {
-    font-family: 'NotoSansMath';
-    font-weight: normal;
     color: var(--strong-color);
 }
 sup
@@ -104,7 +93,7 @@ sup
 }
 strong
 {
-    line-height: calc(var(--line-height) + 8px);
+    font-weight: normal;
 }
 a span, button span
 {
@@ -327,10 +316,11 @@ li + li
 }
 .interactive-button
 {
-    font-size: 16px;
     text-decoration: underline;
     margin-top: 8px;
     margin-bottom: 8px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
 }
 .interactive-button:hover
 {
