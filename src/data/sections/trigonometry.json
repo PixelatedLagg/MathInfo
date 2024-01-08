@@ -30,20 +30,26 @@
         ]
     },
     "general-angle-trigonometry-i": {
-    "title": "General Angle Trigonometry I",
-    "sections": [
-        {
-            "text": "<h1>General Angle Trigonometry I</h1><p>Extend trigonometry to non-right angle triangles by dividing a general triangle into right triangles. Analyzing these right triangles reveals relationships useful for solving the general case.</p><p>Creating two right triangles by dropping an altitude gives us:</p><p><strong>sin(B) = h/a</strong> and <strong>sin(A) = h/b</strong>. Thus, <strong>a * sin(B) = b * sin(A)</strong>, leading to <strong>sin(B) / b = sin(A) / a</strong>. Rotating the triangle and applying the same logic, <strong>sin(C) / c</strong> is also equivalent, confirming the law of sines: <strong>sin(A) / a = sin(B) / b = sin(C) / c</strong>.</p>",
-            "image": "<div class=\"image\"><img src=\"/imgs/Trigonometry/General_Triangle.png\" alt=\"\"><p>General triangle divided into two right triangles.</p></div>"
-        },
-        {
-            "text": "<h2>AAS Triangle</h2><p>For AAS (Angle Angle Side) triangles, where two angles and one side are known, solving is straightforward. Subtract the sum of the known angles from <strong>180</strong> to find the missing angle. Use the law of sines to find the remaining sides.</p><p>For example, with angles <strong>A</strong> and <strong>B</strong> and side <strong>a</strong> known, <strong>C = 180 - (A + B)</strong> and <strong>sin(A) / a = sin(B) / b = sin(C) / c</strong> can be used to find sides <strong>b</strong> and <strong>c</strong>.</p>",
-            "image": "<div class=\"image\"><img src=\"/imgs/Trigonometry/AAS_Triangle.png\" alt=\"\"><p>AAS triangle with law of sines application.</p></div>"
-        },
-        {
-            "text": "<h2>SSA Triangles</h2><p>SSA (Side Side Angle) triangles present ambiguity, potentially leading to two distinct solutions. Using the law of sines, <strong>sin(A) / a = sin(B) / b</strong>, and the inverse sine function, we can find possible angles. However, since <strong>sin<sup>-1</sup></strong> yields two angles, we must verify which leads to a valid triangle.</p><p>For instance, given <strong>sin(70) / 10 = sin(B) / 9</strong>, we find <strong>B</strong> using <strong>sin<sup>-1</sup>(9 * sin(70) / 10)</strong>. The principle value and its supplement are considered. The valid angle is the one that, when combined with the known angles, results in a sum of <strong>180</strong> degrees.</p>",
-            "image": "<div class=\"image\"><img src=\"/imgs/Trigonometry/SSA_Triangle.png\" alt=\"\"><p>SSA triangle showing the determination of possible solutions.</p></div>"
-        }
-    ]
-}
+        "title": "General Angle Trigonometry I",
+        "sections": [
+            {
+                "text": "<h1>General Angle Trigonometry I</h1><p>Extend trigonometry to non-right angle triangles by dividing a general triangle into right triangles. Analyzing these right triangles reveals relationships useful for solving the general case.</p><p>Creating two right triangles by dropping an altitude gives us:</p><p><strong>sin(B) = h/a</strong> and <strong>sin(A) = h/b</strong>. Thus, <strong>a * sin(B) = b * sin(A)</strong>, leading to <strong>sin(B) / b = sin(A) / a</strong>. Rotating the triangle and applying the same logic, <strong>sin(C) / c</strong> is also equivalent, confirming the law of sines: <strong>sin(A) / a = sin(B) / b = sin(C) / c</strong>.</p><h2>AAS Triangles</h2><p>For AAS (Angle Angle Side) triangles, where two angles and one side are known, solving is straightforward. Subtract the sum of the known angles from <strong>180</strong> to find the missing angle. Use the law of sines to find the remaining sides.</p><p>For example, with angles <strong>A</strong> and <strong>B</strong> and side <strong>a</strong> known, <strong>C = 180 - (A + B)</strong> and <strong>sin(A) / a = sin(B) / b = sin(C) / c</strong> can be used to find sides <strong>b</strong> and <strong>c</strong>.</p><h2>SSA Triangles</h2><p>SSA (Side Side Angle) triangles present ambiguity, potentially leading to two distinct solutions. Using the law of sines, <strong>sin(A) / a = sin(B) / b</strong>, and the inverse sine function, we can find possible angles. However, since <strong>sin<sup>-1</sup></strong> yields two angles, we must verify which leads to a valid triangle.</p><p>For instance, given <strong>sin(70) / 10 = sin(B) / 9</strong>, we find <strong>B</strong> using <strong>sin<sup>-1</sup>(9 * sin(70) / 10)</strong>. The principle value and its supplement are considered. The valid angle is the one that, when combined with the known angles, results in a sum of <strong>180</strong> degrees.</p>",
+                "image": "<div class=\"image\"><img src=\"/imgs/Trigonometry/General_Triangle.png\" alt=\"\"><p>General triangle divided into two right triangles.</p></div>"
+            }
+        ]
+    },
+    "general-angle-trigonometry-ii": {
+        "title": "General Angle Trigonometry II",
+        "sections": [
+            {
+                "text": "<h1>General Angle Trigonometry II</h1><p>The law of sines is a key relationship in general triangles. Another crucial relationship is the pythagorean theorem. Consider a general triangle with an altitude dropped, forming two right triangles. Let's denote <strong>x</strong> as the base length of the smaller triangle and <strong>c - x</strong> as the base length of the larger inner triangle from side <strong>c</strong>.</p><p>Performing cosine on <strong>B</strong> gives us:</p><p><strong>cos(B) = x / a</strong><br><strong>a * cos(B) = x</strong></p><p>Now, <strong>x</strong> is expressed in terms of our triangle's side lengths and angles. We can use the pythagorean theorem to create relationships between these right triangles. We aim to find a relationship that excludes variables <strong>h</strong> or <strong>x</strong>.</p><p><strong>h<sup>2</sup> + x<sup>2</sup> = a<sup>2</sup></strong><br><strong>h<sup>2</sup> + (c - x)<sup>2</sup> = b<sup>2</sup></strong><br><strong>h<sup>2</sup> = a<sup>2</sup> - x<sup>2</sup></strong><br><strong>h<sup>2</sup> = b<sup>2</sup> - (c - x)<sup>2</sup></strong></p><p>Setting these two equations equal to each other eliminates <strong>h</strong>.</p><p><strong>a<sup>2</sup> - x<sup>2</sup> = b<sup>2</sup> - (c - x)<sup>2</sup></strong><br><strong>= b<sup>2</sup> - (c<sup>2</sup> - 2 * c * x + x<sup>2</sup>)</strong><br><strong>= b<sup>2</sup> - c<sup>2</sup> + 2 * c * x - x<sup>2</sup></strong><br><strong>a<sup>2</sup> = b<sup>2</sup> - c<sup>2</sup> + 2 * c * x</strong><br><strong>a<sup>2</sup> + c<sup>2</sup> = b<sup>2</sup> + 2 * c * x</strong></p><p>Substituting <strong>x = a * cos(B)</strong> removes <strong>x</strong>.</p><p><strong>a<sup>2</sup> + c<sup>2</sup> - 2 * a * c * cos(B) = b<sup>2</sup></strong></p><p>This equation can be rewritten as <strong>a<sup>2</sup> + b<sup>2</sup> - 2 * a * b * cos(γ) = c<sup>2</sup></strong>, where the cos angle remains opposite to <strong>c</strong>. This is the law of cosines.</p><p>The law of sines is an extension of the pythagorean theorem. When cos is <strong>90°</strong>, <strong>cos(90°) = 0</strong>, simplifying the equation to <strong>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></strong>, a special case of the law of cosines.</p>"
+            },
+            {
+                "text": "<h2>SAS triangles</h2><p>In SAS triangles, the law of sines is inapplicable, but the law of cosines can be used to find the missing side.</p><p><strong>9<sup>2</sup> + 8<sup>2</sup> - 2 * 9 * 8 * cos(40°) = c<sup>2</sup></strong><br><strong>34.7 = c<sup>2</sup></strong><br><strong>c ≈ 5.9</strong></p><p>With all 3 sides known, we can use the law of sines to find an angle. There's no need to consider the possibility of two triangles because knowing all 3 side lengths allows only one possible set of angles.</p>"
+            },
+            {
+                "text": "<h2>SSS triangles</h2><p>To solve SSS triangles, we use the law of cosines. To eliminate ambiguity, solve for the angle of the largest side first. This approach removes the possibility of a second triangle because the longest side corresponds to the largest angle.</p><p><strong>5<sup>2</sup> + 6<sup>2</sup> - 2 * 5 * 6 * cos(x) = 7<sup>2</sup></strong><br><strong>25 + 36 - 60 * cos(x) = 49</strong><br><strong>-60 * cos(x) = -12</strong><br><strong>cos<sup>-1</sup>(12/60) = x</strong><br><strong>x ≈ 78.5°</strong></p><p>Proceed with the law of sines to get the next angles.</p>"
+            }
+        ]
+    }
 }
