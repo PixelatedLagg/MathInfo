@@ -45,6 +45,6 @@ export default function Article(props) {
             <div className="content" role="main">
               {articleObject.sections.map((element, index) => ReadSection(element, index))}
             </div>
-          );
+        );
     }
 }
