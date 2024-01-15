@@ -41,34 +41,34 @@ A:
 - [x] 3.1.1	Language of Page	Each webpage has a default human language assigned.
 - [x] 3.2.1	On Focus	Elements do not change when they receive focus.
 - [x] 3.2.2	On Input	Elements do not change when they receive input.
-- [ ] 3.2.6	Consistent Help	Help options are presented in the same order.
+- [x] 3.2.6	Consistent Help	Help options are presented in the same order.
 - [x] 3.3.1	Error Identification	identify and describe input errors for users.
-- [ ] 3.3.2	Labels or Instructions	Provide labels or instructions for user input.
+- [x] 3.3.2	Labels or Instructions	Provide labels or instructions for user input.
 - [x] 3.3.7	Redundant Entry	Auto-fill or provide information that’s required more than once in the same process.
 - [x] 4.1.1	Parsing	No major code errors
-- [ ] 4.1.2	Name, Role, Value	The name and role of user components can be understood by technology.
+- [x] 4.1.2	Name, Role, Value	The name and role of user components can be understood by technology.
 
 AA:
 - [x] 1.2.4 – Captions (Live)	Add captions to live videos.
 - [x] 1.2.5 – Audio Description (Pre-recorded)	Provide audio descriptions for pre-recorded videos.
-- [ ] 1.3.4 – Orientation	Your website adapts to portrait and landscape views.
-- [ ] 1.3.5 – Identify Input Purpose	The purpose of input fields must be programmatically determinable.
+- [x] 1.3.4 – Orientation	Your website adapts to portrait and landscape views.
+- [x] 1.3.5 – Identify Input Purpose	The purpose of input fields must be programmatically determinable.
 - [x] 1.4.3 – Contrast (Minimum)	Contrast ratio between text and background is at least 4.5:1.
-- [ ] 1.4.4 – Resize Text	Text can be resized to 200% without loss of content or function.
+- [x] 1.4.4 – Resize Text	Text can be resized to 200% without loss of content or function.
 - [x] 1.4.5 – Images of Text	Don’t use images of text.
-- [ ] 1.4.10 – Reflow	Content retains meaning and function without scrolling in two dimensions.
+- [x] 1.4.10 – Reflow	Content retains meaning and function without scrolling in two dimensions.
 - [x] 1.4.11 – Non-Text Contrast	The contrast between user interface components, graphics and adjacent colours is at least 3:1.
-- [ ] 1.4.12 – Text Spacing	Content and function retain meaning when users change elements of text spacing.
+- [x] 1.4.12 – Text Spacing	Content and function retain meaning when users change elements of text spacing.
 - [x] 1.4.13 – Content on Hover or Focus	When hover or focus triggers content to appear, it is dismissible, hoverable and persistent.
 - [x] 2.4.5 – Multiple Ways	Offer at least two ways to find pages on your website.
-- [ ] 2.4.6 – Headings and Labels	Headings and labels describe topic or purpose.
+- [x] 2.4.6 – Headings and Labels	Headings and labels describe topic or purpose.
 - [x] 2.4.11 – Focus Appearance (Minimum)	Focus indicators are clearly distinguishable when active.
 - [x] 2.5.7 – Dragging Movements	Functionality that uses dragging movements can be achieved with a single pointer without dragging.
 - [x] 2.5.8 – Target Size (Minimum)	The target size for pointer inputs is at least 24 by 24 CSS pixels.
-- [ ] 3.1.2 – Language of Parts	Each part of a webpage has a default human language assigned.
-- [ ] 3.2.3 – Consistent Navigation	Position menus and standard controls consistently.
-- [ ] 3.2.4 – Consistent Identification	Identify components with the same function consistently.
-- [ ] 3.2.7 – Visible Controls	Give users a way to identify controls without mouse hover or keyboard focus.
+- [x] 3.1.2 – Language of Parts	Each part of a webpage has a default human language assigned.
+- [x] 3.2.3 – Consistent Navigation	Position menus and standard controls consistently.
+- [x] 3.2.4 – Consistent Identification	Identify components with the same function consistently.
+- [x] 3.2.7 – Visible Controls	Give users a way to identify controls without mouse hover or keyboard focus.
 - [x] 3.3.3 – Error Suggestion	Suggest corrections when users make mistakes.
 - [x] 3.3.4- Error Prevention (Legal, Financial, Data)	Check, confirm and allow reversal of pages that cause important commitments.
 - [x] 3.3.8 – Accessible Authentication	Don’t authenticate users through memory, transcription or cognitive tests without alternatives.
