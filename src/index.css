@@ -36,15 +36,12 @@ p, strong, i
 p, h1, h2, h3, span, a, li::marker, button, i
 {
     color: var(--font-color);
+    font-family: 'Inter';
 }
 nav
 {
     margin: 0;
     padding: 0;
-}
-*
-{
-    font-family: 'Inter';
 }
 p
 {

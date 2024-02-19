@@ -31,6 +31,11 @@ export default function Article(props) {
         .then((res) => setResource(res.default))
         .catch(_ => null);
     }, [res]);
+    useEffect(() => {
+      if (window.MathJax) {
+          window.MathJax.typesetPromise();
+      }
+  }, [resource, article]);
     if (resource.length !== 0)
     {
         if (!resource.hasOwnProperty(article))
