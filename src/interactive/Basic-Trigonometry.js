@@ -40,6 +40,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${(side * Math.sin(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
             case 1: //cos = a / c
                 if (!Math.round(Math.random()))
                 {
@@ -63,6 +64,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${(side * Math.cos(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
             case 2: //tan = b / a
                 if (!Math.round(Math.random()))
                 {
@@ -86,6 +88,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${(side * Math.tan(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
         }
     }
     else
