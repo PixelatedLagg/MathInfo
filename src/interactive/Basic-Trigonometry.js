@@ -118,6 +118,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `sin(${calc}°) = x / ${side}<br>${side} * sin(${calc}°) = x<br>x ≈ ${(side * Math.sin(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
             case 1: //cos = b / c
                 if (!Math.round(Math.random()))
                 {
@@ -141,6 +142,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `cos(${calc}°) = x / ${side}<br>${side} * cos(${calc}°) = x<br>x ≈ ${(side * Math.cos(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
             case 2: //tan = a / b
                 if (!Math.round(Math.random()))
                 {
@@ -164,6 +166,7 @@ function generate(_side, setSide)
                         answer: <strong id="solution" tabindex="0" dangerouslySetInnerHTML={{ __html: `tan(${calc}°) = x / ${side}<br>${side} * tan(${calc}°) = x<br>x ≈ ${(side * Math.tan(rad(calc))).toFixed(1)}`}}></strong>
                     });
                 }
+                break;
         }
     }
 }
@@ -199,6 +202,20 @@ export default function Trigonometry(props) {
                         <p>All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.</p>
                     </div>
                 </div>
+            </div>
+            <div className='section'>
+                <h1>Solve for Angle</h1>
+                <button type="button" className='interactive-button' tabindex="0" onClick={() => generate(_side, setSide)}>Generate New Problem</button>
+                <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+                    <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_side.sidea}</text>
+                    <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_side.sideb}</text>
+                    <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{_side.sidec}</text>
+                    <text stroke="#000" id="angle1" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" fill="#000" y="136" x="90">{_side.angle1}</text>
+                    <text id="angle2" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="426" x="380">{_side.angle2}</text>
+                    <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
+                    <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
+                </svg>
+                <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:{_side.answer}</p>
             </div>
         </div>
         );
