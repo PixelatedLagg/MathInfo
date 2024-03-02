@@ -171,7 +171,7 @@ function generateSide(_side, setSide)
     }
 }
 
-function generateAngle(_side, setAngle)
+function generateAngle(_angle, setAngle)
 {
     var calc = rand(1, 89), side = rand(1, 25);
     if (!Math.round(Math.random()))
