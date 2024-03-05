@@ -9,13 +9,20 @@ function rad(angle) {
     return angle * (Math.PI / 180);
 }
 
+function deg(angle) {
+    return angle * (180 / Math.PI);
+}
+
 function generateSide(_side, setSide)
 {
     var calc = rand(1, 89), side = rand(1, 25);
-    if (!Math.round(Math.random())) {
-        switch (rand(0, 2)) {
+    if (!Math.round(Math.random()))
+    {
+        switch (rand(0, 3))
+        {
             case 0: //sin = b / c
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -24,7 +31,9 @@ function generateSide(_side, setSide)
                         sidec: "x",
                         answer: <strong id="solution" tabIndex="0">sin({calc}°) = {side} / x<br/>x * sin({calc}°) = {side}<br/>x = {side} / sin({calc}°)<br/>x ≈ {(side / Math.sin(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -36,7 +45,8 @@ function generateSide(_side, setSide)
                 }
                 break;
             case 1: //cos = a / c
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -45,7 +55,9 @@ function generateSide(_side, setSide)
                         sidec: "x",
                         answer: <strong id="solution" tabIndex="0">cos({calc}°) = {side} / x<br/>x * cos({calc}°) = {side}<br/>x = {side} / cos({calc}°)<br/>x ≈ {(side / Math.cos(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -57,7 +69,8 @@ function generateSide(_side, setSide)
                 }
                 break;
             case 2: //tan = b / a
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -66,7 +79,9 @@ function generateSide(_side, setSide)
                         sidea: "x",
                         answer: <strong id="solution" tabIndex="0">tan({calc}°) = {side} / x<br/>x * tan({calc}°) = {side}<br/>x = {side} / tan({calc}°)<br/>x ≈ {(side / Math.tan(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle1: `${calc}°`,
                         angle2: "",
@@ -78,10 +93,14 @@ function generateSide(_side, setSide)
                 }
                 break;
         }
-    } else {
-        switch (rand(0, 2)) {
+    }
+    else
+    {
+        switch (rand(0, 3))
+        {
             case 0: //sin = a / c
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -90,7 +109,9 @@ function generateSide(_side, setSide)
                         sidec: "x",
                         answer: <strong id="solution" tabIndex="0">sin({calc}°) = {side} / x<br/>x * sin({calc}°) = {side}<br/>x = {side} / sin({calc}°)<br/>x ≈ {(side / Math.sin(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -102,7 +123,8 @@ function generateSide(_side, setSide)
                 }
                 break;
             case 1: //cos = b / c
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -111,7 +133,9 @@ function generateSide(_side, setSide)
                         sidec: "x",
                         answer: <strong id="solution" tabIndex="0">cos({calc}°) = {side} / x<br/>x * cos({calc}°) = {side}<br/>x = {side} / cos({calc}°)<br/>x ≈ {(side / Math.cos(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -123,7 +147,8 @@ function generateSide(_side, setSide)
                 }
                 break;
             case 2: //tan = a / b
-                if (!Math.round(Math.random())) {
+                if (!Math.round(Math.random()))
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -132,7 +157,9 @@ function generateSide(_side, setSide)
                         sideb: "x",
                         answer: <strong id="solution" tabIndex="0">tan({calc}°) = {side} / x<br/>x * tan({calc}°) = {side}<br/>x = {side} / tan({calc}°)<br/>x ≈ {(side / Math.tan(rad(calc))).toFixed(1)}</strong>
                     });
-                } else {
+                }
+                else
+                {
                     setSide({
                         angle2: `${calc}°`,
                         angle1: "",
@@ -147,21 +174,99 @@ function generateSide(_side, setSide)
     }
 }
 
+function generateAngle(_angle, setAngle)
+{
+    var side = rand(1, 25), side2 = rand(1, 25);
+    if (!Math.round(Math.random())) //angle 1
+    {
+        switch (rand(0, 3))
+        {
+            case 0: //sin = b / c
+                setAngle({
+                    angle1: "θ",
+                    angle2: "",
+                    sidec: side + side2,
+                    sideb: side,
+                    sidea: "",
+                    answer: <strong id="solution" tabIndex="0">sin(θ) = {side} / {side + side2}<br/>sin<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.asin(side / (side + side2)))).toFixed(1)}°</strong>
+                });
+                break;
+            case 1: //cos = a / c
+                setAngle({
+                    angle1: "θ",
+                    angle2: "",
+                    sidec: side + side2,
+                    sideb: "",
+                    sidea: side,
+                    answer: <strong id="solution" tabIndex="0">cos(θ) = {side} / {side + side2}<br/>cos<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.acos(side / (side + side2)))).toFixed(1)}°</strong>
+                });
+                break;
+            case 2: //tan = b / a
+                setAngle({
+                    angle1: "θ",
+                    angle2: "",
+                    sidec: "",
+                    sideb: side,
+                    sidea: side2,
+                    answer: <strong id="solution" tabIndex="0">tan(θ) = {side} / {side2}<br/>tan<sup>-1</sup>({side} / {side2}) = θ<br/>θ ≈ {(deg(Math.atan(side / side2))).toFixed(1)}°</strong>
+                });
+                break;
+        }
+    }
+    else //angle 2
+    {
+        switch (rand(0, 3))
+        {
+            case 0: //sin = a / c
+                setAngle({
+                    angle1: "",
+                    angle2: "θ",
+                    sidec: side + side2,
+                    sideb: "",
+                    sidea: side,
+                    answer: <strong id="solution" tabIndex="0">sin(θ) = {side} / {side + side2}<br/>sin<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.asin(side / (side + side2)))).toFixed(1)}°</strong>
+                });
+                break;
+            case 1: //cos = b / c
+                setAngle({
+                    angle1: "",
+                    angle2: "θ",
+                    sidec: side + side2,
+                    sideb: side,
+                    sidea: "",
+                    answer: <strong id="solution" tabIndex="0">cos(θ) = {side} / {side + side2}<br/>cos<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.acos(side / (side + side2)))).toFixed(1)}°</strong>
+                });
+                break;
+            case 2: //tan = a / b
+                setAngle({
+                    angle1: "",
+                    angle2: "θ",
+                    sidec: "",
+                    sideb: side,
+                    sidea: side2,
+                    answer: <strong id="solution" tabIndex="0">tan(θ) = {side2} / {side}<br/>tan<sup>-1</sup>({side2} / {side}) = θ<br/>θ ≈ {(deg(Math.atan(side2 / side))).toFixed(1)}°</strong>
+                });
+                break;
+        }
+    }
+}
 
 export default function Trigonometry(props) {
     const [_side, setSide] = useState(0);
+    const [_angle, setAngle] = useState(0);
     document.title = "Basic Trigonometry";
     props.onSetNames("Interactive Basic*Trigonometry");
     props.onSetLinks("/interactive /interactive/basic-trigonometry");
     useEffect(() => {
         generateSide(_side, setSide);
+        generateAngle(_angle, setAngle);
     }, []);
     return (
         <div className='content'>
             <div className='section'>
                 <div className="text">
                     <h1>Solve for Side</h1>
-                    <button type="button" className='interactive-button' tabindex="0" onClick={() => generateSide(_side, setSide)}>Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(_side, setSide)}>Generate New Problem</button>
                     <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
                         <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_side.sidea}</text>
                         <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_side.sideb}</text>
@@ -172,6 +277,28 @@ export default function Trigonometry(props) {
                         <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
                     </svg>
                     <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:{_side.answer}</p>
+                </div>
+                <div className='media'>
+                    <div className='image'>
+                        <img src='/imgs/Trigonometry/1_3.png' alt=""></img>
+                        <p>All 6 trigonometric functions of an angle on a triangle of side lengths 5, 4, and 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div className='section'>
+                <div className="text">
+                    <h1>Solve for Angle</h1>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateAngle(_angle, setAngle)}>Generate New Problem</button>
+                    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
+                        <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_angle.sidea}</text>
+                        <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_angle.sideb}</text>
+                        <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{_angle.sidec}</text>
+                        <text stroke="#000" id="angle1" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" fill="#000" y="136" x="90">{_angle.angle1}</text>
+                        <text id="angle2" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="426" x="380">{_angle.angle2}</text>
+                        <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
+                        <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
+                    </svg>
+                    <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:{_angle.answer}</p>
                 </div>
                 <div className='media'>
                     <div className='image'>
