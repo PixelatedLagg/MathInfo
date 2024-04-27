@@ -5,9 +5,7 @@ yarn start - locally run main branch
 
 TODO:
 - MAKE ALL TEXT INCLUDING LISTS SCALE UP WITH
-- create chatgpt prompt to automate editing and json formatting of articles
 - find/manage consistent color scheme
-- add interactive activity using inverse trigonometry to find unknown angle
 - be compliant to WCAG 2.2 AAA
 
 WCAG 2.2 checklist (supplied from https://www.wuhcag.com/wcag-checklist/):
