@@ -15,6 +15,7 @@ export default function Interactive(props) {
           <h2>Interactive Activities:</h2>
           <ul>
             <li><Link to='/interactive/basic-trigonometry' onSetNames={props.onSetNames} onSetLinks={props.onSetLinks}>Basic Trigonometry</Link></li>
+            <li><Link to='/interactive/statistics-categories' onSetNames={props.onSetNames} onSetLinks={props.onSetLinks}>Statistics Categories</Link></li>
           </ul>
         </div>
         <div className="media"></div>

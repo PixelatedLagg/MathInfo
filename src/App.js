@@ -6,6 +6,7 @@ import Home from "./Home"
 import External from "./External"
 import Article from "./Article"
 import BasicTrigonometry from "./interactive/Basic-Trigonometry"
+import StatisticsCategories from './interactive/Statistics-Categories';
 import Interactive from "./Interactive"
 
 
@@ -132,6 +133,7 @@ export default function App() {
           <Route path={"/:res/:article"} element={<Article onSetNames={handleNames} onSetLinks={handleLinks}/>} />
           <Route path={"/interactive"} element={<Interactive onSetNames={handleNames} onSetLinks={handleLinks}/>} />
           <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/interactive/statistics-categories"} element={<StatisticsCategories onSetNames={handleNames} onSetLinks={handleLinks}/>} />
         </Routes>
       </div>
         );
