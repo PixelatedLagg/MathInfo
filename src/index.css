@@ -350,6 +350,13 @@ li a
     -webkit-filter: none;
 }
 
+/* Tables */
+
+table, th, td 
+{
+	border: 1px solid;
+}
+
 /* Responsiveness */
 
 @media (max-width: 1360px) 
