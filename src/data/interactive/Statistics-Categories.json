@@ -1,3 +1,67 @@
 {
-    
+    "population proportion test" : [
+        "A university claims that 60% of its students graduate within four years; out of a sample of 300 students, 180 graduate within four years.",
+        "A clinical trial finds that 120 out of 150 people are protected by a vaccine, and the researcher wants to test if the vaccine's effectiveness is 80%.",
+        "A company claims 90% of customers are satisfied; a survey of 200 customers shows 170 are satisfied.",
+        "A researcher flips a coin 100 times and gets 60 heads; they want to test if the coin is fair.",
+        "A politician claims that 70% of voters support their campaign; a poll of 500 voters shows 330 in favor.",
+        "A school states that 95% of its graduates find employment within six months; a survey of 200 graduates finds 180 employed.",
+        "A health official claims that 10% of the population is at risk of a certain disease; a sample of 1,000 people finds 80 at risk.",
+        "A brand asserts that 85% of its customers are repeat buyers; a survey of 400 customers finds 320 are repeat buyers.",
+        "A dairy company claims that only 5% of its milk cartons are defective; an inspection of 300 cartons finds 20 defects.",
+        "A phone manufacturer claims that 99% of its phones pass quality tests; out of 1,000 phones tested, 985 pass.",
+        "A survey suggests that 75% of people prefer online shopping; a sample of 600 people finds 450 prefer online shopping.",
+        "A restaurant claims that 80% of its customers are satisfied with their service; a survey of 250 customers shows 200 are satisfied.",
+        "A university states that 70% of applicants are accepted into their programs; out of 400 applicants, 280 are accepted.",
+        "A survey claims that 65% of adults exercise regularly; a sample of 500 adults finds 320 who exercise regularly.",
+        "A social media company asserts that 90% of users are satisfied with their privacy settings; a poll of 1,000 users finds 850 satisfied.",
+        "A retailer claims that 30% of customers use their loyalty program; out of 800 customers surveyed, 240 use the program.",
+        "A nonprofit organization claims that 25% of the population donates to charity; a sample of 1,200 people shows 300 donors.",
+        "An airline claims that 95% of its flights are on time; a review of 600 flights shows 570 on time.",
+        "A car manufacturer states that only 2% of their vehicles have defects; an inspection of 1,000 vehicles finds 30 defects.",
+        "A mobile app developer claims that 85% of users find their app useful; a survey of 500 users finds 400 who find it useful.",
+        "A coffee shop claims that 50% of its customers buy a pastry with their coffee; out of 200 customers, 110 buy a pastry."
+    ],
+    "different in population proportions test": [
+
+    ],
+    "population mean test": [
+
+    ],
+    "difference in population means test": [
+
+    ],
+    "difference in population means (paired) test": [
+
+    ],
+    "chi square goodness of fit test": [
+
+    ],
+    "chi square independence test": [
+
+    ],
+    "chi square homogeneity test": [
+
+    ],
+    "linear regression slope test": [
+
+    ],
+    "confidence interval for population proportion": [
+
+    ],
+    "confidence interval for the difference in population proportions": [
+
+    ],
+    "confidence interval for population mean": [
+
+    ],
+    "confidence interval for the difference in population means": [
+
+    ],
+    "confidence interval for the difference in population means (paired)": [
+
+    ],
+    "confidence interval for population slope ": [
+
+    ]
 }

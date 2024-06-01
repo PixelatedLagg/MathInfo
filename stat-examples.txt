@@ -1,3 +1,0 @@
-one prop z-test
-
-"Out of a sample of 200 customers, 130 said they were satisfied with the service, and we want to test if this satisfaction rate is significantly different from the industry standard satisfaction rate of 60%."
