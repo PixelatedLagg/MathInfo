@@ -13,7 +13,7 @@ function deg(angle) {
     return angle * (180 / Math.PI);
 }
 
-function generateSide(_side, setSide)
+function generateSide(setSide)
 {
     var calc = rand(1, 89), side = rand(1, 25);
     if (!Math.round(Math.random()))
@@ -174,7 +174,7 @@ function generateSide(_side, setSide)
     }
 }
 
-function generateAngle(_angle, setAngle)
+function generateAngle(setAngle)
 {
     var side = rand(1, 25), side2 = rand(1, 25);
     if (!Math.round(Math.random())) //angle 1
@@ -258,15 +258,15 @@ export default function Trigonometry(props) {
     props.onSetNames("Interactive Basic*Trigonometry");
     props.onSetLinks("/interactive /interactive/basic-trigonometry");
     useEffect(() => {
-        generateSide(_side, setSide);
-        generateAngle(_angle, setAngle);
+        generateSide(setSide);
+        generateAngle(setAngle);
     }, []);
     return (
         <div className='content'>
             <div className='section'>
                 <div className="text">
                     <h1>Solve for Side</h1>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(_side, setSide)}>Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(setSide)}>Generate New Problem</button>
                     <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
                         <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_side.sidea}</text>
                         <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_side.sideb}</text>
@@ -288,7 +288,7 @@ export default function Trigonometry(props) {
             <div className='section'>
                 <div className="text">
                     <h1>Solve for Angle</h1>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateAngle(_angle, setAngle)}>Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateAngle(setAngle)}>Generate New Problem</button>
                     <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet">
                         <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_angle.sidea}</text>
                         <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_angle.sideb}</text>

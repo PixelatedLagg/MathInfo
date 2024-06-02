@@ -33,7 +33,7 @@ p, strong, i
     font-size: var(--font-size);
     line-height: var(--line-height);
 }
-p, h1, h2, h3, span, a, li::marker, button, i
+p, h1, h2, h3, span, a, li::marker, button, i, label
 {
     color: var(--font-color);
     font-family: 'Inter';
@@ -350,12 +350,27 @@ li a
     -webkit-filter: none;
 }
 
+.prompt
+{
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+}
+
 /* Tables */
 
 table, th, td 
 {
 	border: 1px solid;
 }
+
+/* Input */
+
+.checkboxes .input-label
+{
+    display: block;
+    margin-bottom: 12px;
+}
+
 
 /* Responsiveness */
 
