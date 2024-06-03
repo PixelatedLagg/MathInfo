@@ -2,7 +2,7 @@ import '../index.css';
 import React, { useState, useEffect } from 'react';
 
 function rand(min, max) {
-    return Math.floor(Math.random() * (max - min) ) + min;
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
 function rad(angle) {
