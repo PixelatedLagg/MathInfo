@@ -86,6 +86,8 @@ export default function StatisticsCategories(props) {
                         <div className="input-label"><input type="checkbox" id="13" checked={_promptTypes[13]} onChange={() => handleChange(13)}/><label for="13">Confidence Interval for the Difference in Population Means (Paired)</label></div>
                         <div className="input-label"><input type="checkbox" id="14" checked={_promptTypes[14]} onChange={() => handleChange(14)}/><label for="14">Confidence Interval for Linear Regression Slope</label></div>
                     </div>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => setPromptTypes([true, true, true, true, true, true, true, true, true, true, true, true, true, true, true])}>Select All</button><br/>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => setPromptTypes([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false])}>Deselect All</button><br/>
                     <button type="button" className='interactive-button' tabIndex="0" onClick={() => generatePrompt(setPrompt, _promptTypes)}>Generate New Problem</button>
                     <div className="prompt">
                         <p>Prompt: {_prompt.text}</p>
