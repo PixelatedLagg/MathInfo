@@ -20,11 +20,7 @@ function generatePrompt(setPrompt, _promptTypes)
         {
             if (length === rand)
             {
-                /*var json;
-                import(`.././data/interactive/Statistics-Categories.json`)
-                .then((json) => json[length][Math.floor(Math.random() * 19)])
-                .catch(_ => null);*/
-                setPrompt({text: json[`$[length]`][Math.floor(Math.random() * 19)], ans: numToType(length)});
+                setPrompt({text: json[`${length}`][Math.floor(Math.random() * 19)], ans: numToType(length)});
             }
             length++;
         }
@@ -56,7 +52,7 @@ function numToType(num)
 
 export default function StatisticsCategories(props) {
     const [_prompt, setPrompt] = useState({text: "Select the inference categories then click 'Generate New Problem'.", ans: "Generate a problem!"});
-    const [_promptTypes, setPromptTypes] = useState([]);
+    const [_promptTypes, setPromptTypes] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     document.title = "Statistics Categories";
     props.onSetNames("Interactive Statistics*Categories");
     props.onSetLinks("/interactive /interactive/statistics-categories");
@@ -65,11 +61,17 @@ export default function StatisticsCategories(props) {
         setPromptTypes(_promptTypes);
     }
     const selectAllCheckboxes = () => {
-        setPromptTypes(_promptTypes.map(() => true));
+        for (var i = 0; i < 15; i++)
+        {
+            document.getElementById(`${i}`).checked = true;
+        }
     };
 
     const deselectAllCheckboxes = () => {
-        setPromptTypes(_promptTypes.map(() => false));
+        for (var i = 0; i < 15; i++)
+            {
+                document.getElementById(`${i}`).checked = false;
+            }
     };
     return (
         <div className='content'>
@@ -77,21 +79,21 @@ export default function StatisticsCategories(props) {
                 <div className="text">
                     <h1>Statistics Categories</h1>
                     <div className="checkboxes">
-                        <div className="input-label"><input type="checkbox" id="0" checked={_promptTypes[0]} onChange={() => handleChange(0)}/><label htmlFor="0">Population Proportion Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="1" checked={_promptTypes[1]} onChange={() => handleChange(1)}/><label htmlFor="1">Difference in Population Proportions Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="2" checked={_promptTypes[2]} onChange={() => handleChange(2)}/><label htmlFor="2">Population Mean Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="3" checked={_promptTypes[3]} onChange={() => handleChange(3)}/><label htmlFor="3">Difference in Population Means Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="4" checked={_promptTypes[4]} onChange={() => handleChange(4)}/><label htmlFor="4">Difference in Population Means (Paired) Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="5" checked={_promptTypes[5]} onChange={() => handleChange(5)}/><label htmlFor="5">Chi Square Goodness of Fit Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="6" checked={_promptTypes[6]} onChange={() => handleChange(6)}/><label htmlFor="6">Chi Square Independence Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="7" checked={_promptTypes[7]} onChange={() => handleChange(7)}/><label htmlFor="7">Chi Square Homogeneity Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="8" checked={_promptTypes[8]} onChange={() => handleChange(8)}/><label htmlFor="8">Linear Regression Slope Test</label></div>
-                        <div className="input-label"><input type="checkbox" id="9" checked={_promptTypes[9]} onChange={() => handleChange(9)}/><label htmlFor="9">Confidence Interval for Population Proportion</label></div>
-                        <div className="input-label"><input type="checkbox" id="10" checked={_promptTypes[10]} onChange={() => handleChange(10)}/><label htmlFor="10">Confidence Interval for the Difference in Population Proportions</label></div>
-                        <div className="input-label"><input type="checkbox" id="11" checked={_promptTypes[11]} onChange={() => handleChange(11)}/><label htmlFor="11">Confidence Interval for Population Mean</label></div>
-                        <div className="input-label"><input type="checkbox" id="12" checked={_promptTypes[12]} onChange={() => handleChange(12)}/><label htmlFor="12">Confidence Interval for the Difference in Population Means</label></div>
-                        <div className="input-label"><input type="checkbox" id="13" checked={_promptTypes[13]} onChange={() => handleChange(13)}/><label htmlFor="13">Confidence Interval for the Difference in Population Means (Paired)</label></div>
-                        <div className="input-label"><input type="checkbox" id="14" checked={_promptTypes[14]} onChange={() => handleChange(14)}/><label htmlFor="14">Confidence Interval for Linear Regression Slope</label></div>
+                        <div className="input-label"><input type="checkbox" id="0" onChange={() => handleChange(0)}/><label htmlFor="0">Population Proportion Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="1" onChange={() => handleChange(1)}/><label htmlFor="1">Difference in Population Proportions Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="2" onChange={() => handleChange(2)}/><label htmlFor="2">Population Mean Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="3" onChange={() => handleChange(3)}/><label htmlFor="3">Difference in Population Means Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="4" onChange={() => handleChange(4)}/><label htmlFor="4">Difference in Population Means (Paired) Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="5" onChange={() => handleChange(5)}/><label htmlFor="5">Chi Square Goodness of Fit Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="6" onChange={() => handleChange(6)}/><label htmlFor="6">Chi Square Independence Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="7" onChange={() => handleChange(7)}/><label htmlFor="7">Chi Square Homogeneity Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="8" onChange={() => handleChange(8)}/><label htmlFor="8">Linear Regression Slope Test</label></div>
+                        <div className="input-label"><input type="checkbox" id="9" onChange={() => handleChange(9)}/><label htmlFor="9">Confidence Interval for Population Proportion</label></div>
+                        <div className="input-label"><input type="checkbox" id="10" onChange={() => handleChange(10)}/><label htmlFor="10">Confidence Interval for the Difference in Population Proportions</label></div>
+                        <div className="input-label"><input type="checkbox" id="11" onChange={() => handleChange(11)}/><label htmlFor="11">Confidence Interval for Population Mean</label></div>
+                        <div className="input-label"><input type="checkbox" id="12" onChange={() => handleChange(12)}/><label htmlFor="12">Confidence Interval for the Difference in Population Means</label></div>
+                        <div className="input-label"><input type="checkbox" id="13" onChange={() => handleChange(13)}/><label htmlFor="13">Confidence Interval for the Difference in Population Means (Paired)</label></div>
+                        <div className="input-label"><input type="checkbox" id="14" onChange={() => handleChange(14)}/><label htmlFor="14">Confidence Interval for Linear Regression Slope</label></div>
                     </div>
                     <button type="button" className='interactive-button' tabIndex="0" onClick={selectAllCheckboxes}>Select All</button><br/>
                     <button type="button" className='interactive-button' tabIndex="0" onClick={deselectAllCheckboxes}>Deselect All</button><br/>
