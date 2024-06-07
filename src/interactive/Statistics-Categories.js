@@ -64,14 +64,18 @@ export default function StatisticsCategories(props) {
         for (var i = 0; i < 15; i++)
         {
             document.getElementById(`${i}`).checked = true;
+            _promptTypes[i] = true;
         }
+        setPromptTypes(_promptTypes);
     };
 
     const deselectAllCheckboxes = () => {
         for (var i = 0; i < 15; i++)
-            {
-                document.getElementById(`${i}`).checked = false;
-            }
+        {
+            document.getElementById(`${i}`).checked = false;
+            _promptTypes[i] = false;
+        }
+        setPromptTypes(_promptTypes);
     };
     return (
         <div className='content'>
@@ -101,8 +105,7 @@ export default function StatisticsCategories(props) {
                     <div className="prompt">
                         <p>Prompt: {_prompt.text}</p>
                     </div>
-                    <p style={{marginTop: "8px", marginLeft: "8px"}}>Solution:</p>
-                    <strong id="solution" tabIndex="0">{_prompt.ans}</strong>
+                    <p style={{marginTop: "12px", marginLeft: "12px"}}>Solution:<br/><strong id="solution" tabIndex="0">{_prompt.ans}</strong></p>
                 </div>
                 <div className='media'>
                 </div>

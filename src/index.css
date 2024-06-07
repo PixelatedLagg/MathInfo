@@ -338,16 +338,18 @@ li a
 
 #solution
 {
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
     display: block;
     max-width: fit-content;
+    letter-spacing: 20px;
 }
 
 #solution:hover, #solution:focus
 {
     filter: none;
     -webkit-filter: none;
+    letter-spacing: normal;
 }
 
 .prompt
