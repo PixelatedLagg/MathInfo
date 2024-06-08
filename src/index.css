@@ -342,20 +342,24 @@ li a
     -webkit-filter: blur(5px);
     display: block;
     max-width: fit-content;
-    letter-spacing: 20px;
 }
 
 #solution:hover, #solution:focus
 {
     filter: none;
     -webkit-filter: none;
-    letter-spacing: normal;
 }
 
 .prompt
 {
     border: 1px solid var(--font-color);
     border-radius: 5px;
+    width: fit-content;
+    margin-top: 12px;
+}
+.prompt p
+{
+    margin: 8px;
 }
 
 /* Tables */
