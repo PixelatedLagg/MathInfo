@@ -2,25 +2,30 @@ import '../index.css';
 import React, { useState, useEffect } from 'react';
 import json from '.././data/interactive/Statistics-Categories.json'
 
+function randomNum(lower, upper)
+{
+    return Math.floor(Math.random() * (upper - lower + 1)) + lower;
+}
+
 function generatePrompt(setPrompt, _promptTypes)
 {
     var length = 0;
-    for (var i = 0; i < 14; i++)
+    for (var i = 0; i < 15; i++)
     {
         if (_promptTypes[i])
         {
             length++;
         }
     }
-    var rand = Math.floor(Math.random() * (length - 1));
+    var rand = randomNum(0, length - 1);
     length = 0;
-    for (var i = 0; i < 14; i++)
+    for (var i = 0; i < 15; i++)
     {
         if (_promptTypes[i])
         {
             if (length === rand)
             {
-                setPrompt({text: json[`${length}`][Math.floor(Math.random() * 19)], ans: numToType(length)});
+                setPrompt({text: json[`${i}`][randomNum(0, 19)], ans: numToType(i)});
             }
             length++;
         }
