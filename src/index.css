@@ -424,10 +424,10 @@ table, th, td
     margin-bottom: 12px;
 }
 
-input[type="checkbox"]
+input[type="checkbox"]::before
 {
-    border: 1px solid var(--font-color);
-    background-color: var(--bg-color);
+    border: 1px solid purple;
+    background-color: orange;
 }
 
 /* Responsiveness */
