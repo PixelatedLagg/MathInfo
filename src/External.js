@@ -9,8 +9,11 @@ export default function External(props) {
         <div className="content" role="main">
             <div className="text">
                 <h1>External Stuff</h1>
-                <p>Cool websites:</p>
+                <p>Web Resources:</p>
                 <ul>
+                    <li>
+                        <a href='https://www.youtube.com/@ProfessorLeonard'>Professor Leonard on Youtube</a>
+                    </li>
                     <li>
                         <a href='https://www.khanacademy.org/'>Khan Academy</a>
                     </li>
@@ -27,7 +30,7 @@ export default function External(props) {
                         <a href='https://sophisticatedprimate.com/'>SophisticatedPrimate</a>
                     </li>
                 </ul>
-                <p>Cool books:</p>
+                <p>Books:</p>
                 <ul>
                     <li>
                         <a href='https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/mode/2up'>Elements of Algebra by Leonhard Euler</a>
