@@ -24,12 +24,12 @@ function divisionDenominator() //return coefficients of denominator of remainder
 
 }
 
-export default function FractionDecomposition(props) {
+export default function PolynomialDivision(props) {
     const [_settings, setSettings] = useState([5, 2, 5, 2]);
-    const [_factor, setFactor] = useState([5, 2, 5, 2]);
-    document.title = "Fraction Decomposition";
-    props.onSetNames("Interactive Fraction*Decomposition");
-    props.onSetLinks("/interactive /interactive/fraction-decomposition");
+    const [_factor, setFactor] = useState(false);
+    document.title = "Polynomial Division";
+    props.onSetNames("Interactive Polynomial*Division");
+    props.onSetLinks("/interactive /interactive/polynomial-division");
     function handleChange(num, index) {
         if (num > 0)
         {
@@ -45,7 +45,7 @@ export default function FractionDecomposition(props) {
         <div className='content'>
             <div className='section'>
                 <div className="text">
-                    <h1>Fraction Decomposition</h1>
+                    <h1>Polynomial Division</h1>
                     <div className="checkboxes">
                         
                     </div>
