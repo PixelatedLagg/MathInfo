@@ -24,6 +24,10 @@ function divisionDenominator() //return coefficients of denominator of remainder
 
 }
 
+function generateProblem()
+{
+    
+}
 export default function PolynomialDivision(props) {
     const [_settings, setSettings] = useState([5, 2, 5, 2]);
     const [_factor, setFactor] = useState(false);

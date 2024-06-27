@@ -8,7 +8,7 @@ import Article from "./Article"
 import BasicTrigonometry from "./interactive/Basic-Trigonometry"
 import StatisticsCategories from './interactive/Statistics-Categories';
 import Interactive from "./Interactive"
-import FractionDecomposition from './interactive/Fraction-Decomposition';
+import PolynomialDivision from './interactive/PolynomialDivision';
 
 
 function generateLocation(names, links)
@@ -135,7 +135,7 @@ export default function App() {
           <Route path={"/interactive"} element={<Interactive onSetNames={handleNames} onSetLinks={handleLinks}/>} />
           <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry onSetNames={handleNames} onSetLinks={handleLinks}/>} />
           <Route path={"/interactive/statistics-categories"} element={<StatisticsCategories onSetNames={handleNames} onSetLinks={handleLinks}/>} />
-          <Route path={"/interactive/fraction-decomposition"} element={<FractionDecomposition onSetNames={handleNames} onSetLinks={handleLinks}/>} />
+          <Route path={"/interactive/polynomial-division"} element={<PolynomialDivision onSetNames={handleNames} onSetLinks={handleLinks}/>} />
         </Routes>
       </div>
         );
