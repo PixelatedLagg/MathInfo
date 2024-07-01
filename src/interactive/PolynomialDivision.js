@@ -1,49 +1,81 @@
-/*import '../index.css';
+import '../index.css';
 import React, { useState, useEffect } from 'react';
-
-let numerator = [];
-let denomerator = [];
 
 function randomNum(lower, upper)
 {
     return Math.floor(Math.random() * (upper - lower + 1)) + lower;
 }
 
-function divisionPolynomial() //return polynomial result of division
+function polynomialDivision(dividend, divisor)
 {
+    let quotient = [];
+    let remainder = [...dividend];
+    let divisorDegree = divisor.length - 1;
+    let divisorLeadCoeff = divisor[0];
+    while (remainder.length >= divisor.length)
+    {
+        let coeff = remainder[0] / divisorLeadCoeff;
+        quotient.push(coeff);
+        for (let i = 0; i < divisor.length; i++)
+        {
+            remainder[i] -= coeff * divisor[i];
+        }
+        remainder.shift();
+        while (remainder.length && remainder[0] === 0)
+        {
+            remainder.shift();
+        }
+    }
+    return { quotient: quotient, remainder: remainder };
+}
+
+function polynomialToString(coefficients)
+{
+    return coefficients.map((coeff, index) =>
+    {
+        let degree = coefficients.length - 1 - index;
+        if (degree === 0)
+        {
+            return `${coeff}`;
+        }
+        if (degree === 1)
+        {
+            return `${coeff}x`;
+        }
+        return `${coeff}x^${degree}`;
+    }).join(' + ').replace(/\+ -/g, '- ');
+}
+
+// Example usage:
+let dividend = [1, -3, 0, 2]; // x^3 - 3x^2 + 0x + 2
+let divisor = [1, -1]; // x - 1
+
+let result = polynomialDivision(dividend, divisor);
+
+//console.log("Quotient:", polynomialToString(result.quotient)); // Quotient: 1x^2 - 2x - 1
+//console.log("Remainder:", polynomialToString(result.remainder)); // Remainder: 1
+
+
+
+function generateProblem(_settings)
+{
+    let dividend = Array.from({ length: randomNum(_settings[0] + 1, _settings[1] + 1) }, randomNum(0, 100));
 
 }
 
-function divisionNumerator() //return coefficients of numerator of remainder
+export default function PolynomialDivision(props)
 {
-
-}
-
-function divisionDenominator() //return coefficients of denominator of remainder
-{
-
-}
-
-function generateProblem()
-{
-    
-}
-export default function PolynomialDivision(props) {
     const [_settings, setSettings] = useState([5, 2, 5, 2]);
-    const [_factor, setFactor] = useState(false);
     document.title = "Polynomial Division";
     props.onSetNames("Interactive Polynomial*Division");
     props.onSetLinks("/interactive /interactive/polynomial-division");
-    function handleChange(num, index) {
-        if (num > 0)
+    function handleChange(index) {
+        var e = document.getElementById(index);
+        if (e.value > 0)
         {
-            _settings[index] = num;
+            _settings[index] = e.value;
             setSettings(_settings);
         }
-    }
-    function handleBoolChange(num) {
-        _factor = !_factor;
-        setFactor(_factor);
     }
     return (
         <div className='content'>
@@ -51,7 +83,10 @@ export default function PolynomialDivision(props) {
                 <div className="text">
                     <h1>Polynomial Division</h1>
                     <div className="checkboxes">
-                        
+                        <div className="input-label"><input type="number" id="0" defaultValue={5} min={1} onChange={() => handleChange(0)}/><label htmlFor="0">Maximum Numerator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="1" defaultValue={2} min={1} onChange={() => handleChange(1)}/><label htmlFor="1">Minimum Numerator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="2" defaultValue={5} min={1} onChange={() => handleChange(2)}/><label htmlFor="2">Maximum Denominator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="3" defaultValue={2} min={1} onChange={() => handleChange(3)}/><label htmlFor="3">Minimum Denominator Degrees</label></div>
                     </div>
                     <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem()}>Generate New Problem</button>
                 </div>
@@ -61,11 +96,3 @@ export default function PolynomialDivision(props) {
         </div>
         );
 }
-
-/*
-<div className="input-label"><input type="number" id="0" defaultValue={5} onChange={() => handleChange(val, 0)}/><label htmlFor="0">Maximum Numerator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="1" defaultValue={2} onChange={() => handleChange(val, 1)}/><label htmlFor="1">Minimum Numerator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="2" defaultValue={5} onChange={() => handleChange(val, 2)}/><label htmlFor="2">Maximum Denominator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="3" defaultValue={2} onChange={() => handleChange(val, 3)}/><label htmlFor="3">Minimum Denominator Degrees</label></div>
-                        <div className="input-label"><input type="checkbox" id="4" defaultValue={true} onChange={() => handleBoolChange()}/><label htmlFor="4">Automatically Factor</label></div>
-*/
