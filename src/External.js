@@ -1,10 +1,13 @@
 import './index.css';
-import React from 'react';
+import { React, useEffect } from 'react';
 
-export default function External(props) {
+export default function External(props)
+{
     document.title = "External";
-    props.onSetNames("External");
-    props.onSetLinks("/external");
+    useEffect(() => {
+        props.onSetNames("External");
+        props.onSetLinks("/external");
+    }, [props]);
     return (
         <div className="content" role="main">
             <div className="text">

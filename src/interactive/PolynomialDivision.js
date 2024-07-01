@@ -67,8 +67,10 @@ export default function PolynomialDivision(props)
 {
     const [_settings, setSettings] = useState([5, 2, 5, 2]);
     document.title = "Polynomial Division";
-    props.onSetNames("Interactive Polynomial*Division");
-    props.onSetLinks("/interactive /interactive/polynomial-division");
+    useEffect(() => {
+        props.onSetNames("Interactive Polynomial*Division");
+        props.onSetLinks("/interactive /interactive/polynomial-division");
+    });
     function handleChange(index) {
         var e = document.getElementById(index);
         if (e.value > 0)

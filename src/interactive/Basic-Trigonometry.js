@@ -255,8 +255,10 @@ export default function Trigonometry(props) {
     const [_side, setSide] = useState(0);
     const [_angle, setAngle] = useState(0);
     document.title = "Basic Trigonometry";
-    props.onSetNames("Interactive Basic*Trigonometry");
-    props.onSetLinks("/interactive /interactive/basic-trigonometry");
+    useEffect(() => {
+        props.onSetNames("Interactive Basic*Trigonometry");
+        props.onSetLinks("/interactive /interactive/basic-trigonometry");
+    }, [props]);
     useEffect(() => {
         generateSide(setSide);
         generateAngle(setAngle);

@@ -1,10 +1,12 @@
 import './index.css';
-import React from 'react';
+import { React, useEffect } from 'react';
 
 export default function Home(props) {
     document.title = "Home";
-    props.onSetNames("Home");
-    props.onSetLinks("/");
+    useEffect(() => {
+        props.onSetNames("Home");
+        props.onSetLinks("/");
+    }, [props]);
     return (
         <div className="content" role="main">
             <div className="text">

@@ -1,5 +1,5 @@
 import '../index.css';
-import React, { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import json from '.././data/interactive/Statistics-Categories.json'
 
 function randomNum(lower, upper)
@@ -59,8 +59,10 @@ export default function StatisticsCategories(props) {
     const [_prompt, setPrompt] = useState({text: "Select the inference categories then click 'Generate New Problem'.", ans: "Generate a problem!"});
     const [_promptTypes, setPromptTypes] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     document.title = "Statistics Categories";
-    props.onSetNames("Interactive Statistics*Categories");
-    props.onSetLinks("/interactive /interactive/statistics-categories");
+    useEffect(() => {
+        props.onSetNames("Interactive Statistics*Categories");
+        props.onSetLinks("/interactive /interactive/statistics-categories");
+    }, [props]);
     function handleChange(num) {
         _promptTypes[num] = !_promptTypes[num];
         setPromptTypes(_promptTypes);

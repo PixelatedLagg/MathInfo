@@ -4,6 +4,7 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
+- FIX CONSOLE ERRORS
 - MAKE ALL TEXT INCLUDING LISTS SCALE UP WITH
 - find/manage consistent color scheme
 - be compliant to WCAG 2.2 AAA
