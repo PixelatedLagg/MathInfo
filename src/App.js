@@ -23,7 +23,7 @@ function generateLocation(names, links)
     return;
   }
   var linksSplit = links.split(' ');
-  return namesSplit.map((element, index) => <li key={index}><Link to={linksSplit[index]}>{element.replaceAll('*', ' ')}</Link></li>);
+  return namesSplit.map((element, index) => <li key={index}><Link to={linksSplit[index]} aria-label={`Visit ${element.replaceAll('*', ' ')} Page`}>{element.replaceAll('*', ' ')}</Link></li>);
 }
 
 function toggleDark()
@@ -91,37 +91,37 @@ export default function App() {
       <div className="container">
         <nav role="navigation">
           <div className="header">
-            <Link className="header-button header-link" to="/">
+            <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page">
               <span>Home</span>
             </Link>
-            <div className="dropdown" tabIndex="0">
+            <div className="dropdown" tabIndex="0" role="menubar">
               <button className="header-button dropdown-button" tabIndex="-1">
                 <span>Resources</span>
               </button>
               <div className="dropdown-content">
-                {resources.map((element, index) => <Link key={index} to={`/${element}`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
+                {resources.map((element, index) => <Link key={index} to={`/${element}`} role="menuitem" aria-label={`Visit ${element.charAt(0).toUpperCase() + element.slice(1)} Section`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
               </div>
             </div>
-            <Link className="header-button header-link" to="/external">
+            <Link className="header-button header-link" to="/external" role="menuitem" aria-label="Visit External Page">
               <span>External Stuff</span>
             </Link>
-            <Link className="header-button header-link" to="/interactive">
+            <Link className="header-button header-link" to="/interactive" role="menuitem" aria-label="Visit Interactive Page">
               <span>Interactive</span>
             </Link>
-            <div className="dropdown" tabIndex="0">
+            <div className="dropdown" tabIndex="0" role="menubar" aria-label="Settings">
               <button className="header-button dropdown-button" tabIndex="-1">
                 <span>⛯</span>
               </button>
               <div className="dropdown-content">
-                <button onClick={toggleDark}>Light/Dark Mode</button>
-                <button onClick={toggleFontSize}>200% Font Size</button>
+                <button onClick={toggleDark} role="menuitem">Light/Dark Mode</button>
+                <button onClick={toggleFontSize} role="menuitem">200% Font Size</button>
               </div>
             </div>
           </div>
           <div id="location">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" aria-label="Visit Home Page">Home</Link>
               </li>
               {generateLocation(names, links)}
             </ul>

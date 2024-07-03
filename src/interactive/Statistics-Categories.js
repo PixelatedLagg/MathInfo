@@ -107,17 +107,17 @@ export default function StatisticsCategories(props) {
                         <div className="input-label"><input type="checkbox" id="14" onChange={() => handleChange(14)}/><label htmlFor="14">Confidence Interval for Linear Regression Slope</label></div>
                     </div>
                     <p style={{marginTop: "12px", marginBottom: "0"}}>
-                        <button type="button" className='interactive-button' tabIndex="0" onClick={selectAllCheckboxes}>Select All</button>
+                        <button type="button" className='interactive-button' tabIndex="0" onClick={selectAllCheckboxes} aria-label="Select All">Select All</button>
                         &nbsp;•&nbsp;
-                        <button type="button" className='interactive-button' tabIndex="0" onClick={deselectAllCheckboxes}>Deselect All</button>
+                        <button type="button" className='interactive-button' tabIndex="0" onClick={deselectAllCheckboxes} aria-label="Deselect All">Deselect All</button>
                     </p>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generatePrompt(setPrompt, _promptTypes)}>Generate New Problem</button>
-                    <div className="prompt">
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generatePrompt(setPrompt, _promptTypes)} aria-label="Generate New Problem">Generate New Problem</button>
+                    <div className="prompt" role="contentinfo" aria-live="assertive">
                         <p>Prompt: {_prompt.text}</p>
                     </div>
-                    <p style={{marginTop: "12px", marginLeft: "12px"}}>Solution:<br/><strong id="solution" tabIndex="0">{_prompt.ans}</strong></p>
+                    <p style={{marginTop: "12px", marginLeft: "12px"}} role="contentinfo" aria-live="assertive">Solution:<br/><strong id="solution" tabIndex="0">{_prompt.ans}</strong></p>
                 </div>
-                <div className='media'>
+                <div className='media' role="complementary">
                 </div>
             </div>
         </div>

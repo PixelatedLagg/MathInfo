@@ -16,11 +16,11 @@ export default function Interactive(props) {
           </div>
           <h2>Interactive Activities:</h2>
           <ul>
-            <li><Link to='/interactive/basic-trigonometry'>Basic Trigonometry</Link></li>
-            <li><Link to='/interactive/statistics-categories'>Statistics Categories</Link></li>
-            <li><Link to='/interactive/polynomial-division'>Polynomial Division</Link></li>
+            <li><Link to='/interactive/basic-trigonometry' aria-label="Visit Basic Trigonometry Page">Basic Trigonometry</Link></li>
+            <li><Link to='/interactive/statistics-categories' aria-label="Visit Statistics Categories Page">Statistics Categories</Link></li>
+            <li><Link to='/interactive/polynomial-division' aria-label="Visit Polynomial Division Page">Polynomial Division</Link></li>
           </ul>
         </div>
-        <div className="media"></div>
+        <div className="media" role="complementary"></div>
       </div>);
 }

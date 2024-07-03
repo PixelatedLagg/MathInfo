@@ -4,15 +4,13 @@ npm run deploy - deploys main branch to website
 yarn start - locally run main branch
 
 TODO:
-- FIX CONSOLE ERRORS
 - MAKE ALL TEXT INCLUDING LISTS SCALE UP WITH
 - find/manage consistent color scheme
-- be compliant to WCAG 2.2 AAA
 
 WCAG 2.2 checklist (supplied from https://www.wuhcag.com/wcag-checklist/):
 
 A:
-- [ ] 1.1.1	Non-text Content	Provide text alternatives for non-text content that serves the same purpose. (aria-label)
+- [x] 1.1.1	Non-text Content	Provide text alternatives for non-text content that serves the same purpose. (aria-label)
 - [x] 1.2.1	Audio-only and Video-only (Pre-recorded)	Provide an alternative to video-only and audio-only content.
 - [x] 1.2.2	Captions (Pre-recorded)	Provide captions for videos with audio.
 - [x] 1.2.3	Audio Description or Media Alternative (Pre-recorded)	Provide audio description or text transcript for videos with sound.
@@ -78,10 +76,10 @@ AAA:
 - [x] 1.2.7 – Extended Audio description (Pre-recorded)	Provide extended audio descriptions for pre-recorded videos.
 - [x] 1.2.8 – Media Alternative (Pre-recorded)	Provide text alternatives for pre-recorded videos.
 - [x] 1.2.9 – Audio Only (Live)	Provide alternatives for live audio.
-- [ ] 1.3.6 – Identify Purpose	The purpose of all components must be programmatically determinable.
+- [x] 1.3.6 – Identify Purpose	The purpose of all components must be programmatically determinable.
 - [x] 1.4.6 – Contrast (Enhanced)	Contrast ratio between text and background is at least 7:1.
 - [x] 1.4.7 – Low or No Background Audio	Audio-only content is clear with no or minimal background noise.
-- [ ] 1.4.8 – Visual Presentation	Offer users a range of presentation options for blocks of text.
+- [x] 1.4.8 – Visual Presentation	Offer users a range of presentation options for blocks of text.
 - [x] 1.4.9 – Images of Text (No Exception)	Don’t use images of text.
 - [x] 2.1.3 – Keyboard (No Exception)	All functionality is accessible by keyboard with no exceptions.
 - [x] 2.2.3 – No Timing	No time limits on your website.

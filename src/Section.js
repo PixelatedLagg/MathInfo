@@ -7,7 +7,7 @@ function CheckSummary(element, index, resource) {
   }
   return (
     <li key={index}>
-      <Link to={element}>{resource[element].title}</Link>
+      <Link to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
     </li>
   );
 }
@@ -58,7 +58,7 @@ export function Section(props) {
           {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
         </ul>
       </div>
-      <div className="media" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
+      <div className="media" role="complementary" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
     </div>
   );
 }

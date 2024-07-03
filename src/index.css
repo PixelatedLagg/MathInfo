@@ -479,3 +479,9 @@ input[type="number"]
         width: 100%;
     }
 }
+
+#wcag
+{
+    border: none;
+    width: min-content;
+}

@@ -85,14 +85,14 @@ export default function PolynomialDivision(props)
                 <div className="text">
                     <h1>Polynomial Division</h1>
                     <div className="checkboxes">
-                        <div className="input-label"><input type="number" id="0" defaultValue={5} min={1} onChange={() => handleChange(0)}/><label htmlFor="0">Maximum Numerator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="1" defaultValue={2} min={1} onChange={() => handleChange(1)}/><label htmlFor="1">Minimum Numerator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="2" defaultValue={5} min={1} onChange={() => handleChange(2)}/><label htmlFor="2">Maximum Denominator Degrees</label></div>
-                        <div className="input-label"><input type="number" id="3" defaultValue={2} min={1} onChange={() => handleChange(3)}/><label htmlFor="3">Minimum Denominator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="0" defaultValue={5} min={1} onChange={() => handleChange(0)} aria-label="Maximum Numerator Degrees" name="Maximum Numerator Degrees"/><label htmlFor="0">Maximum Numerator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="1" defaultValue={2} min={1} onChange={() => handleChange(1)} aria-label="Minimum Numerator Degrees" name="Minimum Numerator Degrees"/><label htmlFor="1">Minimum Numerator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="2" defaultValue={5} min={1} onChange={() => handleChange(2)} aria-label="Maximum Denominator Degrees" name="Maximum Denominator Degrees"/><label htmlFor="2">Maximum Denominator Degrees</label></div>
+                        <div className="input-label"><input type="number" id="3" defaultValue={2} min={1} onChange={() => handleChange(3)} aria-label="Minimum Denominator Degrees" name="Minimum Denominator Degrees"/><label htmlFor="3">Minimum Denominator Degrees</label></div>
                     </div>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem()}>Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem()} aria-label="Generate New Problem">Generate New Problem</button>
                 </div>
-                <div className='media'>
+                <div className='media' role="complementary">
                 </div>
             </div>
         </div>
