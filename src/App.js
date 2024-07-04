@@ -89,44 +89,48 @@ export default function App() {
     }
     return (
       <div className="container">
-        <nav role="navigation">
-          <div className="header">
-            <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page">
-              <span>Home</span>
-            </Link>
-            <div className="dropdown" tabIndex="0" role="menubar">
-              <button className="header-button dropdown-button" tabIndex="-1">
-                <span>Resources</span>
-              </button>
-              <div className="dropdown-content">
-                {resources.map((element, index) => <Link key={index} to={`/${element}`} role="menuitem" aria-label={`Visit ${element.charAt(0).toUpperCase() + element.slice(1)} Section`}>{element.charAt(0).toUpperCase() + element.slice(1)}</Link>)}
-              </div>
-            </div>
-            <Link className="header-button header-link" to="/external" role="menuitem" aria-label="Visit External Page">
-              <span>External Stuff</span>
-            </Link>
-            <Link className="header-button header-link" to="/interactive" role="menuitem" aria-label="Visit Interactive Page">
-              <span>Interactive</span>
-            </Link>
-            <div className="dropdown" tabIndex="0" role="menubar" aria-label="Settings">
-              <button className="header-button dropdown-button" tabIndex="-1">
-                <span>⛯</span>
-              </button>
-              <div className="dropdown-content">
-                <button onClick={toggleDark} role="menuitem">Light/Dark Mode</button>
-                <button onClick={toggleFontSize} role="menuitem">200% Font Size</button>
-              </div>
+        <nav role="navigation" aria-label="Main Navigation">
+        <div className="header" role="menubar" aria-label="Horizontal Menu">
+          <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page">
+            <span>Home</span>
+          </Link>
+          <div className="dropdown" role="presentation">
+            <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Resources Dropdown">
+              <span>Resources</span>
+            </button>
+            <div className="dropdown-content" role="menu">
+              {resources.map((element, index) => (
+                <Link key={index} to={`/${element}`} role="menuitem" aria-label={`Visit ${element.charAt(0).toUpperCase() + element.slice(1)} Section`}>
+                  {element.charAt(0).toUpperCase() + element.slice(1)}
+                </Link>
+              ))}
             </div>
           </div>
-          <div id="location">
-            <ul>
-              <li>
-                <Link to="/" aria-label="Visit Home Page">Home</Link>
-              </li>
-              {generateLocation(names, links)}
-            </ul>
+          <Link className="header-button header-link" to="/external" role="menuitem" aria-label="Visit External Page">
+            <span>External Stuff</span>
+          </Link>
+          <Link className="header-button header-link" to="/interactive" role="menuitem" aria-label="Visit Interactive Page">
+            <span>Interactive</span>
+          </Link>
+          <div className="dropdown" role="presentation">
+            <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Settings Dropdown">
+              <span>⛯</span>
+            </button>
+            <div className="dropdown-content" role="menu">
+              <button onClick={toggleDark} role="menuitem">Light/Dark Mode</button>
+              <button onClick={toggleFontSize} role="menuitem">200% Font Size</button>
+            </div>
           </div>
-        </nav>
+        </div>
+        <div id="location">
+          <ul>
+            <li>
+              <Link to="/" aria-label="Visit Home Page">Home</Link>
+            </li>
+            {generateLocation(names, links)}
+          </ul>
+        </div>
+      </nav>
         <Routes>
           <Route exact path={"/"} element={<Home onSetNames={handleNames} onSetLinks={handleLinks}/>} />
           <Route exact path={"/external"} element={<External onSetNames={handleNames} onSetLinks={handleLinks}/>} />
