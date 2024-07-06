@@ -60,7 +60,8 @@ let result = polynomialDivision(dividend, divisor);
 function generateProblem(_settings)
 {
     let dividend = Array.from({ length: randomNum(_settings[0] + 1, _settings[1] + 1) }, randomNum(0, 100));
-
+    let divisor = Array.from({ length: randomNum(_settings[2] + 1, _settings[3] + 1) }, randomNum(0, 100));
+    
 }
 
 export default function PolynomialDivision(props)
@@ -91,6 +92,9 @@ export default function PolynomialDivision(props)
                         <div className="input-label"><input type="number" id="3" defaultValue={2} min={1} onChange={() => handleChange(3)} aria-label="Minimum Denominator Degrees" name="Minimum Denominator Degrees"/><label htmlFor="3">Minimum Denominator Degrees</label></div>
                     </div>
                     <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem()} aria-label="Generate New Problem">Generate New Problem</button>
+                    <div className="prompt" role="contentinfo" aria-live="assertive">
+                        <p>Prompt:</p>
+                    </div>
                 </div>
                 <div className='media' role="complementary">
                 </div>

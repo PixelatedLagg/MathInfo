@@ -36,12 +36,6 @@ export default function Article(props) {
   }, [res]);
 
   useEffect(() => {
-    if (window.MathJax) {
-      window.MathJax.typesetPromise();
-    }
-  }, [resource, article]);
-
-  useEffect(() => {
     if (resource.length !== 0 && resource.hasOwnProperty(article)) {
       const articleObject = resource[article];
       document.title = articleObject.title;
@@ -49,6 +43,9 @@ export default function Article(props) {
       props.onSetLinks(`/${res} /${res}/${article}`);
     } else if (resource.length !== 0 && !resource.hasOwnProperty(article)) {
       window.location.href = "https://mathinfo.org";
+    }
+    if (window.MathJax) {
+      window.MathJax.typesetPromise();
     }
   }, [resource, article, res, props]);
 
