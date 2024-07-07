@@ -13,9 +13,9 @@ document.documentElement.setAttribute("font-size", "normal");
 const root = 
 createRoot(rootElement);
 root.render(
-  <React.StrictMode>
-    <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
-      <App/>
-    </BrowserRouter>
-  </React.StrictMode>,
+    <React.StrictMode>
+        <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+            <App/>
+        </BrowserRouter>
+    </React.StrictMode>,
 );

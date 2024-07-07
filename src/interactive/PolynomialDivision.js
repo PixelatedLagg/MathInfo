@@ -42,36 +42,37 @@ function polynomialToString(coefficients)
         {
             return `${coeff}x`;
         }
+        if (coeff == 0)
+        {
+            return '';
+        }
         return `${coeff}x^${degree}`;
     }).join(' + ').replace(/\+ -/g, '- ');
 }
-
-// Example usage:
-let dividend = [1, -3, 0, 2]; // x^3 - 3x^2 + 0x + 2
-let divisor = [1, -1]; // x - 1
-
-let result = polynomialDivision(dividend, divisor);
 
 //console.log("Quotient:", polynomialToString(result.quotient)); // Quotient: 1x^2 - 2x - 1
 //console.log("Remainder:", polynomialToString(result.remainder)); // Remainder: 1
 
 
 
-function generateProblem(_settings)
+function generateProblem(_settings, setDivision)
 {
-    let dividend = Array.from({ length: randomNum(_settings[0] + 1, _settings[1] + 1) }, randomNum(0, 100));
-    let divisor = Array.from({ length: randomNum(_settings[2] + 1, _settings[3] + 1) }, randomNum(0, 100));
-    
+    let dividend = Array.from({ length: randomNum(_settings[0] + 1, _settings[1] + 1) }, () => randomNum(0, 100));
+    let divisor = Array.from({ length: randomNum(_settings[2] + 1, _settings[3] + 1) }, () => randomNum(0, 100));
+    let result = polynomialDivision(dividend, divisor);
+    setDivision(`\\( \\frac{${polynomialToString(dividend)}}{${polynomialToString(divisor)}} = ${polynomialToString(result.quotient)} + \\frac{${polynomialToString(result.remainder)}}{${polynomialToString(divisor)}} \\)`);
 }
 
 export default function PolynomialDivision(props)
 {
     const [_settings, setSettings] = useState([5, 2, 5, 2]);
+    const [_division, setDivision] = useState("\\( \\frac{dividend}{divisor} = quotient + \\frac{remainder}{divisor} \\)");
     document.title = "Polynomial Division";
     useEffect(() => {
         props.onSetNames("Interactive Polynomial*Division");
         props.onSetLinks("/interactive /interactive/polynomial-division");
     });
+
     function handleChange(index) {
         var e = document.getElementById(index);
         if (e.value > 0)
@@ -80,6 +81,14 @@ export default function PolynomialDivision(props)
             setSettings(_settings);
         }
     }
+
+    useEffect(() => {
+        if (window.MathJax)
+        {
+            window.MathJax.typesetPromise();
+        }
+    }, [_division]);
+
     return (
         <div className='content'>
             <div className='section'>
@@ -91,9 +100,9 @@ export default function PolynomialDivision(props)
                         <div className="input-label"><input type="number" id="2" defaultValue={5} min={1} onChange={() => handleChange(2)} aria-label="Maximum Denominator Degrees" name="Maximum Denominator Degrees"/><label htmlFor="2">Maximum Denominator Degrees</label></div>
                         <div className="input-label"><input type="number" id="3" defaultValue={2} min={1} onChange={() => handleChange(3)} aria-label="Minimum Denominator Degrees" name="Minimum Denominator Degrees"/><label htmlFor="3">Minimum Denominator Degrees</label></div>
                     </div>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem()} aria-label="Generate New Problem">Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem(_settings, setDivision)} aria-label="Generate New Problem">Generate New Problem</button>
                     <div className="prompt" role="contentinfo" aria-live="assertive">
-                        <p>Prompt:</p>
+                        <p>{_division}</p>
                     </div>
                 </div>
                 <div className='media' role="complementary">

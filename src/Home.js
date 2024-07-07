@@ -1,7 +1,7 @@
 import './index.css';
 import { React, useEffect } from 'react';
 
-export default function Home(props) {
+export default function Home(props){
     document.title = "Home";
     useEffect(() => {
         props.onSetNames("Home");
@@ -26,5 +26,5 @@ export default function Home(props) {
                 </div>
             </div>
         </div>
-            );
+    );
 }

@@ -55,18 +55,22 @@ function numToType(num)
     }
 }
 
-export default function StatisticsCategories(props) {
+export default function StatisticsCategories(props)
+{
     const [_prompt, setPrompt] = useState({text: "Select the inference categories then click 'Generate New Problem'.", ans: "Generate a problem!"});
     const [_promptTypes, setPromptTypes] = useState([false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]);
     document.title = "Statistics Categories";
+
     useEffect(() => {
         props.onSetNames("Interactive Statistics*Categories");
         props.onSetLinks("/interactive /interactive/statistics-categories");
     }, [props]);
+
     function handleChange(num) {
         _promptTypes[num] = !_promptTypes[num];
         setPromptTypes(_promptTypes);
     }
+
     const selectAllCheckboxes = () => {
         for (var i = 0; i < 15; i++)
         {
@@ -117,9 +121,8 @@ export default function StatisticsCategories(props) {
                     </div>
                     <p style={{marginTop: "12px", marginLeft: "12px"}} role="contentinfo" aria-live="assertive">Solution:<br/><strong id="solution" tabIndex="0">{_prompt.ans}</strong></p>
                 </div>
-                <div className='media' role="complementary">
-                </div>
+                <div className='media' role="complementary"></div>
             </div>
         </div>
-        );
+    );
 }

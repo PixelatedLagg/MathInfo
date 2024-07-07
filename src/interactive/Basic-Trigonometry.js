@@ -1,15 +1,18 @@
 import '../index.css';
 import React, { useState, useEffect } from 'react';
 
-function rand(min, max) {
+function rand(min, max)
+{
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function rad(angle) {
+function rad(angle)
+{
     return angle * (Math.PI / 180);
 }
 
-function deg(angle) {
+function deg(angle)
+{
     return angle * (180 / Math.PI);
 }
 
@@ -68,7 +71,7 @@ function generateSide(setSide)
                     });
                 }
                 break;
-            case 2: //tan = b / a
+            default: //tan = b / a
                 if (!Math.round(Math.random()))
                 {
                     setSide({
@@ -146,7 +149,7 @@ function generateSide(setSide)
                     });
                 }
                 break;
-            case 2: //tan = a / b
+            default: //tan = a / b
                 if (!Math.round(Math.random()))
                 {
                     setSide({
@@ -201,7 +204,7 @@ function generateAngle(setAngle)
                     answer: <strong id="solution" tabIndex="0">cos(θ) = {side} / {side + side2}<br/>cos<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.acos(side / (side + side2)))).toFixed(1)}°</strong>
                 });
                 break;
-            case 2: //tan = b / a
+            default: //tan = b / a
                 setAngle({
                     angle1: "θ",
                     angle2: "",
@@ -237,7 +240,7 @@ function generateAngle(setAngle)
                     answer: <strong id="solution" tabIndex="0">cos(θ) = {side} / {side + side2}<br/>cos<sup>-1</sup>({side} / {side + side2}) = θ<br/>θ ≈ {(deg(Math.acos(side / (side + side2)))).toFixed(1)}°</strong>
                 });
                 break;
-            case 2: //tan = a / b
+            default: //tan = a / b
                 setAngle({
                     angle1: "",
                     angle2: "θ",
@@ -251,14 +254,17 @@ function generateAngle(setAngle)
     }
 }
 
-export default function Trigonometry(props) {
+export default function Trigonometry(props)
+{
     const [_side, setSide] = useState(0);
     const [_angle, setAngle] = useState(0);
     document.title = "Basic Trigonometry";
+
     useEffect(() => {
         props.onSetNames("Interactive Basic*Trigonometry");
         props.onSetLinks("/interactive /interactive/basic-trigonometry");
     }, [props]);
+
     useEffect(() => {
         generateSide(setSide);
         generateAngle(setAngle);
@@ -310,5 +316,5 @@ export default function Trigonometry(props) {
                 </div>
             </div>
         </div>
-        );
+    );
 }

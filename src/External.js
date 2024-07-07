@@ -57,5 +57,5 @@ export default function External(props)
                 </div>
             </div>
         </div>
-            );
+    );
 }
