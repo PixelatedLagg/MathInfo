@@ -144,3 +144,5 @@ export default function App()
         </div>
     );
 }
+
+//<Route path={"/interactive/polynomial-division"} element={<PolynomialDivision onSetNames={handleNames} onSetLinks={handleLinks}/>}/>

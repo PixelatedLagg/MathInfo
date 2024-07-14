@@ -27,3 +27,5 @@ export default function Interactive(props)
         </div>
     );
 }
+
+//<li><Link to='/interactive/polynomial-division' aria-label="Visit Polynomial Division Page">Polynomial Division</Link></li>

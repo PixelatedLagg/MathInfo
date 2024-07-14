@@ -1,9 +1,14 @@
 import '../index.css';
 import React, { useState, useEffect } from 'react';
 
-function randomNum(lower, upper)
+function randomNum(min, max) { //INCLUSIVE
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomCoeff(min, max)
 {
-    return Math.floor(Math.random() * (upper - lower + 1)) + lower;
+    var result = randomNum(0, 10);
+    return result;
 }
 
 class Fraction {
@@ -21,21 +26,28 @@ class Fraction {
 
     toString() {
         this.simplify();
-        if (this.denominator === 1) return `${this.numerator}`;
+        if (this.denominator === 1)
+        {
+            return `${this.numerator}`;
+        }
+        if (this.denominator < 0) //ensure denom is always positive
+        {
+            return `\\frac{${this.numerator * -1}}{${this.denominator * -1}}`;
+        }
         return `\\frac{${this.numerator}}{${this.denominator}}`;
     }
 }
 
 function polynomialDivision(dividend, divisor) {
     let quotient = [];
-    let remainder = [...dividend];
+    let remainder = dividend.map(coeff => new Fraction(coeff));
 
     while (remainder.length >= divisor.length) {
         let leadCoeffDividend = remainder[0];
-        let leadCoeffDivisor = divisor[0];
+        let leadCoeffDivisor = new Fraction(divisor[0]);
         let exponentDiff = remainder.length - divisor.length;
 
-        let coeffQuotient = new Fraction(leadCoeffDividend, leadCoeffDivisor);
+        let coeffQuotient = new Fraction(leadCoeffDividend.numerator, leadCoeffDividend.denominator * leadCoeffDivisor.numerator);
         quotient.push(coeffQuotient);
 
         let scaledDivisor = divisor.map(coeff => new Fraction(coeffQuotient.numerator * coeff, coeffQuotient.denominator));
@@ -44,15 +56,15 @@ function polynomialDivision(dividend, divisor) {
         remainder = remainder.map((coeff, index) => {
             let scaledCoeff = scaledDivisor[index] || new Fraction(0);
             return new Fraction(
-                coeff * scaledCoeff.denominator - scaledCoeff.numerator * (remainder[index] ? remainder[index].denominator : 1),
-                scaledCoeff.denominator * (remainder[index] ? remainder[index].denominator : 1)
+                coeff.numerator * scaledCoeff.denominator - scaledCoeff.numerator * coeff.denominator,
+                coeff.denominator * scaledCoeff.denominator
             );
         }).slice(1);
     }
 
     return {
-        quotient: quotient.map(f => f.toString()),
-        remainder: remainder.map(f => f.toString())
+        quotient: quotient,
+        remainder: remainder
     };
 }
 
@@ -60,7 +72,7 @@ function polynomialToString(coefficients) {
     let terms = [];
 
     coefficients.forEach((coeff, index) => {
-        if (coeff.numerator === 0) return;
+        if (coeff.numerator === 0) return; // Skip terms with a coefficient of 0
 
         let term = '';
         let exponent = coefficients.length - index - 1;
@@ -78,7 +90,7 @@ function polynomialToString(coefficients) {
         if (exponent > 0) {
             term += 'x';
             if (exponent > 1) {
-                term += `^{${exponent}}`;
+                term += `^${exponent}`;
             }
         }
 
@@ -94,42 +106,43 @@ function generateProblem(_settings, setDivision)
     if (_settings[2] !== 0)
     {
         var degrees = randomNum(_settings[0] - _settings[2], _settings[0] + _settings[2]);
-        if (degrees < 3)
+        console.log("rand dividend", degrees);
+        if (degrees < 2)
         {
-            degrees = 3; //ensure numerator is at least 3 degrees
+            degrees = 2; //ensure numerator is at least 2 degrees
         }
     }
     else
     {
         degrees = _settings[0]; //no variation
     }
-    console.log(degrees);
-    let dividend = Array.from({ length: degrees }, () => randomNum(0, 100));
+    let dividend = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
     if (_settings[2] !== 0)
     {
         degrees = randomNum(_settings[1] - _settings[2], _settings[1] + _settings[2]);
-        if (degrees < 2)
+        if (degrees < 1)
         {
-            degrees = 2; //ensure denominator is at least 3 degrees
+            degrees = 1; //ensure denominator is at least 1 degree
         }
-        if (degrees >= dividend.length)
+        if (degrees >= dividend.length - 1)
         {
-            degrees = dividend.length - 1; //ensure denominator is below numerator
+            degrees = dividend.length - 2; //ensure denominator is below numerator
         }
     }
     else
     {
         degrees = _settings[1]; //no variation
     }
-    console.log(degrees);
-    let divisor = Array.from({ length: degrees }, () => randomNum(0, 100));
+    console.log("divisor", degrees);
+    console.log("dividend", dividend.length - 1);
+    let divisor = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
     let result = polynomialDivision(dividend, divisor);
     setDivision(`\\( \\frac{${polynomialToString(dividend)}}{${polynomialToString(divisor)}} = ${polynomialToString(result.quotient)} + \\frac{${polynomialToString(result.remainder)}}{${polynomialToString(divisor)}} \\)`);
 }
 
 export default function PolynomialDivision(props)
 {
-    const [_settings, setSettings] = useState([5, 3, 4, 2]);
+    const [_settings, setSettings] = useState([5, 3, 2]);
     const [_division, setDivision] = useState("\\( \\frac{dividend}{divisor} = quotient + \\frac{remainder}{divisor} \\)");
     document.title = "Polynomial Division";
     useEffect(() => {
