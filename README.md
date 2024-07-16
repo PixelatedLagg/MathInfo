@@ -1,12 +1,5 @@
 # MathInfo.org
 
-npm run deploy - deploys main branch to website
-yarn start - locally run main branch
-
-TODO:
-- MAKE ALL TEXT INCLUDING LISTS SCALE UP WITH
-- find/manage consistent color scheme
-
 WCAG 2.2 checklist (supplied from https://www.wuhcag.com/wcag-checklist/):
 
 A:
