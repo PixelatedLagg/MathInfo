@@ -41,18 +41,15 @@ class Fraction {
 function polynomialDivision(dividend, divisor) {
     let quotient = [];
     let remainder = dividend.map(coeff => new Fraction(coeff));
-
-    while (remainder.length >= divisor.length) {
+    while (remainder.length >= divisor.length)
+    {
         let leadCoeffDividend = remainder[0];
         let leadCoeffDivisor = new Fraction(divisor[0]);
         let exponentDiff = remainder.length - divisor.length;
-
         let coeffQuotient = new Fraction(leadCoeffDividend.numerator, leadCoeffDividend.denominator * leadCoeffDivisor.numerator);
         quotient.push(coeffQuotient);
-
         let scaledDivisor = divisor.map(coeff => new Fraction(coeffQuotient.numerator * coeff, coeffQuotient.denominator));
         scaledDivisor = [...Array(exponentDiff).fill(new Fraction(0)), ...scaledDivisor];
-
         remainder = remainder.map((coeff, index) => {
             let scaledCoeff = scaledDivisor[index] || new Fraction(0);
             return new Fraction(
@@ -61,42 +58,44 @@ function polynomialDivision(dividend, divisor) {
             );
         }).slice(1);
     }
-
     return {
         quotient: quotient,
         remainder: remainder
     };
 }
 
-function polynomialToString(coefficients) {
+function polynomialToString(coefficients)
+{
     let terms = [];
-
-    coefficients.forEach((coeff, index) => {
-        if (coeff.numerator === 0) return; // Skip terms with a coefficient of 0
-
+    coefficients.forEach((coeff, index) =>
+    {
+        if (coeff.numerator === 0)
+        {
+            return; // Skip terms with a coefficient of 0
+        }
         let term = '';
         let exponent = coefficients.length - index - 1;
-
-        // Handle the coefficient
-        if (coeff.numerator !== 1 || exponent === 0) {
-            if (coeff.numerator === -1 && exponent !== 0) {
+        if (coeff.numerator !== 1 || exponent === 0)
+        {
+            if (coeff.numerator === -1 && exponent !== 0)
+            {
                 term += '-';
-            } else {
+            }
+            else
+            {
                 term += coeff.toString();
             }
         }
-
-        // Handle the variable and exponent
-        if (exponent > 0) {
+        if (exponent > 0)
+        {
             term += 'x';
-            if (exponent > 1) {
+            if (exponent > 1)
+            {
                 term += `^${exponent}`;
             }
         }
-
         terms.push(term);
     });
-
     return terms.join(' + ').replace(/\+ -/g, '- ');
 }
 
@@ -133,8 +132,6 @@ function generateProblem(_settings, setDivision)
     {
         degrees = _settings[1]; //no variation
     }
-    console.log("divisor", degrees);
-    console.log("dividend", dividend.length - 1);
     let divisor = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
     let result = polynomialDivision(dividend, divisor);
     setDivision(`\\( \\frac{${polynomialToString(dividend)}}{${polynomialToString(divisor)}} = ${polynomialToString(result.quotient)} + \\frac{${polynomialToString(result.remainder)}}{${polynomialToString(divisor)}} \\)`);
