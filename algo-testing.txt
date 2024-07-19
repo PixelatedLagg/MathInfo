@@ -1,0 +1,5 @@
+(x + a)(x + b)
+(x^2 + xa + xb + ab)(x + c)
+x^3 + x^2*a + x^2*b + x^2*c + xab + xac + xbc + abc
+
+x^# of factors + (x^# of degrees decreasing * all combos of increasing y length of all factors) + all factors multiplied

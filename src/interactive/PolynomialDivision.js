@@ -11,20 +11,22 @@ function randomCoeff(min, max)
     return result;
 }
 
-class Fraction {
-    constructor(numerator, denominator = 1) {
+class Fraction
+{
+    constructor(numerator, denominator = 1)
+    {
         this.numerator = numerator;
         this.denominator = denominator;
     }
-
-    simplify() {
+    simplify()
+    {
         const gcd = (a, b) => b ? gcd(b, a % b) : a;
         const divisor = gcd(this.numerator, this.denominator);
         this.numerator /= divisor;
         this.denominator /= divisor;
     }
-
-    toString() {
+    toString()
+    {
         this.simplify();
         if (this.denominator === 1)
         {
@@ -38,7 +40,8 @@ class Fraction {
     }
 }
 
-function polynomialDivision(dividend, divisor) {
+function polynomialDivision(dividend, divisor)
+{
     let quotient = [];
     let remainder = dividend.map(coeff => new Fraction(coeff));
     while (remainder.length >= divisor.length)
