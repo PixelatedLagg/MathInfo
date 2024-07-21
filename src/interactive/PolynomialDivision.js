@@ -25,12 +25,69 @@ class Fraction
         this.numerator /= divisor;
         this.denominator /= divisor;
     }
+    sign()
+    {
+        if (this.numerator < 0 ^ this.denominator < 0)
+        {
+            return false; //negative
+        }
+        return true; //positive
+    }
+    abs()
+    {
+        return new Fraction(Math.abs(this.numerator), Math.abs(this.denominator));
+    }
+    add(other) {
+        // Implement addition logic
+        return new Fraction(
+            this.numerator * other.denominator + other.numerator * this.denominator,
+            this.denominator * other.denominator
+        );
+    }
+
+    subtract(other) {
+        // Implement subtraction logic
+        return new Fraction(
+            this.numerator * other.denominator - other.numerator * this.denominator,
+            this.denominator * other.denominator
+        );
+    }
+
+    multiply(other) {
+        // Implement multiplication logic
+        return new Fraction(
+            this.numerator * other.numerator,
+            this.denominator * other.denominator
+        );
+    }
+
+    divide(other) {
+        // Implement division logic
+        return new Fraction(
+            this.numerator * other.denominator,
+            this.denominator * other.numerator
+        );
+    }
+
     toString()
     {
         this.simplify();
+        if (this.numerator === this.denominator)
+        {
+            return '1';
+        }
+        if (this.numerator === 0)
+        {
+            return '0';
+        }
         if (this.denominator === 1)
         {
             return `${this.numerator}`;
+        }
+        if (this.denominator === 0)
+        {
+            console.log("ERROROROR DENOM CANT BE ZERO");
+            return;
         }
         if (this.denominator < 0) //ensure denom is always positive
         {
@@ -40,75 +97,105 @@ class Fraction
     }
 }
 
-function polynomialDivision(dividend, divisor)
+function polynomialMultiply(a, b)
 {
-    let quotient = [];
-    let remainder = dividend.map(coeff => new Fraction(coeff));
-    while (remainder.length >= divisor.length)
+    let result = new Array(a.length + b.length - 1).fill(0);
+    for (var i = 0; i < a.length; i++) //iterate over a
     {
-        let leadCoeffDividend = remainder[0];
-        let leadCoeffDivisor = new Fraction(divisor[0]);
-        let exponentDiff = remainder.length - divisor.length;
-        let coeffQuotient = new Fraction(leadCoeffDividend.numerator, leadCoeffDividend.denominator * leadCoeffDivisor.numerator);
-        quotient.push(coeffQuotient);
-        let scaledDivisor = divisor.map(coeff => new Fraction(coeffQuotient.numerator * coeff, coeffQuotient.denominator));
-        scaledDivisor = [...Array(exponentDiff).fill(new Fraction(0)), ...scaledDivisor];
-        remainder = remainder.map((coeff, index) => {
-            let scaledCoeff = scaledDivisor[index] || new Fraction(0);
-            return new Fraction(
-                coeff.numerator * scaledCoeff.denominator - scaledCoeff.numerator * coeff.denominator,
-                coeff.denominator * scaledCoeff.denominator
-            );
-        }).slice(1);
+        for (var j = 0; j < b.length; j++) //iterate over b
+        {
+            result[-1 + result.length - (-2 + b.length - j + a.length - i)] += a[i] * b[j]; //find degree of result and put at index
+        }
     }
-    return {
-        quotient: quotient,
-        remainder: remainder
-    };
+    return result;
 }
 
-function polynomialToString(coefficients)
-{
-    let terms = [];
-    coefficients.forEach((coeff, index) =>
-    {
-        if (coeff.numerator === 0)
-        {
-            return; // Skip terms with a coefficient of 0
+function polynomialDivision(dividend, divisor) {
+ 
+    const quotient = [];
+    let remainder = [...dividend].map(x => new Fraction(x, 1)); // Convert each element to Fraction
+
+    while (remainder.length >= divisor.length) {
+        const ratio = remainder[0].divide(divisor[0]); // Calculate ratio as Fraction
+
+        quotient.push(ratio); // Push fraction to quotient
+
+        for (let i = 0; i < divisor.length; i++) {
+            const product = ratio.multiply(divisor[i]); // Multiply ratio by divisor element
+            remainder[i] = remainder[i].subtract(product); // Subtract product from remainder
         }
-        let term = '';
-        let exponent = coefficients.length - index - 1;
-        if (coeff.numerator !== 1 || exponent === 0)
+
+        remainder.shift(); // Remove leading zero term
+    }
+
+    return { quotient, remainder };
+}
+
+function formatTerm(term, degree)
+{
+    var d;
+    switch (degree)
+    {
+        case 0:
+            d = "";
+            break;
+        case 1:
+            d = "x";
+            break;
+        default:
+            d = `x^{${degree}}`;
+            break;
+    }
+    if (term === '0')
+    {
+        return "";
+    }
+    if (term === '1')
+    {
+        return d;
+    }
+    return `${term}${d}`;
+}
+
+function polynomialToString(a)
+{
+    var result = formatTerm(a[0], a.length - 1);
+    for (var i = 0; i < a.length; i++)
+    {
+        if (a[i] === 0)
         {
-            if (coeff.numerator === -1 && exponent !== 0)
+            continue;
+        }
+        if (!(a[i] instanceof Fraction))
+        {
+            if (a[i] < 0)
             {
-                term += '-';
+                result += ` - ${formatTerm(a[i], a.length - i - 1)}`;
             }
             else
             {
-                term += coeff.toString();
+                result += ` + ${formatTerm(a[i], a.length - i - 1)}`;
             }
+            continue;
         }
-        if (exponent > 0)
+        if (!(a[i]).sign()) //fraction is negative
         {
-            term += 'x';
-            if (exponent > 1)
-            {
-                term += `^${exponent}`;
-            }
+            result += ` - ${formatTerm(a[i].abs(), a.length - i - 1)}`;
         }
-        terms.push(term);
-    });
-    return terms.join(' + ').replace(/\+ -/g, '- ');
+        else
+        {
+            result += ` + ${formatTerm(a[i], a.length - i - 1)}`;
+        }
+    }
+    return result;
 }
 
-function generateProblem(_settings, setDivision)
+function generateDivisionProblem(_settings, setDivision)
 {
     var degrees;
     if (_settings[2] !== 0)
     {
         var degrees = randomNum(_settings[0] - _settings[2], _settings[0] + _settings[2]);
-        console.log("rand dividend", degrees);
         if (degrees < 2)
         {
             degrees = 2; //ensure numerator is at least 2 degrees
@@ -138,6 +225,18 @@ function generateProblem(_settings, setDivision)
     let divisor = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
     let result = polynomialDivision(dividend, divisor);
     setDivision(`\\( \\frac{${polynomialToString(dividend)}}{${polynomialToString(divisor)}} = ${polynomialToString(result.quotient)} + \\frac{${polynomialToString(result.remainder)}}{${polynomialToString(divisor)}} \\)`);
+}
+
+function generateDecompProblem(_settings)
+{
+
+}
+
+function generateUnfactorableQuadratic() //probability of generating should be 30%
+{
+    let a = randomNum(1, 10);
+    let c = randomNum(1, 10);
+    return [a, randomNum(0, Math.floor(2 * Math.sqrt(a * c)) - 1), c];
 }
 
 export default function PolynomialDivision(props)
@@ -184,7 +283,7 @@ export default function PolynomialDivision(props)
                         <div className="input-label"><input type="number" id="1" defaultValue={3} min={2} onChange={() => handleChange(1)} aria-label="Target Denominator Degrees" name="Target Denominator Degrees"/><label htmlFor="1">Target Denominator Degrees</label></div>
                         <div className="input-label"><input type="number" id="2" defaultValue={2} min={0} onChange={() => handleChange(2)} aria-label="Possible Degree Variation" name="Possible Degree Variation"/><label htmlFor="2">Possible Degree Variation</label></div>
                     </div>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateProblem(_settings, setDivision)} aria-label="Generate New Problem">Generate New Problem</button>
+                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateDivisionProblem(_settings, setDivision)} aria-label="Generate New Problem">Generate New Problem</button>
                     <div className="prompt" role="contentinfo" aria-live="assertive">
                         <p>{_division}</p>
                     </div>
