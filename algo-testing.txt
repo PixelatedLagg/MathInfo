@@ -1,5 +1,16 @@
 (x + a)(x + b)
 (x^2 + xa + xb + ab)(x + c)
-x^3 + x^2*a + x^2*b + x^2*c + xab + xac + xbc + abc
+(x^3 + x^2*a + x^2*b + x^2*c + xab + xac + xbc + abc)(x + d)
+(x^4 + x^3*a + x^3*b + x^3*c + x^2*ab + x^2*ac + x^2*bc + xabc + x^3*d + x^2*ad + x^2*bd + x^2*cd + xabd + xacd + xbcd + abcd)
 
-x^# of factors + (x^# of degrees decreasing * all combos of increasing y length of all factors) + all factors multiplied
+x^4
+^^
+x^highest degree
+
+x^3*a + x^3*b + x^3*c + x^2*ab + x^2*ac + x^2*bc + xabc + x^3*d + x^2*ad + x^2*bd + x^2*cd + xabd + xacd + xbcd
+^^
+loop x^decreasing from highest degree multipled by unique combos of max degree - current degree
+
+abcd
+^^
+everything multiplied together
