@@ -144,7 +144,25 @@ function generateDivisionProblem(_settings, setDivision)
 
 function generateDecompProblem(_settings)
 {
-
+    var targetDegrees = _settings[1];
+    var currentDegrees = 0;
+    var denominator = [1];
+    while (true)
+    {
+        if (currentDegrees === targetDegrees)
+        {
+            break;
+        }
+        if (randomNum(0, 2) === 0 && currentDegrees <= targetDegrees - 2)
+        {
+            currentDegrees += 2;
+            denominator = polynomialMultiply(denominator, generateUnfactorableQuadratic());
+        }
+        else
+        {
+            denominator = polynomialMultiply(denominator, [randomNum(1, 10), randomNum(1, 10)]);
+        }
+    }
 }
 
 function generateUnfactorableQuadratic() //probability of generating should be 30%
