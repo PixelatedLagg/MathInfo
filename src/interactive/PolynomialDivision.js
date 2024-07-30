@@ -6,7 +6,7 @@ function randomNum(min, max) { //INCLUSIVE
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function randomCoeff(min, max)
+function randomCoeff()
 {
     var result = randomNum(0, 10);
     return result;
@@ -144,18 +144,21 @@ function generateDivisionProblem(_settings, setDivision)
 
 function generateDecompProblem(_settings)
 {
-    var targetDegrees = _settings[1];
-    var currentDegrees = 0;
+    var denomDegrees = randomNum(_settings[1] - _settings[2], _settings[1] + _settings[2]);
     var denominator = [1];
     while (true)
     {
-        if (currentDegrees === targetDegrees)
+        if (denominator.length - 1 === denomDegrees)
         {
             break;
         }
-        if (randomNum(0, 2) === 0 && currentDegrees <= targetDegrees - 2)
+        if (denominator.length === denomDegrees)
         {
-            currentDegrees += 2;
+            denominator = polynomialMultiply(denominator, [randomNum(1, 10), randomNum(1, 10)]);
+            continue;
+        }
+        if (randomNum(0, 2) === 0)
+        {
             denominator = polynomialMultiply(denominator, generateUnfactorableQuadratic());
         }
         else
@@ -163,6 +166,7 @@ function generateDecompProblem(_settings)
             denominator = polynomialMultiply(denominator, [randomNum(1, 10), randomNum(1, 10)]);
         }
     }
+    var numerator = Array.from({ length: randomNum(_settings[0] - _settings[2], _settings[0] + _settings[2]) }, () => randomCoeff());
 }
 
 function generateUnfactorableQuadratic() //probability of generating should be 30%
