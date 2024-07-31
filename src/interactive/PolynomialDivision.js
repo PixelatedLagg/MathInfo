@@ -107,6 +107,7 @@ function polynomialToString(a)
 
 function generateDivisionProblem(_settings, setDivision)
 {
+    //CHECK NUM IS BIGGHER THAN DENOM!
     var degrees;
     if (_settings[2] !== 0)
     {
@@ -187,20 +188,8 @@ export default function PolynomialDivision(props)
     });
 
     function handleChange(index) {
-        var e = document.getElementById(index);
-        if (e.value >= e.min)
-        {
-            if (index === 0 && e.value <= _settings[1]) //ensure numerator target is above denominator target
-            {
-                return;
-            }
-            else if (index === 1 && e.value >= _settings[0]) //ensure denominator target is below numerator target
-            {
-                return;
-            }
-            _settings[index] = e.value;
-            setSettings(_settings);
-        }
+        _settings[index] = e.value;
+        setSettings(_settings);
     }
     
     useEffect(() => {
