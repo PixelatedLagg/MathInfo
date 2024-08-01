@@ -107,11 +107,15 @@ function polynomialToString(a)
 
 function generateDivisionProblem(_settings, setDivision)
 {
-    //CHECK NUM IS BIGGHER THAN DENOM!
-    var degrees;
-    if (_settings[2] !== 0)
+    var settingsCopy = [..._settings];
+    if (_settings[0] < _settings[1]) //if num < denom, denom = num - 1
     {
-        var degrees = randomNum(_settings[0] - _settings[2], _settings[0] + _settings[2]);
+        settingsCopy[1] = _settings[0] - 1;
+    }
+    var degrees;
+    if (settingsCopy[2] !== 0)
+    {
+        var degrees = randomNum(settingsCopy[0] - settingsCopy[2], settingsCopy[0] + settingsCopy[2]);
         if (degrees < 2)
         {
             degrees = 2; //ensure numerator is at least 2 degrees
@@ -119,12 +123,12 @@ function generateDivisionProblem(_settings, setDivision)
     }
     else
     {
-        degrees = _settings[0]; //no variation
+        degrees = settingsCopy[0]; //no variation
     }
     let dividend = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
-    if (_settings[2] !== 0)
+    if (settingsCopy[2] !== 0)
     {
-        degrees = randomNum(_settings[1] - _settings[2], _settings[1] + _settings[2]);
+        degrees = randomNum(settingsCopy[1] - settingsCopy[2], settingsCopy[1] + settingsCopy[2]);
         if (degrees < 1)
         {
             degrees = 1; //ensure denominator is at least 1 degree
@@ -136,7 +140,7 @@ function generateDivisionProblem(_settings, setDivision)
     }
     else
     {
-        degrees = _settings[1]; //no variation
+        degrees = settingsCopy[1]; //no variation
     }
     let divisor = Array.from({ length: degrees + 1 }, () => randomCoeff(0, 99));
     let result = polynomialDivision(dividend, divisor);
