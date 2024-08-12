@@ -192,7 +192,7 @@ export default function PolynomialDivision(props)
     });
 
     function handleChange(index) {
-        _settings[index] = e.value;
+        _settings[index] = index.value;
         setSettings(_settings);
     }
     

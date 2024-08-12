@@ -28,5 +28,13 @@
                 "image" : "<div class=\"image\"><img src=\"/imgs/Trigonometry/1_2.png\" alt=\"Diagram of right triangle.\"><p>Diagram of right triangle.</p></div>"
             }
         ]
+    },
+    "proof-of-the-fundamental-theorem-of-calculus-part-i": {
+        "title": "Proof of the Fundamental Theorem of Calculus Part I",
+        "sections": [
+            {
+                "text": "<h1>Proof of the Fundamental Theorem of Calculus Part I</h1><i>Alexander DeCarlo</i><p>Proving the fundamental theorem of calculus consists of two parts. Interestingly, the “first part” was proved secondly, and the “second part” was proved first. However, it makes much more sense for any calculus student to learn the first part's proof, then the second one, despite the order that they were proven. Let's jump right into the first part!</p><p>The first part of the fundamental theorem of calculus connects the idea of a derivative and an integral. It states that the derivative of an integral returns the original function. In mathematical notation: \\[\\frac{d}{dx}\\left[\\int f(x) \\, dx\\right] = f(x)\\]This can also be used to say that the integral of f(x) (area under the curve) is just the “antiderivative” of f(x), or in simpler terms, a function g(x) where its derivative of f(x). As we can see, proving this theorem will give us a gateway into actually solving integrals, one of the hardest tasks in calculus.</p><p>But why would we even consider a relationship in the first place? Well, let's consider a very general function, f(x).</p>IMAGE<p>Now, consider f(x) and A(x), where A(x) is the area function. Basically, we are assuming that the area under any curve can be considered some function of x. As we see with the blue line to the right, changing that also changes the overall area of the function. If f(x) is decreasing, then the added area to A(x) will become less and less large. Here, we can intuitively see a connection to the derivative of f(x) and A(x). It just so happens that the area function IS the antiderivative of f(x), which is less intuitive to see.</p><p>Lets begin with the proof:</p><p>Consider A(x) and f(x) where A(x) is the area function to f(x). We are to prove that A'(x) = f(x).</p><p>Let's begin with the definition of a derivative, just to see if we can work with that somehow:</p>"
+            }
+        ]
     }
 }
