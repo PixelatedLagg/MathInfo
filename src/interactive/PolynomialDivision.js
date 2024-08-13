@@ -1,4 +1,4 @@
-import '../index.css';
+/*import '../index.css';
 import React, { useState, useEffect } from 'react';
 import Fraction from '../utils/Fraction'
 
@@ -223,4 +223,4 @@ export default function PolynomialDivision(props)
             </div>
         </div>
         );
-}
+}*/
