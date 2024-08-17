@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmathinfo=self.webpackChunkmathinfo||[]).push([[329],{329:function(e){e.exports=JSON.parse('{"Resources":["algebra","trigonometry","proofs"]}')}}]);
