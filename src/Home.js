@@ -8,7 +8,18 @@ export default function Home(props){
         props.onSetLinks("/");
     }, [props]);
     return (
-        <div className="content" role="main">
+        <div className="button-grid">
+            <div><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Algebra</p></div>
+            <div>Trigonometry</div>
+            <div>Calculus</div>
+            <div>Proofs</div>
+        </div>
+    );
+}
+
+/*
+
+<div className="content" role="main">
             <div className="text">
                 <h1>Welcome to MathInfo.org</h1>
                 <p>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.</p>
@@ -26,5 +37,5 @@ export default function Home(props){
                 </div>
             </div>
         </div>
-    );
-}
+
+*/

@@ -489,3 +489,55 @@ input[type="number"]
 }
 
 /* REDESIGN */
+
+.content {
+    flex: 1;
+    background-color: white;
+    height:max-content;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+nav {
+    background-color: white;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+  
+.button-grid div {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 4px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for text */
+    border: 2px solid white;
+  }
+  
+.button-grid div:hover {
+    border: 2px solid #848484;
+}
+
+.button-grid div img {
+    margin-right: 16px;
+}
+
+.button-grid div p {
+    line-height: normal !important;
+    margin: 0;
+}
+
+.container {
+    margin-left: 30% !important;
+    margin-right: 30% !important;
+}

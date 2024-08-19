@@ -139,7 +139,6 @@ export default function App()
                 <Route path={"/interactive"} element={<Interactive onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
                 <Route path={"/interactive/basic-trigonometry"} element={<BasicTrigonometry onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
                 <Route path={"/interactive/statistics-categories"} element={<StatisticsCategories onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
-                <Route path={"/interactive/polynomial-division"} element={<PolynomialDivision onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
             </Routes>
         </div>
     );
