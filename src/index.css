@@ -509,24 +509,21 @@ nav {
 .button-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 10px; /* Space between buttons */
-    margin-top: 10px;
+    gap: 32px; /* Space between buttons */
+    margin-top: 32px;
 }
   
 .button-grid div {
     display: flex;
     align-items: center; /* Center content vertically */
-    padding: 4px;
+    padding: 16px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     text-decoration: none; /* Remove underline for text */
-    border: 2px solid white;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 0 6px black;
   }
-  
-.button-grid div:hover {
-    border: 2px solid #848484;
-}
 
 .button-grid div img {
     margin-right: 16px;
@@ -538,6 +535,32 @@ nav {
 }
 
 .container {
-    margin-left: 30% !important;
-    margin-right: 30% !important;
+    margin: 0 auto;
+    max-width: 1250px;
+}
+
+nav {
+    display: none;
+}
+
+.home-text {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+
+.home-alltext {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 6px black;
+}
+
+.home-alltext p {
+    color: black;
+}
+
+.less-p {
+    font-size: calc(var(--font-size) - 4px);
 }

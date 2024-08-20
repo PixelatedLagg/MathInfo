@@ -8,11 +8,24 @@ export default function Home(props){
         props.onSetLinks("/");
     }, [props]);
     return (
-        <div className="button-grid">
-            <div><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Algebra</p></div>
-            <div>Trigonometry</div>
-            <div>Calculus</div>
-            <div>Proofs</div>
+        <div>
+            <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px"}}></img>
+            <div className="home-alltext">
+                <h1>Welcome</h1>
+                <p>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>Will and Alex, two high school students passionate about these topics, created this website to share valuable knowledge with others.</p>
+                <p className="less-p">Mild disclaimer: we employ AI to enhance the editing process for some of our articles. Through its use, we strive to maintain the original structure, core concepts, and intent of the content while focusing on improving clarity and coherence.<br></br>This website is conformant to WCAG 2.2 at Level AAA. <a href="mailto:michiganmii2@gmail.com" aria-label="Send an email to michiganmii2@gmail.com">Email us</a> with any questions or feature requests. View the source code on <a href="https://github.com/PixelatedLagg/MathInfo" aria-label="View the source code on GitHub">Github</a>.</p>
+                <a href="https://www.w3.org/WAI/WCAG2AAA-Conformance" title="Explanation of WCAG 2 Level AAA conformance" aria-label="Learn more about WCAG 2 Level AAA conformance">
+                    <img height="32" width="88" src="https://www.w3.org/WAI/WCAG22/wcag2.2AAA" alt="Level AAA conformance, W3C WAI Web Content Accessibility Guidelines 2.2" id="wcag"></img>
+                </a>
+            </div>
+            <div className="button-grid">
+                <div className="color-algebra"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Algebra</p></div>
+                <div className="color-trig"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Trigonometry</p></div>
+                <div className="color-calculus"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Calculus</p></div>
+                <div className="color-proofs"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Proofs</p></div>
+                <div className="color-int"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>Interactive</p></div>
+                <div className="color-int"><img src="imgs/Logos/algebra.webp" width="48px" height="48px"></img><p>External Links</p></div>
+            </div>
         </div>
     );
 }
