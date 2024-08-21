@@ -1,6 +1,6 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useLocation } from "react-router-dom";
 import { Section } from "./Section"
 import Home from "./Home"
 import External from "./External"
@@ -87,8 +87,12 @@ export default function App()
     const handleLinks = (data) => {
         setLinks(data);
     }
+
+    const location = useLocation();
     return (
         <div className="container">
+            {/* render the navbar when not on home */}
+            {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
                 <div className="header" role="menubar" aria-label="Horizontal Menu">
                     <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page">
@@ -131,8 +135,9 @@ export default function App()
                     </ul>
                 </div>
             </nav>
+            )}
             <Routes>
-                <Route exact path={"/"} element={<Home onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
+                <Route exact path={"/"} element={<Home/>}/>
                 <Route exact path={"/external"} element={<External onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
                 <Route path={"/:res"} element={<Section onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
                 <Route path={"/:res/:article"} element={<Article onSetNames={handleNames} onSetLinks={handleLinks}/>}/>

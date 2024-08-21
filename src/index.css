@@ -513,23 +513,28 @@ nav {
     margin-top: 32px;
 }
   
-.button-grid div {
+.button-grid a {
     display: flex;
     align-items: center; /* Center content vertically */
-    padding: 16px;
-    background-color: white;
     border-radius: 4px;
+    padding: 16px;
     cursor: pointer;
     text-decoration: none; /* Remove underline for text */
     transition: all 0.15s ease-in-out;
     box-shadow: 0 0 6px black;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
   }
 
-.button-grid div img {
+.button-grid a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.button-grid a img {
     margin-right: 16px;
 }
 
-.button-grid div p {
+.button-grid a p {
     line-height: normal !important;
     margin: 0;
 }
@@ -540,7 +545,7 @@ nav {
 }
 
 nav {
-    display: none;
+    /*display: none;*/
 }
 
 .home-text {
@@ -553,14 +558,43 @@ nav {
     margin-top: 16px;
     padding: 16px;
     border-radius: 4px;
-    background-color: white;
-    box-shadow: 0 0 6px black;
+    margin-bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
 }
 
-.home-alltext p {
+.home-alltext * {
     color: black;
 }
 
 .less-p {
     font-size: calc(var(--font-size) - 4px);
+    color: white;
+    text-align: center;
+}
+
+.less-p a {
+    color: white;
+}
+
+.footer {
+    margin-bottom: 16px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    padding: 8px;
+
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto; /* Center the div horizontally */
+    text-align: center; /* Optional: center-align the text */
+    bottom: 0;
+}
+
+.footer * {
+    margin: 0;
+    padding: 0;
 }
