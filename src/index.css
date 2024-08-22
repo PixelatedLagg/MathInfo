@@ -544,10 +544,6 @@ nav {
     max-width: 1250px;
 }
 
-nav {
-    /*display: none;*/
-}
-
 .home-text {
     color: white;
     font-size: 32px;
@@ -597,4 +593,31 @@ nav {
 .footer * {
     margin: 0;
     padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Vertically centers the content within the viewport */
+    margin: 0 auto;
+    width: 100%; /* Adjust based on your content width */
+    position: relative;
+}
+
+/* MAIN REDESIGN */
+
+.header {
+    padding: 4px;
+    background-color: #22A887;
+}
+
+.header-button span {
+    font-weight: bold;
+    color: white;
+}
+
+.header-button {
+    background: none;
+    margin-top: 4px;
 }
