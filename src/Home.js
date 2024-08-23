@@ -1,14 +1,14 @@
 import { React, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Home(props){
+export default function Home(){
     return (
         <div>
             
             <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px"}}></img>
             <div className="home-alltext">
                 <h1>Welcome</h1>
-                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>Will and Alex, two high school students passionate about these topics, created this website to share valuable knowledge with others.</p>
+                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others.</p>
             </div>
             <div className="button-grid">
             <Link to="/algebra">

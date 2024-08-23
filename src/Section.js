@@ -50,15 +50,20 @@ export function Section(props)
         return null;
     }
     return (
-        <div className="content" role="main">
-            <div className="text">
-                <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
-                <h2>Articles:</h2>
-                <ul>
-                    {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
-                </ul>
+        <div>
+            <div className="home-alltext">
+                <h1>{lowerRes.charAt(0).toUpperCase() + lowerRes.slice(1)}</h1>
             </div>
-            <div className="media" role="complementary" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
+            <div className="content" role="main">
+                <div className="text">
+                    <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
+                    <h2>Articles:</h2>
+                    <ul>
+                        {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
+                    </ul>
+                </div>
+                <div className="media" role="complementary" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
+            </div>
         </div>
     );
 }
