@@ -593,7 +593,8 @@ nav {
 
 .header {
     padding: 4px;
-    background-color: rgba(0, 180, 216, 0.5);
+    /*background-color: rgba(0, 180, 216, 0.5);*/
+    background-color: rgba(34, 168, 135, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 4px;
 }
@@ -642,4 +643,37 @@ nav {
 
 span:hover {
     color: black;
+}
+
+.article-grid a {
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    /*background: rgba(120, 0, 0, 0.5); ALGEBRA*/
+    /*background: rgba(81, 0, 135, 0.5); TRIG*/
+    background: rgba(2, 62, 138, 0.5);
+    color: white;
+    padding: 32px; /* Optional: Add padding for a better look */
+    box-sizing: border-box;
+    transition: all 0.15s ease-in-out;
+}
+
+.article-grid a:hover {
+    /*background: #780000; ALGEBRA*/
+    /*background: #510087; TRIG*/
+    background: #023e8a;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 16px;
+}
+
+.divider {
+    width: 100%; /* Width of the container */
+    height: 64px;
+    overflow: hidden; /* Crop the overflowing parts of the SVG */
+    background-image: url('../public/imgs/Calculus/calculus-divider.svg');
+    border-radius: 4px;
+    margin-bottom: 16px;
 }

@@ -8,9 +8,7 @@ function CheckSummary(element, index, resource)
         return null;
     }
     return (
-        <li key={index}>
-            <Link to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
-        </li>
+        <Link to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
     );
 }
 
@@ -50,19 +48,11 @@ export function Section(props)
         return null;
     }
     return (
-        <div>
-            <div className="home-alltext">
-                <h1>{lowerRes.charAt(0).toUpperCase() + lowerRes.slice(1)}</h1>
-            </div>
-            <div className="content" role="main">
-                <div className="text">
-                    <div dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
-                    <h2>Articles:</h2>
-                    <ul>
-                        {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
-                    </ul>
-                </div>
-                <div className="media" role="complementary" dangerouslySetInnerHTML={{ __html: resource.Summary.image }}></div>
+        <div className={`${lowerRes}-section`}>
+            <div className="home-alltext" style={{marginBottom: "32px"}}dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
+            <div className="divider"></div>
+            <div className="article-grid">
+                {Object.keys(resource).map((element, index) => CheckSummary(element, index, resource))}
             </div>
         </div>
     );
