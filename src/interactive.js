@@ -10,20 +10,17 @@ export default function Interactive(props)
         props.onSetLinks("/interactive");
     }, [props]);
     return (
-        <div className="content" role="main">
-            <div className="text">
-                <div>
-                    <h1>Interactive</h1>
-                    <p>Interactive activities allow you to test your math skills with randomly generated problems.</p>
-                </div>
-                <h2>Interactive Activities:</h2>
-                <ul>
-                    <li><Link to='/interactive/basic-trigonometry' aria-label="Visit Basic Trigonometry Page">Basic Trigonometry</Link></li>
-                    <li><Link to='/interactive/statistics-categories' aria-label="Visit Statistics Categories Page">Statistics Categories</Link></li>
-                    <li><Link to='/interactive/polynomial-division' aria-label="Visit Polynomial Division Page">Polynomial Division</Link></li>
-                </ul>
+        <div className="interactive-section">
+            <div className="home-alltext" style={{marginBottom: "32px"}}>
+                <h1>Interactive</h1>
+                <p>Interactive activities allow you to test your math skills with randomly generated problems.</p>
             </div>
-            <div className="media" role="complementary"></div>
+            <div className="divider"></div>
+            <div className="article-grid">
+                <Link to='/interactive/basic-trigonometry' aria-label="Visit Basic Trigonometry Page">Basic Trigonometry</Link>
+                <Link to='/interactive/statistics-categories' aria-label="Visit Statistics Categories Page">Statistics Categories</Link>
+                <Link to='/interactive/polynomial-division' aria-label="Visit Polynomial Division Page">Polynomial Division</Link>
+            </div>
         </div>
     );
 }

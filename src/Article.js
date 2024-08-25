@@ -6,7 +6,6 @@ function ReadSection(section, index)
     return (
         <div className="section" key={index}>
             <div className="text" dangerouslySetInnerHTML={{ __html: section.text }}></div>
-            <div className="media" role="complementary" dangerouslySetInnerHTML={{ __html: section.image }}></div>
         </div>
     );
 }

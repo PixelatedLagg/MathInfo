@@ -40,14 +40,17 @@ p, strong, i
 
 p, h1, h2, h3, span, a, li::marker, button, i, label
 {
-    color: var(--font-color);
     font-family: 'Inter';
 }
 
-nav
+strong, sup
 {
-    margin: 0;
-    padding: 0;
+    color: var(--strong-color);
+    font-family: 'Inter';
+}
+
+a p {
+    color: black;
 }
 
 p
@@ -63,15 +66,17 @@ h1
     font-size: 2em;
 }
 
-i::after(h1)
+img, svg
 {
-    margin-top: 0;
+    max-width: 100vh;
 }
 
 body
 {
     background-image: url('../public/imgs/mathbgfinal.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
     margin: 0;
     padding: 0;
     overflow: auto;
@@ -86,20 +91,16 @@ button
     font-size: unset;
 }
 
-img, svg
-{
-    max-width: 100vh;
-}
-
 html, body, #root
 {
     height: 100%;
 }
 
-strong, sup
+/* ARTICLE TEXT */
+
+i::after(h1)
 {
-    color: var(--strong-color);
-    font-family: 'Inter';
+    margin-top: 0;
 }
 
 sup
@@ -111,31 +112,6 @@ sup
 strong
 {
     font-weight: normal;
-}
-
-a span, button span
-{
-    margin: 0 !important;
-    line-height: unset;
-    display: block;
-    font-size: 1.25em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    width: unset;
-    white-space: nowrap;
-}
-
-.header-button span
-{
-    line-height: 1.17em;
-}
-
-a:link, a:visited
-{
-    color: var(--font-color);
 }
 
 /* Header */
@@ -200,8 +176,9 @@ a:link, a:visited
     list-style-type: none;
 }
 
-#location ul li a
+#location ul li a, #location ul li::marker
 {
+    color: white;
     white-space: nowrap
 }
 
@@ -209,6 +186,32 @@ a:link, a:visited
 {
     margin-left: 16px;
     list-style-type: '\2192';
+}
+
+a span, button span
+{
+    margin: 0 !important;
+    line-height: unset;
+    display: block;
+    font-size: 1.25em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    width: unset;
+    white-space: nowrap;
+}
+
+.header-button span
+{
+    line-height: 1.17em;
+}
+
+nav
+{
+    margin: 0;
+    padding: 0;
 }
 
 /* Resources Dropdown */
@@ -226,7 +229,7 @@ a:link, a:visited
     background-color: white;
     max-width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 2;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -238,6 +241,7 @@ a:link, a:visited
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    z-index: 2;
 }
 
 .dropdown-content a:hover, .dropdown-content button:hover
@@ -271,13 +275,13 @@ a:link, a:visited
 {
     padding: 24px;
     background-color: rgba(11, 11, 11, 0.0);
+    box-sizing: border-box;
 }
 
 .text
 {
-    width: 60%;
-    float: left;
-    display: block;
+    margin: 0 auto;
+    width: 80%;
     padding-bottom: 24px;
 }
 
@@ -374,7 +378,7 @@ li + li
 
 li a
 {
-    color: black;
+    color: white;
     font-size: var(--font-size);
     line-height: var(--line-height);
     text-decoration: underline;
@@ -551,6 +555,7 @@ nav {
     margin-bottom: 80px;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
+    z-index: 0;
 }
 
 .home-alltext * {
@@ -593,29 +598,24 @@ nav {
 
 .header {
     padding: 4px;
-    /*background-color: rgba(0, 180, 216, 0.5);*/
-    background-color: rgba(34, 168, 135, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
     border-radius: 4px;
 }
+
 nav {
     background: none;
 }
 
 .header-button span {
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .header-button {
     background: none;
     margin-top: 4px;
 }
-
-.test {
-    height: 100vh;
-}
-
 
 .content {
     display: flex;
@@ -642,25 +642,18 @@ nav {
 }
 
 span:hover {
-    color: black;
+    text-decoration: underline;
+    text-decoration-color: #22A887;
+    text-decoration-thickness: 4px;
+    text-decoration-style: solid;
 }
 
 .article-grid a {
     backdrop-filter: blur(5px);
     border-radius: 4px;
-    /*background: rgba(120, 0, 0, 0.5); ALGEBRA*/
-    /*background: rgba(81, 0, 135, 0.5); TRIG*/
-    background: rgba(2, 62, 138, 0.5);
-    color: white;
     padding: 32px; /* Optional: Add padding for a better look */
     box-sizing: border-box;
     transition: all 0.15s ease-in-out;
-}
-
-.article-grid a:hover {
-    /*background: #780000; ALGEBRA*/
-    /*background: #510087; TRIG*/
-    background: #023e8a;
 }
 
 .article-grid {
@@ -673,7 +666,70 @@ span:hover {
     width: 100%; /* Width of the container */
     height: 64px;
     overflow: hidden; /* Crop the overflowing parts of the SVG */
-    background-image: url('../public/imgs/Calculus/calculus-divider.svg');
     border-radius: 4px;
     margin-bottom: 16px;
+}
+
+.algebra-section .divider {
+    background-image: url('../public/imgs/Algebra/algebra-divider.svg');
+}
+
+.trigonometry-section .divider {
+    background-image: url('../public/imgs/Trigonometry/trig-divider.svg');
+}
+
+.calculus-section .divider {
+    background-image: url('../public/imgs/Calculus/calculus-divider.svg');
+}
+
+.proofs-section .divider {
+    background-image: url('../public/imgs/Proofs/proofs-divider.svg');
+}
+
+.algebra-section .article-grid a {
+    background: rgba(120, 0, 0, 0.5);
+}
+
+.trigonometry-section .article-grid a {
+    background: rgba(81, 0, 135, 0.5);
+}
+
+.calculus-section .article-grid a {
+    background: rgba(2, 62, 138, 0.5);
+}
+
+.proofs-section .article-grid a {
+    background: rgba(0, 100, 0, 0.5);
+}
+
+.interactive-section .article-grid a {
+    background: rgba(173, 0, 101, 0.5);
+}
+
+.algebra-section .article-grid a:hover {
+    background: rgba(120, 0, 0, 1);
+}
+
+.trigonometry-section .article-grid a:hover {
+    background: rgba(81, 0, 135, 1);
+}
+
+.calculus-section .article-grid a:hover {
+    background: rgba(2, 62, 138, 1);
+}
+
+.proofs-section .article-grid a:hover {
+    background: rgba(0, 100, 0, 1);
+}
+
+.interactive-section .article-grid a:hover {
+    background: rgba(173, 0, 101, 1);
+}
+
+.text a {
+    color: black;
+}
+
+.text strong, .text sup {
+    color: #6400ff; /* PERFECT COLOR FOR CONTRAST 7:1 WHITE AND 2.99:1 BLACK*/
 }
