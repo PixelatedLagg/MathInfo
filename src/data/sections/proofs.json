@@ -1,6 +1,6 @@
 {
     "Summary" : {
-        "text" : "<h1>Proofs</h1>",
+        "text" : "<h1>Proofs</h1><p>Proofs provide the backbone of mathematics, as they rigorously explain why things are the way they are. While much of math has real life application which betters our lives, proofs usually consist of pure logic and mathematical ideas to solely explain and prove some mathematical topic. Given proofs uphold logical soundness, it is considered to be the most complex and difficult branch of mathematics. Proofs serve to better provide a deeper understanding to mathematical concepts as the idea goes against simply providing a formula or statement without evidence for why that it is true.</p>",
         "image" : "<div class=\"image\"><img src=\"/imgs/Proofs/0.png\" alt=\"\"><p>Proofs graphic.</p></div>"
     },
     "pythagorean-theorem-and-distance-formula-derivation" : {

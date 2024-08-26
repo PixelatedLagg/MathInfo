@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 export default function Interactive(props)
 {
     document.title = "Interactive";
+    
     useEffect(() => {
         props.onSetNames("Interactive");
         props.onSetLinks("/interactive");
     }, [props]);
+
     return (
         <div className="interactive-section">
             <div className="home-alltext" style={{marginBottom: "32px"}}>

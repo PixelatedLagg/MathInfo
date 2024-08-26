@@ -7,6 +7,7 @@ function CheckSummary(element, index, resource)
     {
         return null;
     }
+    
     return (
         <Link to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
     );
@@ -47,6 +48,7 @@ export function Section(props)
     {
         return null;
     }
+
     return (
         <div className={`${lowerRes}-section`}>
             <div className="home-alltext" style={{marginBottom: "32px"}}dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>

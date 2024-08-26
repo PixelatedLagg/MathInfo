@@ -1,6 +1,6 @@
 {
     "Summary" : {
-        "text" : "<h1>Trigonometry</h1>",
+        "text" : "<h1>Trigonometry</h1><p>Trigonometry deals with the study of angles. The etymology of the word also provides insight into what branch of math it encompasses, as \"trigon\" refers to triangles, or a shape consisting of 3 angles. Although trigonometry is a sub-branch of geometry, it deserves its own in-depth section as trigonometry appears and is necessary to understand for many other aspects of mathematics. Trigonometry will introduce many new ideas with 2 core functions that incorporate angles called sine and cosine that all relate back to the triangle. The inner-workings of trigonometry include right angle trig., general angle trig, trigonometric function analysis, and even complex trigonometry.</p>",
         "image" : "<div class=\"image\"><img src=\"/imgs/Trigonometry/0.png\" alt=\"\"><p>Trigonometry graphic.</p></div>"
     },
     "right-triangle-trigonometry" : {
