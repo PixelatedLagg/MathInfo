@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmathinfo=self.webpackChunkmathinfo||[]).push([[156],{156:function(s){s.exports=JSON.parse('{"Summary":{"text":"<h1>Calculus</h1>","image":"<div class=\\"image\\"><img src=\\"/imgs/Calculus/0.png\\" alt=\\"\\"><p>Calculus graphic.</p></div>"},"riemann-sums":{"title":"Riemann Sums","sections":[{"text":"..."}]}}')}}]);
