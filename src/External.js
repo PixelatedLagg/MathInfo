@@ -23,7 +23,7 @@ export default function External(props)
                 <a href='https://encyclopediaofmath.org/wiki/Main_Page' aria-label="Visit Encyclopedia of Math">Encyclopedia of Math</a>
                 <a href='https://sophisticatedprimate.com/' aria-label="Visit SophisticatedPrimate">SophisticatedPrimate</a>
                 <a href='https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/mode/2up' aria-label="Visit Archive Page for Elements of Algebra by Leonhard Euler">Elements of Algebra by Leonhard Euler</a>
-                <a href='https://www.amazon.com/Introduction-Number-Theory-Problem-Solving/dp/1934124125' aria-label="Visit Amazon Page for Introduction to Number Theory (Art of Problem Solving Introduction) by Mathew Crawford">Introduction to Number Theory (Art of Problem Solving Introduction) by Mathew Crawford</a>
+                <a href='https://www.amazon.com/Introduction-Number-Theory-Problem-Solving/dp/1934124125' aria-label="Visit Amazon Page for Introduction to Number Theory by Mathew Crawford">Introduction to Number Theory by Mathew Crawford</a>
                 <a href='https://archive.org/details/precalculuswithl0000lars_e0m3' aria-label="Visit Amazon Page for Precalculus with Limits: a Graphing Approach 4th edition by Ron Larson">Precalculus with Limits: a Graphing Approach 4th edition by Ron Larson</a>
             </div>
         </div>

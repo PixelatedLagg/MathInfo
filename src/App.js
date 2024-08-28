@@ -95,7 +95,7 @@ export default function App()
             {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
                 <div className="header" role="menubar" aria-label="Horizontal Menu">
-                    <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page">
+                    <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page" style={{borderTopLeftRadius: "4px", borderBottomLeftRadius: "4px"}}>
                         <span>Home</span>
                     </Link>
                     <div className="dropdown" role="presentation">

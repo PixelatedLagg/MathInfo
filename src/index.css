@@ -1,21 +1,15 @@
 :root
 {
-    --font-color: black;
-    --header-color: #121212;
-    --bg-color: white;
-    --header-outline: #121212;
-    --strong-color: #6400ff;
-    --font-size: 16px;
-    --line-height: 24px;
+    --darkModeBorder: 0px;
+    --darkModeBackground: white;
+    --darkModeTextColor: black;
 }
 
 [data-theme="dark"]
 {
-    --font-color: #e3e3e3;
-    --header-color: #121212;
-    --bg-color: #121212;
-    --header-outline: #e3e3e3;
-    --strong-color: #51a839;
+    --darkModeBorder: 4px;
+    --darkModeBackground: black;
+    --darkModeTextColor: white;
 }
 
 [font-size="double"]
@@ -114,47 +108,6 @@ strong
     font-weight: normal;
 }
 
-/* Header */
-
-.header
-{
-    background-color: var(--header-color);
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--header-outline);
-}
-
-.header-link
-{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.header-button
-{
-    background-color: #00DDFF;
-    padding: 10px;
-    width: min-content;
-}
-
-.header-button:hover {
-    color: black;
-}
-
-.header > *
-{
-    margin-top: 16px;
-    margin-right: 24px;
-}
-
-.header * span
-{
-    color: black;
-}
-
 #location
 {
     top: 0;
@@ -206,10 +159,6 @@ a span, button span
     white-space: nowrap;
 }
 
-.header-button span
-{
-    line-height: 1.17em;
-}
 
 nav
 {
@@ -232,7 +181,6 @@ nav
     background-color: white;
     max-width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -244,7 +192,7 @@ nav
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    z-index: 2;
+    position: relative;
 }
 
 .dropdown-content a:hover, .dropdown-content button:hover
@@ -272,6 +220,8 @@ nav
     background-color: var(--bg-color);
     overflow: auto;
     min-height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .content
@@ -316,7 +266,7 @@ nav
 {
     width: calc(100% - 6px);
     border-radius: 5px;
-    border: 1px solid var(--font-color);
+    border: 1px solid var(--darkModeTextColor);
     display: block;
     margin: 0 auto;
     max-width: 720px;
@@ -469,36 +419,40 @@ input[type="number"]
     }
 }
 
+@media (max-width: 1000px)
+{
+    .button-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .article-grid {
+        grid-template-columns: none !important;
+    }
+}
+
 @media (max-width: 496px) 
 {
-    .header-menu
-    {
-        display: unset;
-    }
-    .header > *
-    {
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        width: 100%;
-    }
-    .header-button
-    {
-        text-align: center;
-    }
     .dropdown-button
     {
         width: 100%;
     }
+    body {
+        background: black;
+    }
+    .button-grid, .article-grid {
+        grid-template-columns: none !important;
+    }
+    .home-alltext {
+        margin-bottom: 32px !important;
+    }
+    .footer {
+        margin-top: 32px !important;
+        position: relative !important;
+    }
 }
 
-#wcag
-{
-    border: none;
-    width: min-content;
+html {
+    overflow: hidden;
 }
-
-/* REDESIGN */
 
 .content {
     flex: 1;
@@ -567,7 +521,6 @@ nav {
     margin-bottom: 80px;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
-    z-index: 0;
 }
 
 .home-alltext * {
@@ -606,29 +559,6 @@ nav {
     padding: 0;
 }
 
-/* MAIN REDESIGN */
-
-.header {
-    padding: 4px;
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    border-radius: 4px;
-}
-
-nav {
-    background: none;
-}
-
-.header-button span {
-    font-weight: bold;
-    color: black;
-}
-
-.header-button {
-    background: none;
-    margin-top: 4px;
-}
-
 .content {
     height: 100vh; /* Takes up the full height of the viewport */
     width: 100%; /* Takes up the full width of the container */
@@ -645,20 +575,8 @@ nav {
     width: 300px; /* Or any specific width you'd like for the media div */
     overflow-y: auto; /* Allows scrolling if media content overflows */
 }
-.dropdown {
-    margin-top: 0;
-}
 
-.dropdown button {
-    margin-top: 0;
-}
-
-span:hover {
-    text-decoration: underline;
-    text-decoration-color: #22A887;
-    text-decoration-thickness: 4px;
-    text-decoration-style: solid;
-}
+/* START SECTION RELATED */
 
 .article-grid a {
     backdrop-filter: blur(5px);
@@ -681,6 +599,10 @@ span:hover {
     border-radius: 4px;
     margin-bottom: 16px;
 }
+
+/* END SECTION RELATED */
+
+/* START SECTION SPECIFIC */
 
 .algebra-section .divider {
     background-image: url('../public/imgs/Algebra/algebra-divider.svg');
@@ -754,14 +676,83 @@ span:hover {
     background: rgba(68, 92, 100, 1);
 }
 
+/* END SECTION SPECIFIC */
+
+/* START HEADER */
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+}
+
+.header-button {
+    padding: 16px;
+    background: none;
+    color: black;
+}
+
+.header-button:hover {
+    background: white;
+}
+
+.dropdown-content {
+    position: absolute;
+}
+
+nav {
+    background: none;
+}
+
+.dropdown {
+    margin-top: 0;
+}
+
+.dropdown button {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container > nav {
+    z-index: 2;
+}
+
+.container > div {
+    z-index: 1;
+}
+
+.dropdown-content a:hover .dropdown-button {
+    background: white;
+}
+
+.header-button {
+    transition: all 0.15s ease-in-out;
+    display: block;
+}
+
 .text a {
     color: black;
 }
 
 .text strong, .text sup {
-    color: #6400ff; /* PERFECT COLOR FOR CONTRAST 7:1 WHITE AND 2.99:1 BLACK*/
+    color: #6400ff;
 }
 
 .section img {
     margin: 0 auto;
+}
+
+.content {
+    border: solid white var(--darkModeBorder);
+    background: var(--darkModeBackground);
+}
+
+.content p, .content h1, .content i {
+    color: var(--darkModeTextColor);
 }
