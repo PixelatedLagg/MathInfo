@@ -1,6 +1,20 @@
 import { React, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+function toggleFontSize()
+{
+    if (document.documentElement.getAttribute("font-size") === "normal")
+    {
+        localStorage.setItem("font-size", "double");
+        document.documentElement.setAttribute("font-size", "double");
+    }
+    else
+    {
+        localStorage.setItem("font-size", "normal");
+        document.documentElement.setAttribute("font-size", "normal");
+    }
+}
+
 export default function Home(){
     return (
         <div>
@@ -8,7 +22,7 @@ export default function Home(){
             <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px", width: "100%"}}></img>
             <div className="home-alltext">
                 <h1>Welcome</h1>
-                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others.</p>
+                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others. <button onClick={toggleFontSize}>Toggle 200% font size.</button></p>
             </div>
             <div className="button-grid">
             <Link to="/algebra">

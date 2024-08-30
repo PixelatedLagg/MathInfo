@@ -5,6 +5,7 @@
     --darkModeTextColor: black;
 
     --font-size: 16px;
+    --footer-position: absolute;
 }
 
 [data-theme="dark"]
@@ -17,7 +18,7 @@
 [font-size="double"]
 {
     --font-size: 32px;
-    --line-height: 40px;
+    --footer-position: relative;
 }
 
 @font-face
@@ -31,7 +32,6 @@
 p, strong, i, a
 {
     font-size: var(--font-size);
-    line-height: var(--line-height);
 }
 
 p, h1, h2, h3, span, a, li::marker, button, i, label
@@ -53,10 +53,12 @@ p
 {
     margin-top: 32px;
     margin-bottom: 32px;
+    line-height: 1.6;
 }
 
 h1
 {
+    font-size: calc(var(--font-size) * 2);
     margin-top: 8px;
     margin-bottom: 16px;
 }
@@ -149,7 +151,7 @@ a span, button span
 {
     line-height: unset;
     display: block;
-    font-size: calc(var(--font-size) + 4px);
+    font-size: calc(var(--font-size) * (5 / 4));
     width: unset;
     white-space: nowrap;
     font-weight: bold;
@@ -202,9 +204,13 @@ nav
     display: block;
 }
 
-.dropdown:hover .dropdown-button
-{
-    color: black;
+.dropdown-button {
+    margin: 0;
+    padding: none;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: white;
 }
 
 /* Main Page */
@@ -326,7 +332,6 @@ li + li
     margin-top: 8px;
     margin-bottom: 8px;
     font-size: var(--font-size);
-    line-height: var(--line-height);
 }
 
 .interactive-button:hover
@@ -338,7 +343,6 @@ li a
 {
     color: white;
     font-size: var(--font-size);
-    line-height: var(--line-height);
     text-decoration: underline;
 }
 
@@ -495,7 +499,6 @@ nav {
 }
 
 .button-grid a p {
-    line-height: normal !important;
     margin: 0;
 }
 
@@ -518,13 +521,15 @@ nav {
 }
 
 .less-p {
-    font-size: calc(var(--font-size) - 4px);
+    font-size: calc(var(--font-size) * (3 / 4));
     color: white;
     text-align: center;
 }
 
 .less-p a {
     color: white;
+    font-size: calc(var(--font-size) * (3 / 4));
+    text-decoration: underline;
 }
 
 .footer {
@@ -534,7 +539,8 @@ nav {
     padding: 8px;
 
     box-sizing: border-box;
-    position: absolute;
+    position: var(--footer-position);
+    margin-top: calc((var(--font-size) * 4) - 64px) !important;
     left: 0;
     right: 0;
     max-width: 1250px;
@@ -580,6 +586,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
     gap: 16px;
+    margin-bottom: 32px;
 }
 
 .divider {
@@ -745,4 +752,20 @@ a {
 
 .content p, .content h1, .content i {
     color: var(--darkModeTextColor);
+}
+
+.home-alltext button {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    font-size: var(--font-size);
+    line-height: 1.6;
+}
+
+.dropdown-content button {
+    font-size: var(--font-size);
 }
