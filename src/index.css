@@ -710,6 +710,7 @@ nav {
 
 .dropdown button {
     margin-top: 0;
+    height: 100%;
 }
 
 a {
@@ -768,4 +769,12 @@ a {
 
 .dropdown-content button {
     font-size: var(--font-size);
+}
+
+.dropdown:not(:hover) .dropdown-content {
+    display: none;
+}
+
+button span {
+    line-height: 1;
 }

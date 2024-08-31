@@ -89,9 +89,9 @@ export default function App()
     }
 
     const location = useLocation();
+
     return (
         <div className="container">
-            {/* render the navbar when not on home */}
             {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
                 <div className="header" role="menubar" aria-label="Horizontal Menu">
@@ -121,7 +121,9 @@ export default function App()
                             <span>⛯</span>
                         </button>
                         <div className="dropdown-content" role="menu">
+                            {/^\/[^/]+\/[^/]+$/.test(location.pathname) && (
                             <button onClick={toggleDark} role="menuitem">Light/Dark Mode</button>
+                            )}
                             <button onClick={toggleFontSize} role="menuitem">200% Font Size</button>
                         </div>
                     </div>
