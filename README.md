@@ -1,8 +1,7 @@
 # MathInfo.org
 
 FINISH REDESIGN:
-- 200% text and text optimization
-- responsiveness
+- fix interactives and their svgs
 - accessibility
 - finish article backload
 
