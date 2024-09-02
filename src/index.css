@@ -6,6 +6,8 @@
 
     --font-size: 16px;
     --footer-position: absolute;
+    --scale-factor: 1;
+    --strong-color: #6400ff;
 }
 
 [data-theme="dark"]
@@ -13,12 +15,14 @@
     --darkModeBorder: 4px;
     --darkModeBackground: black;
     --darkModeTextColor: white;
+    --strong-color: #51a839;
 }
 
 [font-size="double"]
 {
     --font-size: 32px;
     --footer-position: relative;
+    --scale-factor: 2;
 }
 
 @font-face
@@ -29,12 +33,12 @@
     font-style: normal;
 }
 
-p, strong, i, a
+p, strong, i, a, label
 {
     font-size: var(--font-size);
 }
 
-p, h1, h2, h3, span, a, li::marker, button, i, label
+p, h1, h2, h3, span, a, li::marker, button, i, label, strong, sup
 {
     font-family: 'Inter';
 }
@@ -42,7 +46,6 @@ p, h1, h2, h3, span, a, li::marker, button, i, label
 strong, sup
 {
     color: var(--strong-color);
-    font-family: 'Inter';
 }
 
 a p {
@@ -362,7 +365,7 @@ li a
 
 .prompt
 {
-    border: 1px solid var(--font-color);
+    border: 1px solid var(--darkModeTextColor);
     border-radius: 5px;
     width: fit-content;
     margin-top: 12px;
@@ -382,8 +385,10 @@ table, th, td
 
 .checkboxes .input-label
 {
-    display: block;
-    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: calc(var(--font-size) * (3 / 4));
 }
 
 input[type="number"]
@@ -777,4 +782,14 @@ a {
 
 button span {
     line-height: 1;
+}
+
+input[type="checkbox"] {
+    width: var(--font-size);
+    height: var(--font-size);
+    flex-shrink: 0;
+}
+
+label, .interactive-button {
+    color: var(--darkModeTextColor);
 }
