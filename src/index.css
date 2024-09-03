@@ -325,8 +325,8 @@ li + li
 
 .content svg *
 {
-    fill: var(--font-color);
-    stroke: var(--font-color);
+    fill: var(--darkModeTextColor);
+    stroke: var(--darkModeTextColor);
 }
 
 .interactive-button

@@ -272,9 +272,8 @@ export default function Trigonometry(props)
     return (
         <div className='content'>
             <div className='section'>
-                <h1>Solve for Side</h1>
-                <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(setSide)} aria-label="Generate New Problem">Generate New Problem</button>
-                <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive">
+                <h1 style={{marginBottom: "48px"}}>Solve for Side</h1>
+                <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive" style={{marginBottom: "36px"}}>
                     <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_side.sidea}</text>
                     <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_side.sideb}</text>
                     <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{_side.sidec}</text>
@@ -283,20 +282,21 @@ export default function Trigonometry(props)
                     <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
                     <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
                 </svg>
+                <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(setSide)} aria-label="Generate New Problem">Generate New Problem</button>
                 <p style={{marginTop: "8px", marginLeft: "8px"}} role="contentinfo" aria-live="assertive">Solution:{_side.answer}</p>
             </div>
             <div className='section'>
-                <h1>Solve for Angle</h1>
-                    <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateAngle(setAngle)}>Generate New Problem</button>
-                    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive">
-                        <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_angle.sidea}</text>
-                        <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_angle.sideb}</text>
-                        <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{_angle.sidec}</text>
-                        <text stroke="#000" id="angle1" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" fill="#000" y="136" x="90">{_angle.angle1}</text>
-                        <text id="angle2" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="426" x="380">{_angle.angle2}</text>
-                        <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
-                        <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
-                    </svg>
+                <h1 style={{marginBottom: "48px"}}>Solve for Angle</h1>
+                <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive" style={{marginBottom: "36px"}}>
+                    <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_angle.sidea}</text>
+                    <text id="sideb" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="465" x="228">{_angle.sideb}</text>
+                    <text id="sidec" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="233" x="259">{_angle.sidec}</text>
+                    <text stroke="#000" id="angle1" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" fill="#000" y="136" x="90">{_angle.angle1}</text>
+                    <text id="angle2" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="426" x="380">{_angle.angle2}</text>
+                    <path d="m62,438l0,-376l376,376l-376,0z" strokeWidth="5" stroke="#000" fillOpacity="0" fill="#000"/>
+                    <path d="m62.425,401.205l35,0l0,35l-35,0l0,-35z" strokeWidth="2" stroke="#000" fillOpacity="0" fill="#000"/>
+                </svg>
+                <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateAngle(setAngle)}>Generate New Problem</button>
                 <p style={{marginTop: "8px", marginLeft: "8px"}} role="contentinfo" aria-live="assertive">Solution:{_angle.answer}</p>
             </div>
         </div>
