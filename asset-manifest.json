@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd61c498.css",
-    "main.js": "/static/js/main.58409620.js",
-    "static/js/329.01190e5c.chunk.js": "/static/js/329.01190e5c.chunk.js",
+    "main.css": "/static/css/main.7981a853.css",
+    "main.js": "/static/js/main.9371a6fb.js",
+    "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
     "static/js/573.a627a8b7.chunk.js": "/static/js/573.a627a8b7.chunk.js",
     "static/js/156.b1189339.chunk.js": "/static/js/156.b1189339.chunk.js",
     "static/js/775.362ff3f8.chunk.js": "/static/js/775.362ff3f8.chunk.js",
@@ -16,11 +16,11 @@
     "static/media/proofs-divider.svg": "/static/media/proofs-divider.9861b181156622f8771b.svg",
     "static/media/algebra-divider.svg": "/static/media/algebra-divider.723277aaa7cf59c97716.svg",
     "index.html": "/index.html",
-    "main.dd61c498.css.map": "/static/css/main.dd61c498.css.map",
-    "main.58409620.js.map": "/static/js/main.58409620.js.map"
+    "main.7981a853.css.map": "/static/css/main.7981a853.css.map",
+    "main.9371a6fb.js.map": "/static/js/main.9371a6fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd61c498.css",
-    "static/js/main.58409620.js"
+    "static/css/main.7981a853.css",
+    "static/js/main.9371a6fb.js"
   ]
 }
