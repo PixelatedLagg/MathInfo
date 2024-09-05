@@ -1,9 +1,10 @@
 # MathInfo.org
 
 FINISH REDESIGN:
-- fix interactives and their svgs
 - accessibility
 - finish article backload
+SPECIFIC:
+- fix menu items being cropped out of frame
 
 
 TODO:

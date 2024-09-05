@@ -284,8 +284,6 @@ export default function Trigonometry(props)
                 </svg>
                 <button type="button" className='interactive-button' tabIndex="0" onClick={() => generateSide(setSide)} aria-label="Generate New Problem">Generate New Problem</button>
                 <p style={{marginTop: "8px", marginLeft: "8px"}} role="contentinfo" aria-live="assertive">Solution:{_side.answer}</p>
-            </div>
-            <div className='section'>
                 <h1 style={{marginBottom: "48px"}}>Solve for Angle</h1>
                 <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive" style={{marginBottom: "36px"}}>
                     <text id="sidea" xmlSpace="preserve" textAnchor="middle" fontSize="24" fontFamily="serif" strokeWidth="0" stroke="#000" fill="#000" y="255" x="40">{_angle.sidea}</text>
