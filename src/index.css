@@ -73,7 +73,7 @@ img, svg
 
 body
 {
-    background-image: url('../public/imgs/mathbgfinal.jpg');
+    background-image: url('../public/imgs/bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
@@ -205,12 +205,17 @@ nav
     max-width: fit-content;
 }
 
-.dropdown
-
 .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content, .dropdown:focus-within .dropdown-content
 {
     display: block;
 }
+
+.dropdown-button:focus + .dropdown-content
+{
+    background-color: red;
+    display: block;
+}
+
 
 .dropdown-button {
     margin: 0;

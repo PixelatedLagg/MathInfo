@@ -95,11 +95,11 @@ export default function App()
             {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
                 <div className="header" role="menubar" aria-label="Horizontal Menu">
-                    <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page" style={{borderTopLeftRadius: "4px", borderBottomLeftRadius: "4px"}}>
+                    <Link className="header-button header-link" to="/" role="menuitem" aria-label="Visit Home Page" style={{borderTopLeftRadius: "4px", borderBottomLeftRadius: "4px"}} tabIndex={0}>
                         <span>Home</span>
                     </Link>
                     <div className="dropdown" role="presentation">
-                        <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Resources Dropdown">
+                        <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Resources Dropdown" tabIndex={0}>
                             <span>Resources</span>
                         </button>
                         <div className="dropdown-content" role="menu">
@@ -110,14 +110,14 @@ export default function App()
                         ))}
                         </div>
                     </div>
-                    <Link className="header-button header-link" to="/external" role="menuitem" aria-label="Visit External Page">
+                    <Link className="header-button header-link" to="/external" role="menuitem" aria-label="Visit External Page" tabIndex={0}>
                         <span>External Stuff</span>
                     </Link>
-                    <Link className="header-button header-link" to="/interactive" role="menuitem" aria-label="Visit Interactive Page">
+                    <Link className="header-button header-link" to="/interactive" role="menuitem" aria-label="Visit Interactive Page" tabIndex={0}>
                         <span>Interactive</span>
                     </Link>
                     <div className="dropdown" role="presentation">
-                        <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Settings Dropdown">
+                        <button className="header-button dropdown-button" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Settings Dropdown" tabIndex={0}>
                             <span>⛯</span>
                         </button>
                         <div className="dropdown-content" role="menu">

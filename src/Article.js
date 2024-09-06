@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 function ReadSection(section, index)
 {
     return (
-        <div className="section" key={index} dangerouslySetInnerHTML={{ __html: section.text }}></div>
+        <div className="section" key={index} dangerouslySetInnerHTML={{ __html: section }}></div>
     );
 }
 

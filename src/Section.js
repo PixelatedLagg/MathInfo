@@ -9,7 +9,7 @@ function CheckSummary(element, index, resource)
     }
     
     return (
-        <Link to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
+        <Link key={index} to={element} aria-label={`Visit ${resource[element].title} Page`}>{resource[element].title}</Link>
     );
 }
 
