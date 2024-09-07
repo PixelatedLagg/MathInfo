@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.7981a853.css",
-    "main.js": "/static/js/main.9371a6fb.js",
+    "main.css": "/static/css/main.7196e150.css",
+    "main.js": "/static/js/main.d54655ad.js",
     "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
-    "static/js/573.a627a8b7.chunk.js": "/static/js/573.a627a8b7.chunk.js",
-    "static/js/156.b1189339.chunk.js": "/static/js/156.b1189339.chunk.js",
-    "static/js/775.362ff3f8.chunk.js": "/static/js/775.362ff3f8.chunk.js",
-    "static/js/404.90986bb0.chunk.js": "/static/js/404.90986bb0.chunk.js",
-    "static/media/mathbgfinal.jpg": "/static/media/mathbgfinal.9c1917ea9238dbeeaac6.jpg",
+    "static/js/573.7035b724.chunk.js": "/static/js/573.7035b724.chunk.js",
+    "static/js/156.2cce5299.chunk.js": "/static/js/156.2cce5299.chunk.js",
+    "static/js/775.53ba2f32.chunk.js": "/static/js/775.53ba2f32.chunk.js",
+    "static/js/404.fedbda21.chunk.js": "/static/js/404.fedbda21.chunk.js",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
+    "static/media/bg.webp": "/static/media/bg.889bb16289f2099fe9bc.webp",
     "static/media/interactive-divider.svg": "/static/media/interactive-divider.3c1dde9ffaef14960657.svg",
     "static/media/calculus-divider.svg": "/static/media/calculus-divider.bb324010f1986632e222.svg",
     "static/media/trig-divider.svg": "/static/media/trig-divider.fbe0f3cbe8960ecc3517.svg",
@@ -16,11 +16,11 @@
     "static/media/proofs-divider.svg": "/static/media/proofs-divider.9861b181156622f8771b.svg",
     "static/media/algebra-divider.svg": "/static/media/algebra-divider.723277aaa7cf59c97716.svg",
     "index.html": "/index.html",
-    "main.7981a853.css.map": "/static/css/main.7981a853.css.map",
-    "main.9371a6fb.js.map": "/static/js/main.9371a6fb.js.map"
+    "main.7196e150.css.map": "/static/css/main.7196e150.css.map",
+    "main.d54655ad.js.map": "/static/js/main.d54655ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.7981a853.css",
-    "static/js/main.9371a6fb.js"
+    "static/css/main.7196e150.css",
+    "static/js/main.d54655ad.js"
   ]
 }
