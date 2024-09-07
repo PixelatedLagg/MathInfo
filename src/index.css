@@ -210,9 +210,8 @@ nav
     display: block;
 }
 
-.dropdown-button:focus + .dropdown-content
+.dropdown-button:focus + .dropdown-content /*TODO: FIX TAB FOCUS*/
 {
-    background-color: red;
     display: block;
 }
 
