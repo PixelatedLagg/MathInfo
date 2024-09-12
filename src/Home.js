@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import { Link } from 'react-router-dom';
 import GoogleAd from './GoogleAd'
 
@@ -20,7 +20,7 @@ export default function Home(){
     return (
         <div>
             
-            <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px", width: "100%"}}></img>
+            <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px", width: "100%"}} alt="MathInfo.org stylized."></img>
             <div className="home-alltext">
                 <h1>Welcome</h1>
                 <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others. <button onClick={toggleFontSize}>Toggle 200% font size.</button></p>

@@ -8,7 +8,7 @@ import Article from "./Article"
 import BasicTrigonometry from "./interactive/Basic-Trigonometry"
 import StatisticsCategories from './interactive/Statistics-Categories';
 import Interactive from "./Interactive"
-import PolynomialDivision from './interactive/PolynomialDivision';
+import GoogleAd from './GoogleAd';
 
 function generateLocation(names, links)
 {
@@ -91,6 +91,15 @@ export default function App()
     const location = useLocation();
 
     return (
+    <div className="columns">
+        <div className="ad-column">
+            <div className="ad">
+                <GoogleAd></GoogleAd>
+            </div>
+            <div className="ad">
+                <GoogleAd></GoogleAd>
+            </div>
+        </div>
         <div className="container">
             {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
@@ -148,6 +157,15 @@ export default function App()
                 <Route path={"/interactive/statistics-categories"} element={<StatisticsCategories onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
             </Routes>
         </div>
+        <div className="ad-column">
+            <div className="ad">
+                <GoogleAd></GoogleAd>
+            </div>
+            <div className="ad">
+                <GoogleAd></GoogleAd>
+            </div>
+        </div>
+    </div>
     );
 }
 
