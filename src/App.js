@@ -92,6 +92,7 @@ export default function App()
 
     return (
     <div className="columns">
+        {/^\/[^/]+\/[^/]+$/.test(location.pathname) && (
         <div className="ad-column">
             <div className="ad">
                 <GoogleAd></GoogleAd>
@@ -100,6 +101,7 @@ export default function App()
                 <GoogleAd></GoogleAd>
             </div>
         </div>
+        )}
         <div className="container">
             {location.pathname !== '/' && (
             <nav role="navigation" aria-label="Main Navigation">
@@ -157,6 +159,7 @@ export default function App()
                 <Route path={"/interactive/statistics-categories"} element={<StatisticsCategories onSetNames={handleNames} onSetLinks={handleLinks}/>}/>
             </Routes>
         </div>
+        {/^\/[^/]+\/[^/]+$/.test(location.pathname) && (
         <div className="ad-column">
             <div className="ad">
                 <GoogleAd></GoogleAd>
@@ -165,6 +168,7 @@ export default function App()
                 <GoogleAd></GoogleAd>
             </div>
         </div>
+        )}
     </div>
     );
 }
