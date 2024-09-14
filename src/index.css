@@ -79,7 +79,7 @@ button {
     font-size: unset;
 }
 
-html, body, #root {
+html, body {
     height: 100%;
 }
 
@@ -728,8 +728,4 @@ label, .interactive-button {
     justify-content: center;
     align-items: center;
     background-color: red;
-}
-
-body {
-    overflow: hidden !important;
 }

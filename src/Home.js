@@ -51,7 +51,6 @@ export default function Home(){
                 <p>External Links</p>
             </Link>
             </div>
-            <GoogleAd />
             <div className="footer">
                 <p className="less-p">Mild disclaimer: we employ AI to enhance the editing process for some of our articles. Through its use, we strive to maintain the original structure, core concepts, and intent of the content while focusing on improving clarity and coherence.<br></br>This website is conformant to WCAG 2.2 at Level AAA. <a href="mailto:michiganmii2@gmail.com" aria-label="Send an email to michiganmii2@gmail.com">Email us</a> with any questions or feature requests. View the source code on <a href="https://github.com/PixelatedLagg/MathInfo" aria-label="View the source code on GitHub">Github</a>.</p>
             </div>
