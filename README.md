@@ -1,7 +1,7 @@
 # MathInfo.org
 
 FINISH REDESIGN:
-- get website back up lmao
+- finish embeds
 - accessibility
 - finish article backload
 SPECIFIC:
