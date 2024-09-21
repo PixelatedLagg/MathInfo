@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7196e150.css",
-    "main.js": "/static/js/main.d54655ad.js",
+    "main.css": "/static/css/main.b027fa9e.css",
+    "main.js": "/static/js/main.0578be8a.js",
     "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
     "static/js/573.7035b724.chunk.js": "/static/js/573.7035b724.chunk.js",
     "static/js/156.2cce5299.chunk.js": "/static/js/156.2cce5299.chunk.js",
@@ -16,11 +16,11 @@
     "static/media/proofs-divider.svg": "/static/media/proofs-divider.9861b181156622f8771b.svg",
     "static/media/algebra-divider.svg": "/static/media/algebra-divider.723277aaa7cf59c97716.svg",
     "index.html": "/index.html",
-    "main.7196e150.css.map": "/static/css/main.7196e150.css.map",
-    "main.d54655ad.js.map": "/static/js/main.d54655ad.js.map"
+    "main.b027fa9e.css.map": "/static/css/main.b027fa9e.css.map",
+    "main.0578be8a.js.map": "/static/js/main.0578be8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7196e150.css",
-    "static/js/main.d54655ad.js"
+    "static/css/main.b027fa9e.css",
+    "static/js/main.0578be8a.js"
   ]
 }
