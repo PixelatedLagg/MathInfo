@@ -51,6 +51,10 @@ export function Section(props)
 
     return (
         <div className={`${lowerRes}-section`}>
+            <Helmet>
+                <meta property="og:title" content={lowerRes.charAt(0).toUpperCase() + lowerRes.slice(1)} />
+                <meta property="og:description" content={`Browse the ${lowerRes.charAt(0).toUpperCase() + lowerRes.slice(1)} section on MathInfo.org!`} />
+            </Helmet>
             <div className="home-alltext" style={{marginBottom: "32px"}}dangerouslySetInnerHTML={{ __html: resource.Summary.text }}></div>
             <div className="divider"></div>
             <div className="article-grid">

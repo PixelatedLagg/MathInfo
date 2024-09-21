@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function ReadSection(section, index)
 {
@@ -58,6 +59,10 @@ export default function Article(props)
     const articleObject = resource[article];
     return (
         <div className="content" role="main">
+            <Helmet>
+                <meta property="og:title" content={articleObject.title} />
+                <meta property="og:description" content={`Read the article about ${articleObject.title} on MathInfo.org!`} />
+            </Helmet>
             {articleObject.sections.map((element, index) => ReadSection(element, index))}
         </div>
     );
