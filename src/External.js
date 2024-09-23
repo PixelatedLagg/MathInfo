@@ -1,5 +1,6 @@
 import './index.css';
 import { React, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function External(props)
 {
@@ -10,6 +11,10 @@ export default function External(props)
     }, [props]);
     return (
         <div className="external-section">
+            <Helmet>
+                <meta property="og:title" content="External" />
+                <meta property="og:description" content="Browse some external resources on MathInfo.org!" />
+            </Helmet>
             <div className="home-alltext" style={{marginBottom: "32px"}}>
                 <h1>External Resources</h1>
                 <p>These are our favourite math resources: some online, some physical.</p>

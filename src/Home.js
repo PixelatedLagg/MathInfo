@@ -1,6 +1,5 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
-import GoogleAd from './GoogleAd'
 
 function toggleFontSize()
 {
@@ -19,7 +18,6 @@ function toggleFontSize()
 export default function Home(){
     return (
         <div>
-            
             <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px", width: "100%"}} alt="MathInfo.org stylized."></img>
             <div className="home-alltext">
                 <h1>Welcome</h1>

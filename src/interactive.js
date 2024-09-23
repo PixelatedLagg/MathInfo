@@ -1,6 +1,7 @@
 import './index.css';
 import { React, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 export default function Interactive(props)
 {
@@ -13,6 +14,10 @@ export default function Interactive(props)
 
     return (
         <div className="interactive-section">
+            <Helmet>
+                <meta property="og:title" content="Interactive" />
+                <meta property="og:description" content="Browse the interactive section on MathInfo.org!" />
+            </Helmet>
             <div className="home-alltext" style={{marginBottom: "32px"}}>
                 <h1>Interactive</h1>
                 <p>Interactive activities allow you to test your math skills with randomly generated problems.</p>

@@ -1,5 +1,6 @@
 import '../index.css';
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function rand(min, max)
 {
@@ -271,6 +272,10 @@ export default function Trigonometry(props)
     }, []);
     return (
         <div className='content'>
+            <Helmet>
+                <meta property="og:title" content="Basic Trigonometry" />
+                <meta property="og:description" content="Test your basic trigonometry skills on MathInfo.org!" />
+            </Helmet>
             <div className='section'>
                 <h1 style={{marginBottom: "48px"}}>Solve for Side</h1>
                 <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" role="contentinfo" aria-live="assertive" style={{marginBottom: "36px"}}>

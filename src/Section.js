@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function CheckSummary(element, index, resource)
 {

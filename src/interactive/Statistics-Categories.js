@@ -1,6 +1,7 @@
 import '../index.css';
 import { React, useState, useEffect } from 'react';
 import json from '.././data/interactive/Statistics-Categories.json'
+import { Helmet } from 'react-helmet';
 
 function randomNum(lower, upper)
 {
@@ -90,6 +91,10 @@ export default function StatisticsCategories(props)
     };
     return (
         <div className='content'>
+            <Helmet>
+                <meta property="og:title" content="Statistics Categories" />
+                <meta property="og:description" content="Test your statistics skills on MathInfo.org!" />
+            </Helmet>
             <div className='section'>
                 <h1>Statistics Categories</h1>
                 <div className="checkboxes">
