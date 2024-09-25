@@ -1,7 +1,7 @@
 # MathInfo.org
 
 FINISH REDESIGN:
-- finish embeds (using react helmet)
+- fix dynamic embeds (using react helmet)
 - accessibility
 - finish article backload
 SPECIFIC:
