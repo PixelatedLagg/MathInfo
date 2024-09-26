@@ -8,7 +8,7 @@ SPECIFIC:
 - fix menu items being cropped out of frame
 
 
-TODO:
+FUTURE TODO:
 
 - finish polynomial division
 - finish partial fraction decomposition
