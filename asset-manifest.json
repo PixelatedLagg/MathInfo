@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b027fa9e.css",
-    "main.js": "/static/js/main.0578be8a.js",
+    "main.css": "/static/css/main.26602b1e.css",
+    "main.js": "/static/js/main.9338b12b.js",
     "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
     "static/js/573.7035b724.chunk.js": "/static/js/573.7035b724.chunk.js",
     "static/js/156.2cce5299.chunk.js": "/static/js/156.2cce5299.chunk.js",
@@ -9,18 +9,18 @@
     "static/js/404.fedbda21.chunk.js": "/static/js/404.fedbda21.chunk.js",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
     "static/media/bg.webp": "/static/media/bg.889bb16289f2099fe9bc.webp",
-    "static/media/interactive-divider.svg": "/static/media/interactive-divider.3c1dde9ffaef14960657.svg",
-    "static/media/calculus-divider.svg": "/static/media/calculus-divider.bb324010f1986632e222.svg",
-    "static/media/trig-divider.svg": "/static/media/trig-divider.fbe0f3cbe8960ecc3517.svg",
-    "static/media/external-divider.svg": "/static/media/external-divider.862426fcaa56625edc36.svg",
-    "static/media/proofs-divider.svg": "/static/media/proofs-divider.9861b181156622f8771b.svg",
-    "static/media/algebra-divider.svg": "/static/media/algebra-divider.723277aaa7cf59c97716.svg",
+    "static/media/interactive-divider.svg": "/static/media/interactive-divider.edb1d31cc7dccfda3c06.svg",
+    "static/media/calculus-divider.svg": "/static/media/calculus-divider.7c4f1b9405273dc569fe.svg",
+    "static/media/trig-divider.svg": "/static/media/trig-divider.2598809333376f09934e.svg",
+    "static/media/external-divider.svg": "/static/media/external-divider.9a6b8864c8f34685986c.svg",
+    "static/media/proofs-divider.svg": "/static/media/proofs-divider.26ac4d08dbeb71ecbe64.svg",
+    "static/media/algebra-divider.svg": "/static/media/algebra-divider.5e6f1b64d1cec121c0c6.svg",
     "index.html": "/index.html",
-    "main.b027fa9e.css.map": "/static/css/main.b027fa9e.css.map",
-    "main.0578be8a.js.map": "/static/js/main.0578be8a.js.map"
+    "main.26602b1e.css.map": "/static/css/main.26602b1e.css.map",
+    "main.9338b12b.js.map": "/static/js/main.9338b12b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b027fa9e.css",
-    "static/js/main.0578be8a.js"
+    "static/css/main.26602b1e.css",
+    "static/js/main.9338b12b.js"
   ]
 }
