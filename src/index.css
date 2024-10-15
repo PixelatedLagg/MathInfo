@@ -3,8 +3,7 @@
     --darkModeBackground: white;
     --darkModeTextColor: black;
 
-    --font-size: 16px;
-    --footer-position: absolute;
+    --font-size: 1rem;
     --scale-factor: 1;
     --strong-color: #6400ff;
 }
@@ -17,8 +16,7 @@
 }
 
 [font-size="double"] {
-    --font-size: 32px;
-    --footer-position: relative;
+    --font-size: 2rem;
     --scale-factor: 2;
 }
 
@@ -201,6 +199,7 @@ a span, button span {
     min-height: 100%;
     padding-left: 16px;
     padding-right: 16px;
+    flex-grow: 1;
 }
 
 .content {
@@ -433,7 +432,7 @@ input[type="number"]
     display: flex;
     align-items: center; /* Center content vertically */
     border-radius: 4px;
-    padding: 16px;
+    padding: 2vh;
     cursor: pointer;
     text-decoration: none; /* Remove underline for text */
     transition: all 0.15s ease-in-out;
@@ -463,7 +462,7 @@ input[type="number"]
     margin-top: 16px;
     padding: 16px;
     border-radius: 4px;
-    margin-bottom: 80px;
+    margin-bottom: 32px;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
 }
@@ -488,14 +487,12 @@ input[type="number"]
 
     box-sizing: border-box;
     position: var(--footer-position);
-    margin-top: calc((var(--font-size) * 4) - 64px) !important;
-    left: 0;
-    right: 0;
     max-width: 1250px;
+    height: 8vh;
     width: 100%;
     margin: 0 auto; /* Center the div horizontally */
     text-align: center; /* Optional: center-align the text */
-    bottom: 0;
+    margin-top: 32px;
 }
 
 .footer * {

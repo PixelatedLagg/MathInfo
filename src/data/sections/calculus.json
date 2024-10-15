@@ -2,14 +2,6 @@
     "Summary" : {
         "text" : "<h1>Calculus</h1><p>Calculus is a complex branch in mathematics that deals with the study of change. Knowledge of how functions change over certain periods or conditions can only be answered with methods derived from calculus. There are 3 core topics which comprise calculus: Limits, Derivation and Integration. Limits describe how functions approach values. Derivation describes the rate of change at certain values of a function. Integration describes the area under the curve of a function. The beauty in calculus lies in how these 3 core topics relate to one another.</p>"
     },
-    "riemann-sums" : {
-        "title" : "Riemann Sums",
-        "sections" : [
-            {
-                "text" : "..."
-            }
-        ]
-    },
     "proof-of-the-fundamental-theorem-of-calculus-part-i": {
         "title": "Proof of the Fundamental Theorem of Calculus Part I",
         "sections": [
