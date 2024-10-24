@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e8621b66.css",
-    "main.js": "/static/js/main.9446ba7c.js",
+    "main.js": "/static/js/main.c3e4b6e7.js",
     "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
     "static/js/573.7035b724.chunk.js": "/static/js/573.7035b724.chunk.js",
     "static/js/156.02f50b39.chunk.js": "/static/js/156.02f50b39.chunk.js",
@@ -17,10 +17,10 @@
     "static/media/algebra-divider.svg": "/static/media/algebra-divider.5e6f1b64d1cec121c0c6.svg",
     "index.html": "/index.html",
     "main.e8621b66.css.map": "/static/css/main.e8621b66.css.map",
-    "main.9446ba7c.js.map": "/static/js/main.9446ba7c.js.map"
+    "main.c3e4b6e7.js.map": "/static/js/main.c3e4b6e7.js.map"
   },
   "entrypoints": [
     "static/css/main.e8621b66.css",
-    "static/js/main.9446ba7c.js"
+    "static/js/main.c3e4b6e7.js"
   ]
 }
