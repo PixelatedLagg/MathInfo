@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.a09b1118.css",
-    "main.js": "/static/js/main.638295fb.js",
+    "main.js": "/static/js/main.36eb3a7f.js",
     "static/js/329.94a86816.chunk.js": "/static/js/329.94a86816.chunk.js",
     "static/js/573.7035b724.chunk.js": "/static/js/573.7035b724.chunk.js",
-    "static/js/156.b0c9b7a5.chunk.js": "/static/js/156.b0c9b7a5.chunk.js",
+    "static/js/156.6ad82ebd.chunk.js": "/static/js/156.6ad82ebd.chunk.js",
     "static/js/775.53ba2f32.chunk.js": "/static/js/775.53ba2f32.chunk.js",
     "static/js/404.fedbda21.chunk.js": "/static/js/404.fedbda21.chunk.js",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
@@ -17,10 +17,10 @@
     "static/media/algebra-divider.svg": "/static/media/algebra-divider.5e6f1b64d1cec121c0c6.svg",
     "index.html": "/index.html",
     "main.a09b1118.css.map": "/static/css/main.a09b1118.css.map",
-    "main.638295fb.js.map": "/static/js/main.638295fb.js.map"
+    "main.36eb3a7f.js.map": "/static/js/main.36eb3a7f.js.map"
   },
   "entrypoints": [
     "static/css/main.a09b1118.css",
-    "static/js/main.638295fb.js"
+    "static/js/main.36eb3a7f.js"
   ]
 }
