@@ -199,7 +199,7 @@ a span, button span {
     min-height: 100%;
     padding-left: 16px;
     padding-right: 16px;
-    flex-grow: 1;
+    flex: 0 0 70%;
 }
 
 .content {
@@ -212,8 +212,8 @@ a span, button span {
     box-sizing: border-box;
     flex: 1;
     background-color: white;
-    height:max-content;
-    height: 100vh; /* Takes up the full height of the viewport */
+    min-height: 100vh; /* Ensures it fills at least the viewport but can grow */
+    height: auto;
     width: 100%; /* Takes up the full width of the container */
     flex-direction: column;
     border: solid white var(--darkModeBorder);
@@ -394,7 +394,7 @@ input[type="number"]
     }
 }
 
-@media (max-width: 496px) 
+@media (max-width: 1200px) 
 {
     .dropdown-button
     {
@@ -412,6 +412,34 @@ input[type="number"]
     .footer {
         margin-top: 32px !important;
         position: relative !important;
+    }
+    .container {
+        flex: 0 0 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .ad-column {
+        width: 0;
+        padding: 0 !important;
+        margin: 0;
+    }
+    .home-alltext {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .button-grid {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .footer {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .container > div > img {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: block;
+        overflow: hidden;
     }
 }
 
@@ -467,37 +495,27 @@ input[type="number"]
     backdrop-filter: blur(5px);
 }
 
-.less-p {
-    font-size: calc(var(--font-size) * (3 / 4));
-    color: white;
-    text-align: center;
-}
-
-.less-p a {
+.footer a {
     color: white;
     font-size: calc(var(--font-size) * (3 / 4));
     text-decoration: underline;
 }
 
 .footer {
-    margin-bottom: 16px;
     border-radius: 4px;
     backdrop-filter: blur(5px);
-    padding: 8px;
 
     box-sizing: border-box;
     position: var(--footer-position);
     max-width: 1250px;
-    height: 8vh;
     width: 100%;
-    margin: 0 auto; /* Center the div horizontally */
-    text-align: center; /* Optional: center-align the text */
     margin-top: 32px;
-}
+    color: white;
+    text-align: center;
 
-.footer * {
-    margin: 0;
-    padding: 0;
+    font-size: calc(var(--font-size) * (3 / 4));
+    color: white;
+    text-align: center;
 }
 
 /* START SECTION RELATED */
@@ -727,4 +745,17 @@ label, .interactive-button {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(5px);
     border-radius: 4px;
+}
+
+/* MISC */
+.footer {
+    display: -ms-flexbox;
+    justify-content: center;
+    padding: 1.5vh;
+}
+.MJX-TEX {
+    color: var(--darkModeTextColor);
+}
+.ad {
+    display: none !important;
 }

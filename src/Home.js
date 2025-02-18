@@ -15,13 +15,13 @@ function toggleFontSize()
     }
 }
 
-export default function Home(){
+export default function Home() {
     return (
         <div>
             <img src={"/imgs/Logos/fulltext.svg"} style={{marginTop: "32px", width: "100%"}} alt="MathInfo.org stylized."></img>
             <div className="home-alltext">
                 <h1>Welcome</h1>
-                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and Computer Science, along with some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others. <button onClick={toggleFontSize}>Toggle 200% font size.</button></p>
+                <p style={{marginBottom: "16px"}}>Here you will find (mainly article-based) resources for Mathematics and some interactive activities to test your understanding.<br></br>William Olsen and Alexander De Carlo, two high school students passionate about these topics, created this website to share valuable knowledge with others. <button onClick={toggleFontSize}>Toggle 200% font size.</button></p>
             </div>
             <div className="button-grid">
             <Link to="/algebra">
@@ -49,9 +49,10 @@ export default function Home(){
                 <p>External Links</p>
             </Link>
             </div>
-            <div className="footer">
-                <p className="less-p">Mild disclaimer: we employ AI to enhance the editing process for some of our articles. Through its use, we strive to maintain the original structure, core concepts, and intent of the content while focusing on improving clarity and coherence.<br></br>This website is conformant to WCAG 2.2 at Level AAA. <a href="mailto:admin@mathinfo.org" aria-label="Send an email to michiganmii2@gmail.com">Email us</a> with any questions or feature requests. View the source code on <a href="https://github.com/PixelatedLagg/MathInfo" aria-label="View the source code on GitHub">Github</a>.</p>
-            </div>
+            <p className="footer">
+                This website is conformant to WCAG 2.2 at Level AAA.&nbsp;<a href="mailto:admin@mathinfo.org" aria-label="Send an email to michiganmii2@gmail.com">Email us</a>&nbsp;with any questions or feature requests. View the source code on&nbsp;<a href="https://github.com/PixelatedLagg/MathInfo" aria-label="View the source code on GitHub">Github</a>.<br></br>
+                <img src="https://www.w3.org/WAI/WCAG22/wcag2.2AAA.png" style={ { height: "3vh", marginTop: "1vh", padding: 0}}></img>
+            </p>
         </div>
     );
 }
